@@ -1,0 +1,14 @@
+[
+  {
+    "id": "ee9362c597d71db1",
+    "key": "hola",
+    "expiresAt": "2025-06-05",
+    "allowOffline": true
+  },
+  {
+    "id": "ali456",
+    "key": "key2",
+    "expiresAt": "2025-06-15",
+    "allowOffline": false
+  }
+]

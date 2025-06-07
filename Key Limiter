@@ -10,6 +10,12 @@ Pablo Basico
     "key": "xd",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "xdr",
+    "key": "raaa",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }Yefferzón Pro-Plus
  {
     "id": "xddd",

@@ -124,5 +124,11 @@
     "key": "asd",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "hola xd",
+    "key": "xd",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
 ]

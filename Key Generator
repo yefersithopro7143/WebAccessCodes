@@ -46,5 +46,11 @@
     "key": "asfas",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "ad",
+    "key": "sdasd",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
 ]

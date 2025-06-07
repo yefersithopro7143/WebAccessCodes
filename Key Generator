@@ -16,5 +16,11 @@
     "key": "xddddddddddd",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "rata",
+    "key": "xddddd",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
 ]

@@ -12,9 +12,9 @@
     "allowOffline": true
   },
   {
-    "id": "hola",
-    "key": "rat",
-    "expiresAt": "2025-04-14",
+    "id": "rata",
+    "key": "loca",
+    "expiresAt": "2025-06-14",
     "allowOffline": true
   }
 ]

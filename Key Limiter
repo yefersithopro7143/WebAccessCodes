@@ -31,4 +31,10 @@ Pablo Basico
     "key": "hjhjdsajhasd",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "rata",
+    "key": "rata",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }

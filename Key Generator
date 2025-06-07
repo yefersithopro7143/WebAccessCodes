@@ -22,5 +22,11 @@
     "key": "hola",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "3x3c3",
+    "key": "4gh4",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
 ]

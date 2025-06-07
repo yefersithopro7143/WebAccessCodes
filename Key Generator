@@ -16,5 +16,11 @@
     "key": "loca",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "asjcasjkadjjasd",
+    "key": "hola",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
 ]

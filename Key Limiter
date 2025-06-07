@@ -5,4 +5,10 @@ Yefferzón Pro-Plus
     "key": "xd",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "hola x",
+    "key": "ssaa",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }

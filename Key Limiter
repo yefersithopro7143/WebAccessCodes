@@ -11,4 +11,10 @@ Yefferzón Pro-Plus
     "key": "sad",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "asdas",
+    "key": "sdads",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }

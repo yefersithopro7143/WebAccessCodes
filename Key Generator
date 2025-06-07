@@ -1,17 +1,14 @@
 [
   {
-    "id": "ee9362c597d71db1",
-    "key": "rata",
-    "expiresAt": "2025-05-01",
-    "allowOffline": true
-  },
-
-  {
     "id": "Yhhu",
     "key": "Gyy",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "asdas",
+    "key": "dasdasd",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
-
-
 ]

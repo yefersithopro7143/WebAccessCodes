@@ -42,4 +42,10 @@ Pablo Basico
     "key": "asdas",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "asdsa",
+    "key": "asdsa",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }

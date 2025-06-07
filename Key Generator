@@ -118,5 +118,11 @@
     "key": "dasdasssssssssss",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "sdasd",
+    "key": "asd",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
 ]

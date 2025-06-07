@@ -24,4 +24,10 @@ Andrea Pro-Plus
     "key": "jsj",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "hola",
+    "key": "xd",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }

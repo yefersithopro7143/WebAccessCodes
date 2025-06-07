@@ -34,5 +34,11 @@
     "key": "sadas",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "asdas",
+    "key": "asdadas",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
 ]

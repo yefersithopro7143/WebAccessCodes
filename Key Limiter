@@ -4,8 +4,13 @@ Pablo Basico
     "key": "rata",
     "expiresAt": "2025-06-01",
     "allowOffline": true
-  }
-Yefferzón Pro-Plus
+  },
+  {
+    "id": "hola",
+    "key": "xd",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
+  }Yefferzón Pro-Plus
  {
     "id": "xddd",
     "key": "buuu",

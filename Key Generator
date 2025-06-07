@@ -160,5 +160,11 @@
     "key": "Rat",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "Rat",
+    "key": "Vh",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
 ]

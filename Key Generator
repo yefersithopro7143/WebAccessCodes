@@ -154,5 +154,11 @@
     "key": "Vhy",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "Hola",
+    "key": "Rat",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
 ]

@@ -3,12 +3,12 @@
     "id": "ee9362c597d71db1",
     "key": "rata",
     "expiresAt": "2025-06-01",
-    "allowOffline": false
+    "allowOffline": true
   },
   {
     "id": "ali456",
     "key": "key2",
     "expiresAt": "2025-06-15",
-    "allowOffline": false
+    "allowOffline": true
   }
 ]

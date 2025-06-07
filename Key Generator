@@ -22,5 +22,11 @@
     "key": "asdasdsa",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "sdfsd",
+    "key": "sads",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
 ]

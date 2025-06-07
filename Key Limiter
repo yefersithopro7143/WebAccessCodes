@@ -5,6 +5,12 @@ Yefferzón Pro-Plus
     "expiresAt": "2025-06-01",
     "allowOffline": true
   },
+  {
+    "id": "rata",
+    "key": "xd",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
+  },
  {
     "id": "xddd",
     "key": "buuu",

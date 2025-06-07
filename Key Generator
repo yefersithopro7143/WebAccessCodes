@@ -52,5 +52,11 @@
     "key": "sdasd",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "czx",
+    "key": "sasad",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
 ]

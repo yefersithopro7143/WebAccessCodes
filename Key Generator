@@ -148,5 +148,11 @@
     "key": "Vh",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "Bjj",
+    "key": "Vhy",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }
 ]

@@ -19,4 +19,10 @@ Pablo Basico
     "key": "xd",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "holaxd",
+    "key": "xd",
+    "expiresAt": "2025-06-14",
+    "allowOffline": true
   }

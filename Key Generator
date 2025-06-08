@@ -28,5 +28,11 @@
     "key": "t0oel3KPiQZ6ZPOpDXgY",
     "expiresAt": "2025-06-15",
     "allowOffline": true
+  },
+  {
+    "id": "Frank",
+    "key": "9MO6fXJEvzep46XBsDza",
+    "expiresAt": "2025-06-12",
+    "allowOffline": true
   }
 ]

@@ -2,13 +2,13 @@
   {
     "id": "xdddd",
     "key": "Pro",
-    "expiresAt": "2025-06-12",
+    "expiresAt": "2025-06-07",
     "allowOffline": true
   },
   {
     "id": "raaaaaaaa",
     "key": "Hola",
-    "expiresAt": "2025-06-12",
+    "expiresAt": "2025-05-12",
     "allowOffline": true
   }
 ]

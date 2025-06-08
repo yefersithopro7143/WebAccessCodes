@@ -244,5 +244,11 @@
     "key": "dasd",
     "expiresAt": "2025-06-15",
     "allowOffline": true
+  },
+  {
+    "id": "asd",
+    "key": "adas",
+    "expiresAt": "2025-06-15",
+    "allowOffline": true
   }
 ]

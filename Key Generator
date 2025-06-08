@@ -250,5 +250,11 @@
     "key": "adas",
     "expiresAt": "2025-06-15",
     "allowOffline": true
+  },
+  {
+    "id": "asda",
+    "key": "sadsaasdasdas",
+    "expiresAt": "2025-06-15",
+    "allowOffline": true
   }
 ]

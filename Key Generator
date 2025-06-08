@@ -34,5 +34,11 @@
     "key": "9MO6fXJEvzep46XBsDza",
     "expiresAt": "2025-06-12",
     "allowOffline": true
+  },
+  {
+    "id": "hola gente",
+    "key": "VskzZxyaf7XORvcgLA7y",
+    "expiresAt": "2025-06-12",
+    "allowOffline": true
   }
 ]

@@ -40,5 +40,11 @@
     "key": "Frtt",
     "expiresAt": "2025-06-14",
     "allowOffline": true
+  },
+  {
+    "id": "Wet",
+    "key": "Fgg",
+    "expiresAt": "2025-06-15",
+    "allowOffline": true
   }
 ]

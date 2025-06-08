@@ -52,5 +52,11 @@
     "key": "xd",
     "expiresAt": "2025-06-15",
     "allowOffline": true
+  },
+  {
+    "id": "sdasd",
+    "key": "dasda",
+    "expiresAt": "2025-06-15",
+    "allowOffline": true
   }
 ]

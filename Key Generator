@@ -4,5 +4,11 @@
     "key": "GvV6MGL9huPmT1mTpdAL",
     "expiresAt": "2025-06-08",
     "allowOffline": true
+  },
+  {
+    "id": "4e81e67f955835c7",
+    "key": "Pro",
+    "expiresAt": "2025-06-12",
+    "allowOffline": true
   }
 ]

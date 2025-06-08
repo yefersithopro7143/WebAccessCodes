@@ -64,5 +64,11 @@
     "key": "fsafsd",
     "expiresAt": "2025-06-15",
     "allowOffline": true
+  },
+  {
+    "id": "vbgh",
+    "key": "ghvg",
+    "expiresAt": "2025-06-15",
+    "allowOffline": true
   }
 ]

@@ -202,5 +202,11 @@
     "key": "TS2nCkocBFdOiniROex2",
     "expiresAt": "2025-06-15",
     "allowOffline": true
+  },
+  {
+    "id": "adas",
+    "key": "kqZHbQ9awqxPYCgaEvKQ",
+    "expiresAt": "2025-06-15",
+    "allowOffline": true
   }
 ]

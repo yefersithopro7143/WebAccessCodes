@@ -256,5 +256,11 @@
     "key": "sadsaasdasdas",
     "expiresAt": "2025-06-15",
     "allowOffline": true
+  },
+  {
+    "id": "asd",
+    "key": "dasda",
+    "expiresAt": "2025-06-15",
+    "allowOffline": true
   }
 ]

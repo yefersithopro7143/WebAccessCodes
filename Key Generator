@@ -118,5 +118,11 @@
     "key": "ZTVH72JQzPwBOCHfXM5j",
     "expiresAt": "2025-06-15",
     "allowOffline": true
+  },
+  {
+    "id": "asda",
+    "key": "bm0YG00aQULk7qG3bhNH",
+    "expiresAt": "2025-06-15",
+    "allowOffline": true
   }
 ]

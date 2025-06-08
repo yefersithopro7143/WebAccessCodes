@@ -226,5 +226,11 @@
     "key": "dsadas",
     "expiresAt": "2025-06-15",
     "allowOffline": true
+  },
+  {
+    "id": "asdas",
+    "key": "sadasd",
+    "expiresAt": "2025-06-15",
+    "allowOffline": true
   }
 ]

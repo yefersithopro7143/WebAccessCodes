@@ -10,5 +10,11 @@
     "key": "Bebito",
     "expiresAt": "2025-06-15",
     "allowOffline": true
+  },
+  {
+    "id": "Xd",
+    "key": "CEC6wRwxhqxutnV2BoNK",
+    "expiresAt": "2025-06-15",
+    "allowOffline": true
   }
 ]

@@ -22,5 +22,11 @@
     "key": "zHcC0x1ioe5PLS3Hjf8z",
     "expiresAt": "2025-06-15",
     "allowOffline": true
+  },
+  {
+    "id": "rata",
+    "key": "SxBiqmPWAPQrWZGQlz8K",
+    "expiresAt": "2025-06-15",
+    "allowOffline": true
   }
 ]

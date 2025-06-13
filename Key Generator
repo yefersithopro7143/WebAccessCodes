@@ -1,11 +1,5 @@
 [
   {
-    "id": "4e81e67f955835c7",
-    "key": "Free",
-    "expiresAt": "2025-06-12",
-    "allowOffline": true
-  },
-  {
     "id": "fbf433993223d135",
     "key": "Bebito",
     "expiresAt": "2025-06-15",
@@ -51,6 +45,12 @@
     "id": "Hola",
     "key": "CUAGtc6KODbgzDp6sH25",
     "expiresAt": "2025-06-18",
+    "allowOffline": true
+  },
+  {
+    "id": "b429c8ccf8ecb710",
+    "key": "W3SgYsszFIXBrZJ8hzzd",
+    "expiresAt": "2025-06-19",
     "allowOffline": true
   }
 ]

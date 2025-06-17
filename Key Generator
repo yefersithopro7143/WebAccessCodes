@@ -100,5 +100,11 @@
     "key": "x6ol3KOivXs98Al0qZuF",
     "expiresAt": "2025-06-25",
     "allowOffline": true
+  },
+  {
+    "id": "sfds",
+    "key": "Nzw47gREZwZA8SM",
+    "expiresAt": "2025-06-25",
+    "allowOffline": true
   }
 ]

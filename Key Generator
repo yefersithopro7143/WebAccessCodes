@@ -88,5 +88,11 @@
     "key": "G8kmNCHbl4H7ENxhZvc3",
     "expiresAt": "2025-06-23",
     "allowOffline": true
+  },
+  {
+    "id": "asdasd",
+    "key": "7Y6ZW9S609Z3by5G1wC8",
+    "expiresAt": "2025-06-25",
+    "allowOffline": true
   }
 ]

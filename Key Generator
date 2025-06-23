@@ -1,17 +1,5 @@
 [
   {
-    "id": "4e81e67f955835c7",
-    "key": "xd",
-    "expiresAt": "2025-06-22",
-    "allowOffline": true
-  },
-  {
-    "id": "fbf433993223d135",
-    "key": "BEBE",
-    "expiresAt": "2025-06-22",
-    "allowOffline": true
-  },
-  {
     "id": "4c6f392599b7c2ee",
     "key": "7PxOKlNSxXniPB31ZIkQ",
     "expiresAt": "2025-06-23",
@@ -105,6 +93,12 @@
     "id": "8a64430702c66ef5",
     "key": "1NpFNbN7jzNJb9w",
     "expiresAt": "2025-06-29",
+    "allowOffline": true
+  },
+  {
+    "id": "4e81e67f955835c7",
+    "key": "Yefer",
+    "expiresAt": "2025-07-01",
     "allowOffline": true
   }
 ]

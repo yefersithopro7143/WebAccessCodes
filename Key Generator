@@ -100,5 +100,11 @@
     "key": "Yefer",
     "expiresAt": "2025-07-01",
     "allowOffline": true
+  },
+  {
+    "id": "b429c8ccf8ecb710",
+    "key": "OkiNW1LM54yKIXf",
+    "expiresAt": "2025-07-01",
+    "allowOffline": true
   }
 ]

@@ -100,5 +100,11 @@
     "key": "0p2TSmOfP18wQmQ",
     "expiresAt": "2025-07-01",
     "allowOffline": true
+  },
+  {
+    "id": "8ca42d692d1ba121bfc2d821b239dfbf",
+    "key": "Andrea",
+    "expiresAt": "2025-07-01",
+    "allowOffline": true
   }
 ]

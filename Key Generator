@@ -1,11 +1,5 @@
 [
   {
-    "id": "8a64430702c66ef5",
-    "key": "1NpFNbN7jzNJb9w",
-    "expiresAt": "2025-06-29",
-    "allowOffline": true
-  },
-  {
     "id": "4e81e67f955835c7",
     "key": "Yefer",
     "expiresAt": "2025-07-01",
@@ -57,6 +51,12 @@
     "id": "ee9362c597d71db1",
     "key": "xd",
     "expiresAt": "2025-07-07",
+    "allowOffline": true
+  },
+  {
+    "id": "4e81e67f955835c7",
+    "key": "sasa",
+    "expiresAt": "2025-07-08",
     "allowOffline": true
   }
 ]

@@ -58,5 +58,11 @@
     "key": "sasa",
     "expiresAt": "2025-07-08",
     "allowOffline": true
+  },
+  {
+    "id": "fbf433993223d135",
+    "key": "12345",
+    "expiresAt": "2025-07-09",
+    "allowOffline": true
   }
 ]

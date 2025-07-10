@@ -94,5 +94,11 @@
     "key": "Pro",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Jjj",
+    "key": "Hhu",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

@@ -88,5 +88,11 @@
     "key": "NhaRVaNwea0ONyH",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Xdfg",
+    "key": "Pro",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

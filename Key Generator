@@ -1,32 +1,8 @@
 [
   {
-    "id": "ee9362c597d71db1",
-    "key": "xd",
-    "expiresAt": "2025-07-07",
-    "allowOffline": true
-  },
-  {
     "id": "4e81e67f955835c7",
     "key": "sasa",
     "expiresAt": "2025-07-20",
-    "allowOffline": true
-  },
-  {
-    "id": "fbf433993223d135",
-    "key": "12345",
-    "expiresAt": "2025-07-09",
-    "allowOffline": true
-  },
-  {
-    "id": "8a64430702c66ef5",
-    "key": "AODIHwWpoJuaWWt",
-    "expiresAt": "2025-07-09",
-    "allowOffline": true
-  },
-  {
-    "id": "8a64430702c66ef5",
-    "key": "N1bHohYCvW5RgnV",
-    "expiresAt": "2025-07-09",
     "allowOffline": true
   },
   {
@@ -87,6 +63,12 @@
     "id": "ee9362c597d71db1",
     "key": "5dItG4fdK9TmdBX",
     "expiresAt": "2025-07-15",
+    "allowOffline": true
+  },
+  {
+    "id": "8559c730ff65cbaa",
+    "key": "xhhrD3YSX3p5Vz7",
+    "expiresAt": "2025-07-18",
     "allowOffline": true
   }
 ]

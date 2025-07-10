@@ -154,5 +154,11 @@
     "key": "vWi51pOBzQEC6EX",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Rata",
+    "key": "Raaaaaaaaa",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

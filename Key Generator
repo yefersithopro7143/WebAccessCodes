@@ -142,5 +142,11 @@
     "key": "H",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Rata",
+    "key": "2D6kv5Fr6NlmyhP",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

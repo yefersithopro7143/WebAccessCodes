@@ -220,5 +220,11 @@
     "key": "Guyrfg",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Rata",
+    "key": "Vjuhgg",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

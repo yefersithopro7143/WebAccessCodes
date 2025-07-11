@@ -172,5 +172,11 @@
     "key": "Xd",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Rata",
+    "key": "Xd",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

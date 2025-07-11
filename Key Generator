@@ -214,5 +214,11 @@
     "key": "Cgg",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Rata",
+    "key": "Guyrfg",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

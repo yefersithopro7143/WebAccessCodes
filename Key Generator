@@ -316,5 +316,11 @@
     "key": "e2x6pm60cWcr55O",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Ratas",
+    "key": "uag1CEcIxtKhJ9F",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

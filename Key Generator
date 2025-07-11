@@ -250,5 +250,11 @@
     "key": "Xdjj",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Rat",
+    "key": "Vh",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

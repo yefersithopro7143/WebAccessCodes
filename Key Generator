@@ -394,5 +394,11 @@
     "key": "LT66T89mi7jzoaF",
     "expiresAt": "2025-07-19",
     "allowOffline": true
+  },
+  {
+    "id": "Hola",
+    "key": "Xd",
+    "expiresAt": "2025-07-19",
+    "allowOffline": true
   }
 ]

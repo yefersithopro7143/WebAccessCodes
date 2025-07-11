@@ -232,5 +232,11 @@
     "key": "Xd",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Rat",
+    "key": "Cg",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

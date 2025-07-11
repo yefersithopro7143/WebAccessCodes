@@ -184,5 +184,11 @@
     "key": "Hg",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Rata",
+    "key": "Cf",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

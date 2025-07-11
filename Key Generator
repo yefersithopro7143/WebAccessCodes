@@ -280,5 +280,11 @@
     "key": "Hhjuyh",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Rat",
+    "key": "Thju",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

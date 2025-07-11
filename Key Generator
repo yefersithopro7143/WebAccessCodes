@@ -334,5 +334,11 @@
     "key": "3TGiWJHqYx8UOXV",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "Ratasi",
+    "key": "2hKe7xYSOSxRjCn",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

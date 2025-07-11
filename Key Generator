@@ -142,5 +142,11 @@
     "key": "Tgq7cHo0bncrbbl",
     "expiresAt": "2025-07-18",
     "allowOffline": true
+  },
+  {
+    "id": "hola",
+    "key": "aLocCRwbmoY2zFQ",
+    "expiresAt": "2025-07-18",
+    "allowOffline": true
   }
 ]

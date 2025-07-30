@@ -1,53 +1,5 @@
 [
   {
-    "id": "b429c8ccf8ecb710",
-    "key": "JBd0xJxYhMVawjm",
-    "expiresAt": "2025-07-28",
-    "allowOffline": true
-  },
-  {
-    "id": "8559c730ff65cbaa",
-    "key": "PaRjyY4H3BO63zW",
-    "expiresAt": "2025-07-28",
-    "allowOffline": true
-  },
-  {
-    "id": "8559c730ff65cbaa",
-    "key": "t7xUsEcFUijOKzD",
-    "expiresAt": "2025-07-28",
-    "allowOffline": true
-  },
-  {
-    "id": "4e81e67f955835c7",
-    "key": "xd",
-    "expiresAt": "2025-07-28",
-    "allowOffline": true
-  },
-  {
-    "id": "8559c730ff65cbaa",
-    "key": "SJqkn0n19FDR2xY",
-    "expiresAt": "2025-07-28",
-    "allowOffline": true
-  },
-  {
-    "id": "8a64430702c66ef5",
-    "key": "WdwK3R8gxbo5V4m",
-    "expiresAt": "2025-07-29",
-    "allowOffline": true
-  },
-  {
-    "id": "8a64430702c66ef5",
-    "key": "GOJnnt5jeEdS7Xp",
-    "expiresAt": "2025-07-29",
-    "allowOffline": true
-  },
-  {
-    "id": "4c6f392599b7c2ee",
-    "key": "l8NhA8vtdWASeGZ",
-    "expiresAt": "2025-07-29",
-    "allowOffline": true
-  },
-  {
     "id": "ee9362c597d71db1",
     "key": "By9BRQTH8gdTD8D",
     "expiresAt": "2025-07-30",
@@ -57,6 +9,12 @@
     "id": "4e81e67f955835c7",
     "key": "Xd",
     "expiresAt": "2025-08-05",
+    "allowOffline": true
+  },
+  {
+    "id": "b429c8ccf8ecb710",
+    "key": "wU2KCZkxOnoRVtG",
+    "expiresAt": "2025-08-07",
     "allowOffline": true
   }
 ]

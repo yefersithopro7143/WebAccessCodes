@@ -58,5 +58,11 @@
     "key": "oIWR32vYvNvTfPU",
     "expiresAt": "2025-08-14",
     "allowOffline": true
+  },
+  {
+    "id": "4e81e67f955835c7",
+    "key": "Hola",
+    "expiresAt": "2025-08-14",
+    "allowOffline": true
   }
 ]

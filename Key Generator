@@ -1,29 +1,5 @@
 [
   {
-    "id": "8559c730ff65cbaa",
-    "key": "x2vUmINKu8Rwq0w",
-    "expiresAt": "2025-08-08",
-    "allowOffline": true
-  },
-  {
-    "id": "8559c730ff65cbaa",
-    "key": "tfrOPvYzKvlQBh2",
-    "expiresAt": "2025-08-08",
-    "allowOffline": true
-  },
-  {
-    "id": "4c6f392599b7c2ee",
-    "key": "Xfqav0745zV6EwU",
-    "expiresAt": "2025-08-08",
-    "allowOffline": true
-  },
-  {
-    "id": "4c6f392599b7c2ee",
-    "key": "ZRaLlRFTVxh1JpA",
-    "expiresAt": "2025-08-08",
-    "allowOffline": true
-  },
-  {
     "id": "ee9362c597d71db1",
     "key": "RJyLrRtjT1SOc52",
     "expiresAt": "2025-08-10",
@@ -63,6 +39,12 @@
     "id": "4c6f392599b7c2ee",
     "key": "bqgq4DcNFRGfRul",
     "expiresAt": "2025-08-16",
+    "allowOffline": true
+  },
+  {
+    "id": "ee9362c597d71db1",
+    "key": "Sk86QADRTzexP6L",
+    "expiresAt": "2025-08-18",
     "allowOffline": true
   }
 ]

@@ -1,11 +1,5 @@
 [
   {
-    "id": "ee9362c597d71db1",
-    "key": "RJyLrRtjT1SOc52",
-    "expiresAt": "2025-08-10",
-    "allowOffline": true
-  },
-  {
     "id": "8559c730ff65cbaa",
     "key": "OiP1f5VPKKK83Rc",
     "expiresAt": "2025-08-13",
@@ -45,6 +39,12 @@
     "id": "ee9362c597d71db1",
     "key": "Sk86QADRTzexP6L",
     "expiresAt": "2025-08-18",
+    "allowOffline": true
+  },
+  {
+    "id": "8559c730ff65cbaa",
+    "key": "p9eMn1Olxsa3qVw",
+    "expiresAt": "2025-08-21",
     "allowOffline": true
   }
 ]

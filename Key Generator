@@ -52,5 +52,11 @@
     "key": "oUPmV5QKWtrcd3O",
     "expiresAt": "2025-09-03",
     "allowOffline": true
+  },
+  {
+    "id": "xds",
+    "key": "rqYTKLbuUUk5DfP",
+    "expiresAt": "2025-09-03",
+    "allowOffline": true
   }
 ]

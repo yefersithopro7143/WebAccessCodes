@@ -76,5 +76,11 @@
     "key": "aaa",
     "expiresAt": "2025-09-03",
     "allowOffline": true
+  },
+  {
+    "id": "hola",
+    "key": "Vqf0jFhTUPEjmn9",
+    "expiresAt": "2025-09-03",
+    "allowOffline": true
   }
 ]

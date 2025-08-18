@@ -1,0 +1,109 @@
+{
+  "aplicaciones": [
+    {
+      "id": 1,
+      "nombre": "ChatOn",
+      "imagen": "https://i.top4top.io/p_34117y0v21.png",
+      "estado": "No-Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/ChatOn_1.71.603-652.apk"
+    },
+    {
+      "id": 2,
+      "nombre": "Spotify",
+      "imagen": "https://j.top4top.io/p_31678q9hx0.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Spotify.apk"
+    },
+    {
+      "id": 3,
+      "nombre": "Snaptube",
+      "imagen": "https://a.top4top.io/p_3167cmh3s1.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Snaptube.apk"
+    },
+    {
+      "id": 4,
+      "nombre": "Truecaller",
+      "imagen": "https://e.top4top.io/p_3171hwaua2.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Truecaller.apk"
+    },
+    {
+      "id": 5,
+      "nombre": "YT Premium",
+      "imagen": "https://j.top4top.io/p_3296ddenq5.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YT.Premium.zip"
+    },
+    {
+      "id": 6,
+      "nombre": "Photomath",
+      "imagen": "https://l.top4top.io/p_318216did1.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Photomath.apk"
+    },
+    {
+      "id": 7,
+      "nombre": "iLovePDF",
+      "imagen": "https://k.top4top.io/p_3182n3sl10.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/iLovePDF.apk"
+    },
+    {
+      "id": 8,
+      "nombre": "MagisTV",
+      "imagen": "https://h.top4top.io/p_32146zy8m1.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/MAGIS.apk"
+    },
+    {
+      "id": 9,
+      "nombre": "ChatBox IA",
+      "imagen": "https://h.top4top.io/p_3411ex4g10.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/ChatBox.IA.apk"
+    },
+    {
+      "id": 10,
+      "nombre": "Diccionario",
+      "imagen": "https://l.top4top.io/p_3438b5q340.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Diccionario.apk"
+    },
+    {
+      "id": 11,
+      "nombre": "Loora",
+      "imagen": "https://e.top4top.io/p_3427drv180.png",
+      "estado": "No-Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Loora_2.5.10.apk"
+    },
+    {
+      "id": 12,
+      "nombre": "AI Chat",
+      "imagen": "https://a.top4top.io/p_344891sym0.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/AI.Chat.apk"
+    },
+    {
+      "id": 13,
+      "nombre": "xxxxxxx",
+      "imagen": "https://e.top4top.io/p_325877y9v1.jpg",
+      "estado": "No-Disponible",
+      "enlace": "xd"
+    },
+    {
+      "id": 14,
+      "nombre": "xxxxxxx",
+      "imagen": "https://e.top4top.io/p_325877y9v1.jpg",
+      "estado": "No-Disponible",
+      "enlace": "xd"
+    },
+    {
+      "id": 15,
+      "nombre": "xxxxxxx",
+      "imagen": "https://e.top4top.io/p_325877y9v1.jpg",
+      "estado": "No-Disponible",
+      "enlace": "xd"
+    }
+  ]
+}

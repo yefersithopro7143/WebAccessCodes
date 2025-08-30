@@ -1,12 +1,6 @@
 [
   {
     "id": "ee9362c597d71db1",
-    "key": "qMHb3gkE35DOsjK",
-    "expiresAt": "2025-08-25",
-    "allowOffline": true
-  },
-  {
-    "id": "ee9362c597d71db1",
     "key": "0HsiuQYTFG6qELi",
     "expiresAt": "2025-09-03",
     "allowOffline": true
@@ -33,12 +27,6 @@
     "id": "xds",
     "key": "po0Xpm3QwsdAPfq",
     "expiresAt": "2025-09-03",
-    "allowOffline": true
-  },
-  {
-    "id": "xds",
-    "key": "gHphBDiQnMc4ZsX",
-    "expiresAt": "2025-08-26",
     "allowOffline": true
   },
   {
@@ -69,6 +57,12 @@
     "id": "8559c730ff65cbaa",
     "key": "aZ4uaazbJWh70Uh",
     "expiresAt": "2025-09-10",
+    "allowOffline": true
+  },
+  {
+    "id": "ee9362c597d1db1",
+    "key": "awz4JXKcSs4AN9D",
+    "expiresAt": "2025-09-15",
     "allowOffline": true
   }
 ]

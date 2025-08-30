@@ -92,14 +92,31 @@
     showProtectionAlert("🚫 Arrastre deshabilitado");
   });
 
-  // Pulsación larga en móviles
+  // --- MODIFICADO: Pulsación larga en móviles con detección de scroll ---
   let touchTimer;
-  document.addEventListener("touchstart", () => {
+  let startY = 0;
+  let moved = false;
+  document.addEventListener("touchstart", (e) => {
+    moved = false;
+    startY = e.touches[0].clientY;
     touchTimer = setTimeout(() => {
-      showProtectionAlert("🚫 Copia en móviles bloqueada");
+      if (!moved) {
+        showProtectionAlert("🚫 Copia en móviles bloqueada");
+      }
     }, 550);
   });
-  document.addEventListener("touchend", () => clearTimeout(touchTimer));
+
+  document.addEventListener("touchmove", (e) => {
+    let currentY = e.touches[0].clientY;
+    if (Math.abs(currentY - startY) > 10) {
+      moved = true;
+      clearTimeout(touchTimer);
+    }
+  });
+  document.addEventListener("touchend", () => {
+    clearTimeout(touchTimer);
+  });
+  // --- FIN MODIFICADO ---
 
   // Detección de DevTools
   setInterval(() => {

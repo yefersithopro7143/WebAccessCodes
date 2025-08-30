@@ -1,9 +1,9 @@
-// security.js - Código unificado de protección avanzada con estilo profesional
+// security.js - Protección avanzada mejorada con overlay y mensajes centrados
 
 (function() {
   // Inyectar CSS dinámicamente
   const css = `
-    /* Fondo oscuro que cubre toda la pantalla para resaltar el mensaje */
+    /* Overlay oscuro que bloquea interacción y scroll */
     .protected-overlay {
       position: fixed;
       top: 0; left: 0; right: 0; bottom: 0;
@@ -19,23 +19,23 @@
       pointer-events: auto;
     }
 
-    /* Contenedor del mensaje en la parte superior */
+    /* Contenedor del mensaje centrado */
     .protected-alert {
       position: fixed;
-      top: 20px;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%) translateY(-20px);
+      transform: translate(-50%, -50%) scale(0.9);
       background: linear-gradient(135deg, #1a1a1a, #111111);
       color: #ffd633;
-      padding: 12px 24px;
+      padding: 16px 32px;
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      font-weight: 600;
-      font-size: 14px;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(255, 214, 51, 0.4);
+      font-weight: 700;
+      font-size: 16px;
+      border-radius: 14px;
+      box-shadow: 0 10px 30px rgba(255, 214, 51, 0.45);
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 12px;
       max-width: 90%;
       max-width: clamp(280px, 40vw, 480px);
       opacity: 0;
@@ -47,21 +47,21 @@
     .protected-alert.show {
       opacity: 1;
       pointer-events: auto;
-      transform: translateX(-50%) translateY(0);
+      transform: translate(-50%, -50%) scale(1);
     }
     .protected-alert.hide {
       opacity: 0;
-      transform: translateX(-50%) translateY(-20px);
+      transform: translate(-50%, -50%) scale(0.9);
       pointer-events: none;
     }
 
     /* Icono de advertencia */
     .protected-alert svg {
-      width: 20px;
-      height: 20px;
+      width: 22px;
+      height: 22px;
       flex-shrink: 0;
       fill: #ffd633;
-      filter: drop-shadow(0 0 2px #ffd633aa);
+      filter: drop-shadow(0 0 3px #ffd633cc);
       animation: pulse 2.5s infinite ease-in-out;
     }
 
@@ -75,13 +75,22 @@
   style.textContent = css;
   document.head.appendChild(style);
 
-  // Crear overlay oscuro para resaltar el mensaje
+  // Crear overlay oscuro para bloquear interacción y scroll
   let overlay = document.createElement('div');
   overlay.className = 'protected-overlay';
   document.body.appendChild(overlay);
 
-  // Función para mostrar alerta profesional
-  function showProtectionAlert(message = "⚠️ Seguridad Avanzada Activada") {
+  // Función para bloquear scroll cuando overlay está activo
+  function toggleBodyScroll(block) {
+    if (block) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+  }
+
+  // Función para mostrar alerta profesional y centrada
+  function showProtectionAlert(message = "⚠️ Seguridad") {
     // Eliminar alerta previa si existe
     let oldAlert = document.querySelector(".protected-alert");
     if (oldAlert) {
@@ -89,12 +98,15 @@
       setTimeout(() => oldAlert.remove(), 350);
     }
 
-    // Activar overlay
+    // Activar overlay y bloquear scroll
     overlay.classList.add('active');
+    toggleBodyScroll(true);
 
     // Crear nuevo mensaje
     const alert = document.createElement("div");
     alert.className = "protected-alert";
+    alert.setAttribute('role', 'alert');
+    alert.setAttribute('aria-live', 'assertive');
     alert.innerHTML = `
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false">
         <path d="M12 2L1 21h22L12 2zM12 16a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm-1-5h2V7h-2v4z"/>
@@ -107,16 +119,20 @@
     void alert.offsetWidth;
     alert.classList.add("show");
 
-    // Duración extendida: 3.5 segundos visible + 0.35s fade out
+    // Duración: 3.5 segundos visible + 0.35s fade out
     setTimeout(() => {
       alert.classList.remove("show");
       alert.classList.add("hide");
       overlay.classList.remove('active');
+      toggleBodyScroll(false);
       setTimeout(() => alert.remove(), 350);
     }, 3500);
   }
 
-  // Bloqueo de teclas peligrosas
+  // Detectar si es dispositivo móvil (simplificado)
+  const isMobile = /Mobi|Android|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+  // Bloqueo de teclas peligrosas (PC y móviles)
   document.addEventListener("keydown", (e) => {
     if (
       e.key === "F12" ||
@@ -124,61 +140,42 @@
       (e.ctrlKey && ["u","s","p","a","c","x","v"].includes(e.key.toLowerCase()))
     ) {
       e.preventDefault();
-      showProtectionAlert("🚫 Acción bloqueada - Seguridad Avanzada");
+      showProtectionAlert("Acción bloqueada");
     }
   });
 
-  // Bloquear clic derecho
-  document.addEventListener("contextmenu", (e) => {
-    e.preventDefault();
-    showProtectionAlert("🚫 Clic derecho deshabilitado");
-  });
+  // Bloquear clic derecho solo en PC
+  if (!isMobile) {
+    document.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+      showProtectionAlert("Clic derecho bloqueado");
+    });
+  }
 
-  // Bloquear selección (excepto en .allow-copy)
+  // Bloquear selección de texto (excepto en .allow-copy) en PC y móviles
   document.addEventListener("selectstart", (e) => {
     if (!e.target.classList.contains("allow-copy")) {
       e.preventDefault();
-      showProtectionAlert("🚫 Protección de contenido activa");
+      showProtectionAlert("Selección bloqueada");
     }
   });
 
-  // Bloquear arrastre
+  // Bloquear arrastre en todos los dispositivos
   document.addEventListener("dragstart", (e) => {
     e.preventDefault();
-    showProtectionAlert("🚫 Arrastre deshabilitado");
+    showProtectionAlert("Arrastre bloqueado");
   });
 
-  // Pulsación larga en móviles con detección de scroll
-  let touchTimer;
-  let startY = 0;
-  let moved = false;
-  document.addEventListener("touchstart", (e) => {
-    moved = false;
-    startY = e.touches[0].clientY;
-    touchTimer = setTimeout(() => {
-      if (!moved) {
-        showProtectionAlert("🚫 ActiCopy activado - Copia bloqueada");
-      }
-    }, 600);
-  });
-
-  document.addEventListener("touchmove", (e) => {
-    let currentY = e.touches[0].clientY;
-    if (Math.abs(currentY - startY) > 10) {
-      moved = true;
-      clearTimeout(touchTimer);
-    }
-  });
-  document.addEventListener("touchend", () => {
-    clearTimeout(touchTimer);
-  });
+  // En móviles, eliminar pulsación larga para evitar conflicto con selección
+  // Solo se usa bloqueo de selección para evitar "locuras"
+  // Por eso no se implementa pulsación larga aquí
 
   // Detección de DevTools
   setInterval(() => {
     let start = performance.now();
     debugger;
     if (performance.now() - start > 100) {
-      showProtectionAlert("🚨 Inspección detectada - Seguridad reforzada");
+      showProtectionAlert("Inspección detectada");
     }
   }, 1800);
 

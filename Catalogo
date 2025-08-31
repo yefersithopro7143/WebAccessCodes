@@ -139,13 +139,6 @@
       "imagen": "https://dddd.com",
       "estado": "Disponible",
       "enlace": "https://dddd.com"
-    },
-    {
-      "id": 23,
-      "nombre": "Bot",
-      "imagen": "https://tienda-premium.blogspot.com/p/subir-apks.html?auth=ok&m=1",
-      "estado": "No-Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/bot.apk"
     }
   ]
 }

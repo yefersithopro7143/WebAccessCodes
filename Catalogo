@@ -113,10 +113,10 @@
       "enlace": "https://xd.com"
     },
     {
-      "id": 19,
+      "id": "19",
       "nombre": "Xd",
       "imagen": "https://www.tiendapremiums.store/p/subir-apks.html?auth=ok&m=1",
-      "estado": "No-Disponible",
+      "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/AI.Chat.apk"
     }
   ]

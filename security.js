@@ -31,8 +31,8 @@
     }
     
     @keyframes shimmer {
-      0%, 100% { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
-      50% { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+      0%, 100% { background: linear-gradient(135deg, #6c5ce7 0%, #a29bfe 100%); }
+      50% { background: linear-gradient(135deg, #fd79a8 0%, #e84393 100%); }
     }
     
     .protected-alert.show {
@@ -41,34 +41,34 @@
     }
     
     .protected-alert.danger {
-      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+      background: linear-gradient(135deg, #ff3838 0%, #ff6b35 100%);
       animation: pulse-red 1.5s infinite;
     }
     
     .protected-alert.warning {
-      background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
-      color: #2d3436;
+      background: linear-gradient(135deg, #ffb347 0%, #ff8c42 100%);
+      color: #ffffff;
       animation: pulse-orange 1.5s infinite;
     }
     
     .protected-alert.info {
-      background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+      background: linear-gradient(135deg, #00cec9 0%, #55a3ff 100%);
       animation: pulse-blue 1.5s infinite;
     }
     
     @keyframes pulse-red {
-      0%, 100% { box-shadow: 0 8px 32px rgba(255, 107, 107, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15); }
-      50% { box-shadow: 0 12px 40px rgba(255, 107, 107, 0.6), 0 6px 20px rgba(255, 107, 107, 0.3); }
+      0%, 100% { box-shadow: 0 8px 32px rgba(255, 56, 56, 0.5), 0 4px 12px rgba(0, 0, 0, 0.2); }
+      50% { box-shadow: 0 12px 40px rgba(255, 107, 53, 0.7), 0 6px 20px rgba(255, 107, 53, 0.4); }
     }
     
     @keyframes pulse-orange {
-      0%, 100% { box-shadow: 0 8px 32px rgba(255, 234, 167, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15); }
-      50% { box-shadow: 0 12px 40px rgba(250, 177, 160, 0.6), 0 6px 20px rgba(250, 177, 160, 0.3); }
+      0%, 100% { box-shadow: 0 8px 32px rgba(255, 179, 71, 0.5), 0 4px 12px rgba(0, 0, 0, 0.2); }
+      50% { box-shadow: 0 12px 40px rgba(255, 140, 66, 0.7), 0 6px 20px rgba(255, 140, 66, 0.4); }
     }
     
     @keyframes pulse-blue {
-      0%, 100% { box-shadow: 0 8px 32px rgba(116, 185, 255, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15); }
-      50% { box-shadow: 0 12px 40px rgba(116, 185, 255, 0.6), 0 6px 20px rgba(116, 185, 255, 0.3); }
+      0%, 100% { box-shadow: 0 8px 32px rgba(0, 206, 201, 0.5), 0 4px 12px rgba(0, 0, 0, 0.2); }
+      50% { box-shadow: 0 12px 40px rgba(85, 163, 255, 0.7), 0 6px 20px rgba(85, 163, 255, 0.4); }
     }
     
     .protected-alert svg {
@@ -80,8 +80,9 @@
     }
     
     .protected-alert .alert-text {
-      letter-spacing: 0.3px;
-      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+      letter-spacing: 0.4px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
+      font-weight: 600;
     }
     
     .protected-alert::before {
@@ -199,7 +200,7 @@
     ) {
       e.preventDefault();
       e.stopPropagation();
-      showProtectionAlert("🚫 Acción bloqueada", "danger");
+      showProtectionAlert("Acción bloqueada", "danger");
     }
   }, true);
 
@@ -207,7 +208,7 @@
   document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
     e.stopPropagation();
-    showProtectionAlert("🚫 Clic derecho no permitido", "danger");
+    showProtectionAlert("Clic derecho no permitido", "danger");
   }, true);
 
   // Bloquear selección mejorado
@@ -215,7 +216,7 @@
     if (!e.target.closest(".allow-copy")) {
       e.preventDefault();
       e.stopPropagation();
-      showProtectionAlert("🚫 Texto protegido", "warning");
+      showProtectionAlert("Texto protegido", "warning");
     }
   }, true);
 
@@ -224,7 +225,7 @@
     if (!e.target.closest(".allow-copy")) {
       e.preventDefault();
       e.stopPropagation();
-      showProtectionAlert("🚫 Arrastre deshabilitado", "warning");
+      showProtectionAlert("Arrastre deshabilitado", "warning");
     }
   }, true);
 
@@ -252,7 +253,7 @@
     touchTimer = setTimeout(() => {
       // Solo mostrar alerta si NO estamos haciendo scroll Y el touch sigue activo
       if (!scrolling && touchStarted) {
-        showProtectionAlert("🚫 Selección bloqueada", "warning");
+        showProtectionAlert("Selección bloqueada", "warning");
       }
     }, 800); // Aumentamos el tiempo para evitar falsos positivos
   }, { passive: true });
@@ -271,7 +272,7 @@
   // Bloquear gestos de zoom
   document.addEventListener("gesturestart", (e) => {
     e.preventDefault();
-    showProtectionAlert("🚫 Zoom bloqueado", "info");
+    showProtectionAlert("Zoom bloqueado", "info");
   });
 
   // Bloquear doble tap para zoom
@@ -281,7 +282,7 @@
     const tapLength = currentTime - lastTap;
     if (tapLength < 500 && tapLength > 0) {
       e.preventDefault();
-      showProtectionAlert("🚫 Zoom bloqueado", "info");
+      showProtectionAlert("Zoom bloqueado", "info");
     }
     lastTap = currentTime;
   });
@@ -306,21 +307,21 @@
     if (!e.target.closest(".allow-copy")) {
       e.preventDefault();
       e.clipboardData.setData("text/plain", "");
-      showProtectionAlert("🚫 Copia bloqueada", "warning");
+      showProtectionAlert("Copia bloqueada", "warning");
     }
   });
 
   document.addEventListener("paste", (e) => {
     if (!e.target.closest(".allow-copy")) {
       e.preventDefault();
-      showProtectionAlert("🚫 Pegado bloqueado", "warning");
+      showProtectionAlert("Pegado bloqueado", "warning");
     }
   });
 
   // Protección contra extensiones de captura
   document.addEventListener("beforeprint", (e) => {
     e.preventDefault();
-    showProtectionAlert("🚫 Impresión bloqueada", "info");
+    showProtectionAlert("Impresión bloqueada", "info");
   });
 
   // Limpiar alertas al cambiar de página

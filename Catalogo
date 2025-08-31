@@ -106,10 +106,10 @@
       "enlace": "https://xd.com"
     },
     {
-      "id": 18,
+      "id": "18",
       "nombre": "Andrea",
       "imagen": "https://e.top4top.io/p_325877y9v1.jpg",
-      "estado": "Disponible",
+      "estado": "No-Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Andrea.apk"
     }
   ]

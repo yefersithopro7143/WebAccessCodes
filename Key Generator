@@ -70,5 +70,11 @@
     "key": "ZZk3VX1keDkDo4w",
     "expiresAt": "2025-09-15",
     "allowOffline": true
+  },
+  {
+    "id": "Hola",
+    "key": "Xd",
+    "expiresAt": "2025-09-15",
+    "allowOffline": true
   }
 ]

@@ -4,33 +4,102 @@
   const css = `
     .protected-alert {
       position: fixed;
-      bottom: 15px;
+      top: 20px;
       left: 50%;
-      transform: translateX(-50%) scale(0.9);
-      background: rgba(0, 0, 0, 0.85);
+      transform: translateX(-50%) translateY(-100px) scale(0.8);
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
       color: #fff;
-      padding: 8px 14px;
+      padding: 10px 16px;
       font-size: 13px;
-      border-radius: 8px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 500;
+      border-radius: 25px;
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       opacity: 0;
       pointer-events: none;
-      transition: opacity 0.25s ease, transform 0.25s ease;
+      transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
       z-index: 99999;
       max-width: 90%;
       text-align: center;
+      box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3),
+                  0 4px 12px rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      animation: shimmer 2s infinite;
     }
+    
+    @keyframes shimmer {
+      0%, 100% { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+      50% { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+    }
+    
     .protected-alert.show {
       opacity: 1;
-      transform: translateX(-50%) scale(1);
+      transform: translateX(-50%) translateY(0) scale(1);
     }
+    
+    .protected-alert.danger {
+      background: linear-gradient(135deg, #ff6b6b 0%, #ee5a52 100%);
+      animation: pulse-red 1.5s infinite;
+    }
+    
+    .protected-alert.warning {
+      background: linear-gradient(135deg, #ffeaa7 0%, #fab1a0 100%);
+      color: #2d3436;
+      animation: pulse-orange 1.5s infinite;
+    }
+    
+    .protected-alert.info {
+      background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+      animation: pulse-blue 1.5s infinite;
+    }
+    
+    @keyframes pulse-red {
+      0%, 100% { box-shadow: 0 8px 32px rgba(255, 107, 107, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15); }
+      50% { box-shadow: 0 12px 40px rgba(255, 107, 107, 0.6), 0 6px 20px rgba(255, 107, 107, 0.3); }
+    }
+    
+    @keyframes pulse-orange {
+      0%, 100% { box-shadow: 0 8px 32px rgba(255, 234, 167, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15); }
+      50% { box-shadow: 0 12px 40px rgba(250, 177, 160, 0.6), 0 6px 20px rgba(250, 177, 160, 0.3); }
+    }
+    
+    @keyframes pulse-blue {
+      0%, 100% { box-shadow: 0 8px 32px rgba(116, 185, 255, 0.4), 0 4px 12px rgba(0, 0, 0, 0.15); }
+      50% { box-shadow: 0 12px 40px rgba(116, 185, 255, 0.6), 0 6px 20px rgba(116, 185, 255, 0.3); }
+    }
+    
     .protected-alert svg {
-      width: 18px;
-      height: 18px;
-      fill: #ffcc00;
+      width: 16px;
+      height: 16px;
+      fill: currentColor;
       flex-shrink: 0;
+      filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.2));
+    }
+    
+    .protected-alert .alert-text {
+      letter-spacing: 0.3px;
+      text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    }
+    
+    .protected-alert::before {
+      content: '';
+      position: absolute;
+      top: -2px;
+      left: -2px;
+      right: -2px;
+      bottom: -2px;
+      background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+      border-radius: 27px;
+      opacity: 0;
+      animation: border-glow 2s infinite;
+    }
+    
+    @keyframes border-glow {
+      0%, 100% { opacity: 0; transform: rotate(0deg); }
+      50% { opacity: 1; transform: rotate(180deg); }
     }
     
     /* BLOQUEO COMPLETO DE SELECCIÓN */
@@ -70,8 +139,8 @@
   let lastAlertTime = 0;
   let alertCooldown = 1500; // 1.5 segundos entre alertas
   
-  // Función para mostrar alerta compacta (con control de spam)
-  function showProtectionAlert(message = "⚠️ Seguridad activa") {
+  // Función para mostrar alerta compacta (con control de spam y estilos dinámicos)
+  function showProtectionAlert(message = "⚠️ Seguridad activa", type = "default") {
     const currentTime = Date.now();
     if (currentTime - lastAlertTime < alertCooldown) {
       return; // Evitar spam de alertas
@@ -82,20 +151,43 @@
     if (oldAlert) oldAlert.remove();
     
     const alert = document.createElement("div");
-    alert.className = "protected-alert";
+    alert.className = `protected-alert ${type}`;
+    
+    // Diferentes iconos según el tipo de alerta
+    let iconSVG = '';
+    switch(type) {
+      case 'danger':
+        iconSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+        </svg>`;
+        break;
+      case 'warning':
+        iconSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M1 21h22L12 2 1 21zm12-3h-2v-2h2v2zm0-4h-2v-4h2v4z"/>
+        </svg>`;
+        break;
+      case 'info':
+        iconSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+        </svg>`;
+        break;
+      default:
+        iconSVG = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+          <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z"/>
+        </svg>`;
+    }
+    
     alert.innerHTML = `
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-        <path d="M12 2L1 21h22L12 2zM12 16a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm-1-5h2V7h-2v4z"/>
-      </svg>
-      <span>${message}</span>
+      ${iconSVG}
+      <span class="alert-text">${message}</span>
     `;
     
     document.body.appendChild(alert);
-    setTimeout(() => alert.classList.add("show"), 30);
+    setTimeout(() => alert.classList.add("show"), 50);
     setTimeout(() => {
       alert.classList.remove("show");
-      setTimeout(() => alert.remove(), 250);
-    }, 2200);
+      setTimeout(() => alert.remove(), 400);
+    }, 2500);
   }
 
   // Bloqueo de teclas peligrosas
@@ -107,7 +199,7 @@
     ) {
       e.preventDefault();
       e.stopPropagation();
-      showProtectionAlert("🚫 Acción bloqueada");
+      showProtectionAlert("🚫 Acción bloqueada", "danger");
     }
   }, true);
 
@@ -115,7 +207,7 @@
   document.addEventListener("contextmenu", (e) => {
     e.preventDefault();
     e.stopPropagation();
-    showProtectionAlert("🚫 Clic derecho no permitido");
+    showProtectionAlert("🚫 Clic derecho no permitido", "danger");
   }, true);
 
   // Bloquear selección mejorado
@@ -123,7 +215,7 @@
     if (!e.target.closest(".allow-copy")) {
       e.preventDefault();
       e.stopPropagation();
-      showProtectionAlert("🚫 Texto protegido");
+      showProtectionAlert("🚫 Texto protegido", "warning");
     }
   }, true);
 
@@ -132,7 +224,7 @@
     if (!e.target.closest(".allow-copy")) {
       e.preventDefault();
       e.stopPropagation();
-      showProtectionAlert("🚫 Arrastre deshabilitado");
+      showProtectionAlert("🚫 Arrastre deshabilitado", "warning");
     }
   }, true);
 
@@ -160,7 +252,7 @@
     touchTimer = setTimeout(() => {
       // Solo mostrar alerta si NO estamos haciendo scroll Y el touch sigue activo
       if (!scrolling && touchStarted) {
-        showProtectionAlert("🚫 Selección bloqueada");
+        showProtectionAlert("🚫 Selección bloqueada", "warning");
       }
     }, 800); // Aumentamos el tiempo para evitar falsos positivos
   }, { passive: true });
@@ -179,7 +271,7 @@
   // Bloquear gestos de zoom
   document.addEventListener("gesturestart", (e) => {
     e.preventDefault();
-    showProtectionAlert("🚫 Zoom bloqueado");
+    showProtectionAlert("🚫 Zoom bloqueado", "info");
   });
 
   // Bloquear doble tap para zoom
@@ -189,7 +281,7 @@
     const tapLength = currentTime - lastTap;
     if (tapLength < 500 && tapLength > 0) {
       e.preventDefault();
-      showProtectionAlert("🚫 Zoom bloqueado");
+      showProtectionAlert("🚫 Zoom bloqueado", "info");
     }
     lastTap = currentTime;
   });
@@ -203,7 +295,7 @@
     
     if (timeTaken > 100 && !devToolsOpen) {
       devToolsOpen = true;
-      showProtectionAlert("🚨 Inspección detectada");
+      showProtectionAlert("🚨 Inspección detectada", "danger");
     } else if (timeTaken <= 100) {
       devToolsOpen = false;
     }
@@ -214,21 +306,21 @@
     if (!e.target.closest(".allow-copy")) {
       e.preventDefault();
       e.clipboardData.setData("text/plain", "");
-      showProtectionAlert("🚫 Copia bloqueada");
+      showProtectionAlert("🚫 Copia bloqueada", "warning");
     }
   });
 
   document.addEventListener("paste", (e) => {
     if (!e.target.closest(".allow-copy")) {
       e.preventDefault();
-      showProtectionAlert("🚫 Pegado bloqueado");
+      showProtectionAlert("🚫 Pegado bloqueado", "warning");
     }
   });
 
   // Protección contra extensiones de captura
   document.addEventListener("beforeprint", (e) => {
     e.preventDefault();
-    showProtectionAlert("🚫 Impresión bloqueada");
+    showProtectionAlert("🚫 Impresión bloqueada", "info");
   });
 
   // Limpiar alertas al cambiar de página

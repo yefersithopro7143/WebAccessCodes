@@ -1,13 +1,6 @@
 {
   "aplicaciones": [
     {
-      "id": 6,
-      "nombre": "Photomath",
-      "imagen": "https://l.top4top.io/p_318216did1.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Photomath.apk"
-    },
-    {
       "id": 7,
       "nombre": "iLovePDF",
       "imagen": "https://k.top4top.io/p_3182n3sl10.png",

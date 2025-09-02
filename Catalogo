@@ -1,13 +1,6 @@
 {
   "aplicaciones": [
     {
-      "id": 11,
-      "nombre": "Loora",
-      "imagen": "https://e.top4top.io/p_3427drv180.png",
-      "estado": "No-Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Loora_2.5.10.apk"
-    },
-    {
       "id": 12,
       "nombre": "AI Chat",
       "imagen": "https://a.top4top.io/p_344891sym0.png",

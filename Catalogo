@@ -1,13 +1,6 @@
 {
   "aplicaciones": [
     {
-      "id": "2",
-      "nombre": "Spotify",
-      "imagen": "https://j.top4top.io/p_31678q9hx0.png",
-      "estado": "No-Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Spotify.apk"
-    },
-    {
       "id": 3,
       "nombre": "Snaptube",
       "imagen": "https://a.top4top.io/p_3167cmh3s1.png",

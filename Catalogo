@@ -1,13 +1,6 @@
 {
   "aplicaciones": [
     {
-      "id": 9,
-      "nombre": "ChatBox IA",
-      "imagen": "https://h.top4top.io/p_3411ex4g10.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/ChatBox.IA.apk"
-    },
-    {
       "id": 10,
       "nombre": "Diccionario",
       "imagen": "https://l.top4top.io/p_3438b5q340.png",

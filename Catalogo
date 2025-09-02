@@ -1,13 +1,6 @@
 {
   "aplicaciones": [
     {
-      "id": 3,
-      "nombre": "Snaptube",
-      "imagen": "https://a.top4top.io/p_3167cmh3s1.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Snaptube.apk"
-    },
-    {
       "id": 4,
       "nombre": "Truecaller",
       "imagen": "https://e.top4top.io/p_3171hwaua2.png",

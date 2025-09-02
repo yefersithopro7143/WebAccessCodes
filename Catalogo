@@ -1,13 +1,6 @@
 {
   "aplicaciones": [
     {
-      "id": 4,
-      "nombre": "Truecaller",
-      "imagen": "https://e.top4top.io/p_3171hwaua2.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Truecaller.apk"
-    },
-    {
       "id": 5,
       "nombre": "YT Premium",
       "imagen": "https://j.top4top.io/p_3296ddenq5.png",

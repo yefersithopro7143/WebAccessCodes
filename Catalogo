@@ -1,13 +1,6 @@
 {
   "aplicaciones": [
     {
-      "id": 13,
-      "nombre": "xxxxxxx",
-      "imagen": "https://e.top4top.io/p_325877y9v1.jpg",
-      "estado": "No-Disponible",
-      "enlace": "xd"
-    },
-    {
       "id": 14,
       "nombre": "AI Chat",
       "imagen": "https://b.top4top.io/p_3531qm30n0.png",

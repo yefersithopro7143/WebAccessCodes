@@ -1,13 +1,6 @@
 {
   "aplicaciones": [
     {
-      "id": 7,
-      "nombre": "iLovePDF",
-      "imagen": "https://k.top4top.io/p_3182n3sl10.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/iLovePDF.apk"
-    },
-    {
       "id": 8,
       "nombre": "MagisTV",
       "imagen": "https://h.top4top.io/p_32146zy8m1.png",

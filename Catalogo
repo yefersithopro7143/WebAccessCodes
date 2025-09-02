@@ -1,13 +1,6 @@
 {
   "aplicaciones": [
     {
-      "id": 5,
-      "nombre": "YT Premium",
-      "imagen": "https://j.top4top.io/p_3296ddenq5.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YT.Premium.zip"
-    },
-    {
       "id": 6,
       "nombre": "Photomath",
       "imagen": "https://l.top4top.io/p_318216did1.png",

@@ -53,6 +53,7 @@
     
     .protected-alert.info {
       background: linear-gradient(135deg, #00cec9 0%, #55a3ff 100%);
+      color: #ffffff !important;
       animation: pulse-blue 1.5s infinite;
     }
     

@@ -280,7 +280,7 @@
   document.addEventListener("touchend", (e) => {
     const currentTime = new Date().getTime();
     const tapLength = currentTime - lastTap;
-    if (tapLength < 500 && tapLength > 0) {
+    if (tapLength < 250 && tapLength > 0) {
       e.preventDefault();
       showProtectionAlert("Zoom bloqueado", "info");
     }

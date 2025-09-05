@@ -146,6 +146,13 @@
       "imagen": "https://a.top4top.io/p_3535ackg91.png",
       "estado": "No-Disponible",
       "enlace": "https://soon.com"
+    },
+    {
+      "id": 35,
+      "nombre": "Mini Reels",
+      "imagen": "https://b.top4top.io/p_3535bfcko2.png",
+      "estado": "No-Disponible",
+      "enlace": "https://soon.com"
     }
   ]
 }

@@ -64,5 +64,11 @@
     "key": "mrNMuWQRc4lJKLq",
     "expiresAt": "2025-09-24",
     "allowOffline": true
+  },
+  {
+    "id": "b429c8ccf8ecb710",
+    "key": "kBZLhYw20uy4U3a",
+    "expiresAt": "2025-09-24",
+    "allowOffline": true
   }
 ]

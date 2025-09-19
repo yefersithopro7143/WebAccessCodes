@@ -6,12 +6,6 @@
     "allowOffline": true
   },
   {
-    "id": "8559c730ff65cbaa",
-    "key": "6FGGJGHSzwGvlnd",
-    "expiresAt": "2025-09-18",
-    "allowOffline": true
-  },
-  {
     "id": "fbf433993223d135",
     "key": "WLHjmrCFHq0UdcL",
     "expiresAt": "2025-09-19",
@@ -51,6 +45,12 @@
     "id": "8559c730ff65cbaa",
     "key": "3ixSIflv7vtAMwe",
     "expiresAt": "2025-10-04",
+    "allowOffline": true
+  },
+  {
+    "id": "fbf433993223d135",
+    "key": "d7QZ6GhofK2uhx8",
+    "expiresAt": "2025-10-05",
     "allowOffline": true
   }
 ]

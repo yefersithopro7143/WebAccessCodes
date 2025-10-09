@@ -72,6 +72,13 @@
     },
     {
       "id": 11,
+      "nombre": "Loora",
+      "imagen": "https://e.top4top.io/p_3538mu4ql3.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Loora.apk"
+    },
+    {
+      "id": 12,
       "nombre": "M. Copilot",
       "imagen": "https://b.top4top.io/p_3538smqry0.png",
       "estado": "Disponible",

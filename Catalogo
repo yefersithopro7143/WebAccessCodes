@@ -9,20 +9,13 @@
     },
     {
       "id": 2,
-      "nombre": "DramaNow",
-      "imagen": "https://l.top4top.io/p_35352cgnd0.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/DramaNow.apk"
-    },
-    {
-      "id": 3,
       "nombre": "NetShort",
       "imagen": "https://g.top4top.io/p_3531g5pol5.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/NetShort.apk"
     },
     {
-      "id": 4,
+      "id": 3,
       "nombre": "YT music",
       "imagen": "https://d.top4top.io/p_3531v3gqg4.png",
       "estado": "Disponible",

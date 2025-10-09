@@ -2,146 +2,139 @@
   "aplicaciones": [
     {
       "id": 1,
-      "nombre": "ChatBoxxxx",
-      "imagen": "https://b.top4top.io/p_3531qm30n0.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/AI.Chat.apk"
-    },
-    {
-      "id": 2,
       "nombre": "Copilot",
       "imagen": "https://b.top4top.io/p_3538smqry0.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Copilot.apk"
     },
     {
-      "id": 3,
+      "id": 2,
       "nombre": "DramaNow",
       "imagen": "https://l.top4top.io/p_35352cgnd0.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/DramaNow.apk"
     },
     {
-      "id": 4,
+      "id": 3,
       "nombre": "iLovePDF",
       "imagen": "https://e.top4top.io/p_3531kxozj3.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/iLovePDF.apk"
     },
     {
-      "id": 5,
+      "id": 4,
       "nombre": "MAGIS TV",
       "imagen": "https://f.top4top.io/p_3531oldth4.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/MAGIS.apk"
     },
     {
-      "id": 6,
+      "id": 5,
       "nombre": "NetShort",
       "imagen": "https://g.top4top.io/p_3531g5pol5.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/NetShort.apk"
     },
     {
-      "id": 7,
+      "id": 6,
       "nombre": "Nice Mind",
       "imagen": "https://h.top4top.io/p_3531yo0sk6.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Nice.Mind.apk"
     },
     {
-      "id": 8,
+      "id": 7,
       "nombre": "Photomath ",
       "imagen": "https://i.top4top.io/p_35312f7mv7.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Photomath.apk"
     },
     {
-      "id": 9,
+      "id": 8,
       "nombre": "Popcorn Drama",
       "imagen": "https://c.top4top.io/p_3535nk1wk3.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Popcorn.Drama.apk"
     },
     {
-      "id": 10,
+      "id": 9,
       "nombre": "radreel",
       "imagen": "https://e.top4top.io/p_3533dnniv0.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/radreel.apk"
     },
     {
-      "id": 11,
+      "id": 10,
       "nombre": "ShortPlay",
       "imagen": "https://d.top4top.io/p_3535iycs14.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/ShortPlay.apk"
     },
     {
-      "id": 12,
+      "id": 11,
       "nombre": "Shot Short",
       "imagen": "https://f.top4top.io/p_3533ky4ve1.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Shot.Short.apk"
     },
     {
-      "id": 13,
+      "id": 12,
       "nombre": "Soda Reels",
       "imagen": "https://g.top4top.io/p_3533b7a7t2.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Soda.Reels.apk"
     },
     {
-      "id": 14,
+      "id": 13,
       "nombre": "Super Drama",
       "imagen": "https://h.top4top.io/p_3533jcl3y3.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Super.Drama.apk"
     },
     {
-      "id": 15,
+      "id": 14,
       "nombre": "Temp Mail",
       "imagen": "https://l.top4top.io/p_3531mto0g0.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Temp.Mail.apk"
     },
     {
-      "id": 16,
+      "id": 15,
       "nombre": "TeraBox",
       "imagen": "https://a.top4top.io/p_3531d5uem1.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/TeraBox.apk"
     },
     {
-      "id": 17,
+      "id": 16,
       "nombre": "Touch Shorts",
       "imagen": "https://e.top4top.io/p_35357u0w85.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/TouchShorts.apk"
     },
     {
-      "id": 18,
+      "id": 17,
       "nombre": "Truecaller ",
       "imagen": "https://b.top4top.io/p_3531ie1ti2.png",
       "estado": "No-Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Truecaller.apk"
     },
     {
-      "id": 19,
+      "id": 18,
       "nombre": "YouTube ",
       "imagen": "https://c.top4top.io/p_3531zqxqk3.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YouTube.zip"
     },
     {
-      "id": 20,
+      "id": 19,
       "nombre": "YT music",
       "imagen": "https://d.top4top.io/p_3531v3gqg4.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YT.music.zip"
     },
     {
-      "id": 21,
+      "id": 20,
       "nombre": "Zoo",
       "imagen": "https://b.top4top.io/p_3531qm30n0.png",
       "estado": "Disponible",

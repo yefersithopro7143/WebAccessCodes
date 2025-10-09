@@ -1,13 +1,6 @@
 {
   "aplicaciones": [
     {
-      "id": 16,
-      "nombre": "Diccionario ",
-      "imagen": "https://d.top4top.io/p_35314tmus2.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Diccionario.apk"
-    },
-    {
       "id": 17,
       "nombre": "iLovePDF",
       "imagen": "https://e.top4top.io/p_3531kxozj3.png",

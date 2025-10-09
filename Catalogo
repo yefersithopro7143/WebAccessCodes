@@ -37,6 +37,13 @@
     },
     {
       "id": 6,
+      "nombre": "Duolingo ",
+      "imagen": "https://c.top4top.io/p_3538s3jl71.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Duolingo.apk"
+    },
+    {
+      "id": 7,
       "nombre": "M. Copilot",
       "imagen": "https://b.top4top.io/p_3538smqry0.png",
       "estado": "Disponible",

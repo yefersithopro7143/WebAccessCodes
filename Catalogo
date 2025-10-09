@@ -44,6 +44,13 @@
     },
     {
       "id": 7,
+      "nombre": "English E.",
+      "imagen": "https://d.top4top.io/p_3569f4kxe1.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Elementary.English.apk"
+    },
+    {
+      "id": 8,
       "nombre": "M. Copilot",
       "imagen": "https://b.top4top.io/p_3538smqry0.png",
       "estado": "Disponible",

@@ -37,27 +37,20 @@
     },
     {
       "id": 6,
-      "nombre": "Soda Reels",
-      "imagen": "https://g.top4top.io/p_3533b7a7t2.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Soda.Reels.apk"
-    },
-    {
-      "id": 7,
       "nombre": "Truecaller ",
       "imagen": "https://b.top4top.io/p_3531ie1ti2.png",
       "estado": "No-Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Truecaller.apk"
     },
     {
-      "id": 8,
+      "id": 7,
       "nombre": "YouTube ",
       "imagen": "https://c.top4top.io/p_3531zqxqk3.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YouTube.zip"
     },
     {
-      "id": 9,
+      "id": 8,
       "nombre": "YT music",
       "imagen": "https://d.top4top.io/p_3531v3gqg4.png",
       "estado": "Disponible",

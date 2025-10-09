@@ -44,34 +44,27 @@
     },
     {
       "id": 7,
-      "nombre": "Touch Shorts",
-      "imagen": "https://e.top4top.io/p_35357u0w85.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/TouchShorts.apk"
-    },
-    {
-      "id": 8,
       "nombre": "Truecaller ",
       "imagen": "https://b.top4top.io/p_3531ie1ti2.png",
       "estado": "No-Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Truecaller.apk"
     },
     {
-      "id": 9,
+      "id": 8,
       "nombre": "YouTube ",
       "imagen": "https://c.top4top.io/p_3531zqxqk3.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YouTube.zip"
     },
     {
-      "id": 10,
+      "id": 9,
       "nombre": "YT music",
       "imagen": "https://d.top4top.io/p_3531v3gqg4.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YT.music.zip"
     },
     {
-      "id": 11,
+      "id": 10,
       "nombre": "Zoo",
       "imagen": "https://b.top4top.io/p_3531qm30n0.png",
       "estado": "Disponible",

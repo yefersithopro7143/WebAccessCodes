@@ -232,5 +232,11 @@
     "key": "gzYub4TDZ23ookG",
     "expiresAt": "2025-10-22",
     "allowOffline": true
+  },
+  {
+    "id": "8559c730ff65cbaa",
+    "key": "mrxPqE1pdTzH2cp",
+    "expiresAt": "2025-10-30",
+    "allowOffline": true
   }
 ]

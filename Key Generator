@@ -226,5 +226,11 @@
     "key": "Rata",
     "expiresAt": "2025-10-21",
     "allowOffline": true
+  },
+  {
+    "id": "b429c8ccf8ecb710",
+    "key": "gzYub4TDZ23ookG",
+    "expiresAt": "2025-10-22",
+    "allowOffline": true
   }
 ]

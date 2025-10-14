@@ -3,7 +3,7 @@
     "id": "ee9362c597d71db1",
     "key": "test",
     "expiresAt": "2030-09-15",
-    "allowOffline": true
+    "allowOffline": false
   },
   {
     "id": "8559c730ff65cbaa",

@@ -82,5 +82,11 @@
     "key": "nnTECG4o6rWY4EM",
     "expiresAt": "2025-10-29",
     "allowOffline": true
+  },
+  {
+    "id": "holasbb",
+    "key": "Rjbb1SAbX4vwDzE",
+    "expiresAt": "2025-10-29",
+    "allowOffline": true
   }
 ]

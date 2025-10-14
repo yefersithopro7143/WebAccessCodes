@@ -52,5 +52,11 @@
     "key": "xCNa7SSBmov2H3I",
     "expiresAt": "2025-10-29",
     "allowOffline": true
+  },
+  {
+    "id": "holaax",
+    "key": "MbqA7LIz9vJ6Thc",
+    "expiresAt": "2025-10-29",
+    "allowOffline": true
   }
 ]

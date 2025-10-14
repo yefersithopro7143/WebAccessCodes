@@ -154,5 +154,11 @@
     "key": "mZlZEcobSND7UaB",
     "expiresAt": "2025-10-29",
     "allowOffline": true
+  },
+  {
+    "id": "holgg",
+    "key": "aUEmZyp7A7KfiL0",
+    "expiresAt": "2025-10-29",
+    "allowOffline": true
   }
 ]

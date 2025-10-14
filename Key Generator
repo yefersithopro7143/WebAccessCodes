@@ -3,7 +3,8 @@
     "id": "ee9362c597d71db1",
     "key": "test",
     "expiresAt": "2030-09-15",
-    "allowOffline": yefer
+    "allowOffline": true
+    "name": Yefferzón
   },
   {
     "id": "8559c730ff65cbaa",
@@ -33,7 +34,7 @@
     "id": "4e81e67f955835c7",
     "key": "Baby",
     "expiresAt": "2025-10-14",
-    "allowOffline": yefer
+    "allowOffline": true
   },
   {
     "id": "4e81e67f955835c7",

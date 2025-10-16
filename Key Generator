@@ -226,5 +226,11 @@
     "key": "0OZ3M60n35R00T9",
     "expiresAt": "2025-10-23",
     "allowOffline": true
+  },
+  {
+    "id": "4c6f392599b7c2ee",
+    "key": "EgJr7YORMprRWZO",
+    "expiresAt": "2025-11-01",
+    "allowOffline": true
   }
 ]

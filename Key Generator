@@ -166,5 +166,11 @@
     "key": "WFVpRDEXSj14Zud",
     "expiresAt": "2025-11-05",
     "allowOffline": true
+  },
+  {
+    "id": "ee9362c597d1db",
+    "key": "L9Z1NVjojhXpOTA",
+    "expiresAt": "2025-10-30",
+    "allowOffline": true
   }
 ]

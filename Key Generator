@@ -160,5 +160,11 @@
     "key": "L9Z1NVjojhXpOTA",
     "expiresAt": "2025-10-30",
     "allowOffline": true
+  },
+  {
+    "id": "b429c8ccf8ecb710",
+    "key": "iMAJdYRQrwm8Dsk",
+    "expiresAt": "2025-11-08",
+    "allowOffline": true
   }
 ]

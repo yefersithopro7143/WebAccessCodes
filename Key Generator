@@ -52,5 +52,11 @@
     "key": "vane11",
     "expiresAt": "2026-02-10",
     "allowOffline": true
+  },
+  {
+    "id": "4c6f392599b7c2ee",
+    "key": "J1GO0q7bt4ln2Vw",
+    "expiresAt": "2025-12-05",
+    "allowOffline": true
   }
 ]

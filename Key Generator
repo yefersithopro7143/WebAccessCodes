@@ -4,5 +4,12 @@
     "key": "test",
     "expiresAt": "2030-09-15",
     "allowOffline": true
+  },
+  {
+    "id": "xd",
+    "username": "yefferzon2",
+    "key": "ZJNqlHxSVOFqFPX",
+    "expiresAt": "2025-12-27",
+    "allowOffline": true
   }
 ]

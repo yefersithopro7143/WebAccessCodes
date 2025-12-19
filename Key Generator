@@ -11,5 +11,12 @@
     "key": "asd",
     "expiresAt": "2026-01-04",
     "allowOffline": true
+  },
+  {
+    "id": "xd",
+    "username": "yefferzon2",
+    "key": "pOMS4BaXcjE2tjr",
+    "expiresAt": "2025-12-27",
+    "allowOffline": true
   }
 ]

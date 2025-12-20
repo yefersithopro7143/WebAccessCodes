@@ -45,5 +45,11 @@
     "key": "Hola",
     "expiresAt": "2025-12-27",
     "allowOffline": true
+  },
+  {
+    "id": "ee9362c597d71db1",
+    "key": "Holas",
+    "expiresAt": "2025-12-27",
+    "allowOffline": true
   }
 ]

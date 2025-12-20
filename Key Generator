@@ -1,47 +1,7 @@
 [
   {
     "id": "ee9362c597d71db1",
-    "key": "test",
-    "expiresAt": "2030-09-15",
-    "allowOffline": true
-  },
-  {
-    "id": "xd",
-    "username": "yefferzon2",
-    "key": "asd",
-    "expiresAt": "2026-01-04",
-    "allowOffline": true
-  },
-  {
-    "id": "xd",
-    "username": "yefferzon2",
-    "key": "pOMS4BaXcjE2tjr",
-    "expiresAt": "2025-12-27",
-    "allowOffline": true
-  },
-  {
-    "id": "xd",
-    "username": "yefferzon2",
-    "key": "H0qB2BIUB9oIj9F",
-    "expiresAt": "2026-01-19",
-    "allowOffline": true
-  },
-  {
-    "id": "xd",
     "username": "pablo",
-    "key": "m7n7KiOo5QOxGww",
-    "expiresAt": "2025-12-27",
-    "allowOffline": true
-  },
-  {
-    "id": "xds",
-    "username": "pablo",
-    "key": "VJHEE0ZTzrvfN8x",
-    "expiresAt": "2025-12-27",
-    "allowOffline": true
-  },
-  {
-    "id": "ee9362c597d71db1",
     "key": "Hola",
     "expiresAt": "2025-12-27",
     "allowOffline": true

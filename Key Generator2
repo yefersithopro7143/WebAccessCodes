@@ -1,1 +1,16 @@
-xd
+[
+  {
+    "id": "xds",
+    "username": "pablo",
+    "key": "VJHEE0ZTzrvfN8x",
+    "expiresAt": "2025-12-27",
+    "allowOffline": true
+  },
+  {
+    "id": "ee9362c597d71db1",
+    "username": "pablo",
+    "key": "Hola",
+    "expiresAt": "2025-12-27",
+    "allowOffline": true
+  }
+]

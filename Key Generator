@@ -5,5 +5,12 @@
     "key": "Hola",
     "expiresAt": "2025-12-20",
     "allowOffline": true
+  },
+  {
+    "id": "xds",
+    "username": "pablo",
+    "key": "zrlQ1Lgz5UXGMAD",
+    "expiresAt": "2025-12-28",
+    "allowOffline": true
   }
 ]

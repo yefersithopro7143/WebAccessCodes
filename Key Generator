@@ -5,5 +5,12 @@
     "key": "zLC4aBpUysHxavp",
     "expiresAt": "2025-12-28",
     "allowOffline": true
+  },
+  {
+    "id": "s",
+    "username": "pablo",
+    "key": "NgnKhG2eUMDG6zE",
+    "expiresAt": "2025-12-28",
+    "allowOffline": true
   }
 ]

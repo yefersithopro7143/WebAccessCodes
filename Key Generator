@@ -19,5 +19,11 @@
     "key": "Xd",
     "expiresAt": "2025-12-31",
     "allowOffline": true
+  },
+  {
+    "id": "b429c8ccf8ecb710",
+    "key": "7YAuvSlQSCARJ4C",
+    "expiresAt": "2026-01-05",
+    "allowOffline": true
   }
 ]

@@ -39,5 +39,12 @@
     "key": "vv",
     "expiresAt": "2025-12-28",
     "allowOffline": true
+  },
+  {
+    "id": "nhj",
+    "username": "yefferzon2",
+    "key": "jjj",
+    "expiresAt": "2025-12-28",
+    "allowOffline": true
   }
 ]

@@ -5,5 +5,12 @@
     "key": "Xd",
     "expiresAt": "2025-12-31",
     "allowOffline": true
+  },
+  {
+    "id": "1c14c4cb64009694",
+    "username": "andrea",
+    "key": "7AzcxbSXtxMBNrA",
+    "expiresAt": "2028-09-16",
+    "allowOffline": true
   }
 ]

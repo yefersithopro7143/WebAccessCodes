@@ -19,5 +19,12 @@
     "key": "Andrea11",
     "expiresAt": "2053-05-08",
     "allowOffline": true
+  },
+  {
+    "id": "b429c8ccf8ecb710",
+    "username": "gabriela",
+    "key": "91lBHLzh4dwkzKM",
+    "expiresAt": "2026-01-05",
+    "allowOffline": true
   }
 ]

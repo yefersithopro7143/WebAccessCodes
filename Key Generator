@@ -33,12 +33,5 @@
     "key": "Andrea11",
     "expiresAt": "2053-05-10",
     "allowOffline": true
-  },
-  {
-    "id": "ee9362c597d71db1",
-    "username": "yefferzon2",
-    "key": "Free",
-    "expiresAt": "2026-01-27",
-    "allowOffline": true
   }
 ]

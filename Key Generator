@@ -40,5 +40,12 @@
     "key": "Fast",
     "expiresAt": "2026-01-04",
     "allowOffline": true
+  },
+  {
+    "id": "4c6f392599b7c2ee",
+    "username": "ivan",
+    "key": "U1lKAS8VGsKlxSn",
+    "expiresAt": "2026-01-13",
+    "allowOffline": true
   }
 ]

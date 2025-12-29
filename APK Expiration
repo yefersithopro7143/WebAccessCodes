@@ -1,0 +1,11 @@
+{
+  "ShowDate": "2025-12-29",
+  "Title": "Update Available",
+  "Subtitle": "v4.5 • Critical Patch",
+  "WhatsNew": "• Upgrading Game Servers\n• Fixing Login Issues\n• New UI Added\n• Vpn Proxy Removed\n • Dialog By Yefferzon",
+  "Button1": "Update",
+  "Button1Url": "https://hola.com",
+  "2Button": true,
+  "ShowTimer": true,
+  "TargetTime": "2025-12-30 24:00:00"
+}

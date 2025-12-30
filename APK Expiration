@@ -3,8 +3,8 @@
   "Title": "Actualización Disponible",
   "Subtitle": "v1.0 • Critical Patch",
   "WhatsNew": "• Actualización de servidores\n• Corrección de problemas Premium\n• Nueva interfaz de usuario añadida\n• Seguridad del sistema activa",
-  "Button1": "Update",
-  "Button1Url": "https://hola.com",
+  "Button1": "Actualizar",
+  "Button1Url": "https://tienda-premium.blogspot.com/p/inicio-de-sesion-iniciar-sesion.html",
   "2Button": true,
   "ShowTimer": false,
   "TargetTime": "2025-12-31 00:00:00"

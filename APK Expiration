@@ -6,6 +6,6 @@
   "Button1": "Actualizar",
   "Button1Url": "https://tienda-premium.blogspot.com/p/inicio-de-sesion-iniciar-sesion.html",
   "2Button": true,
-  "ShowTimer": false,
+  "ShowTimer": true,
   "TargetTime": "2025-12-31 00:00:00"
 }

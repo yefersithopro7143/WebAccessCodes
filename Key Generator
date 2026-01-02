@@ -110,12 +110,5 @@
     "key": "bYuThuHKOaMHN0c",
     "expiresAt": "2026-02-02",
     "allowOffline": true
-  },
-  {
-    "id": "Ratas",
-    "username": "yefferzon",
-    "key": "gd8etTr1y8RQai5",
-    "expiresAt": "2026-03-14",
-    "allowOffline": true
   }
 ]

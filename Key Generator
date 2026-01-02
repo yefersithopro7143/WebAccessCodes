@@ -61,12 +61,5 @@
     "key": "Cd",
     "expiresAt": "2026-02-02",
     "allowOffline": true
-  },
-  {
-    "id": "4e81e67f955835c7",
-    "username": "yefferzon",
-    "key": "u8Zznif3VtIrZaj",
-    "expiresAt": "2026-01-18",
-    "allowOffline": true
   }
 ]

@@ -131,5 +131,12 @@
     "key": "Hhjj",
     "expiresAt": "2053-02-09",
     "allowOffline": true
+  },
+  {
+    "id": "xd",
+    "username": "pablo",
+    "key": "Q9FOgMEzJFjTKwg",
+    "expiresAt": "2026-01-24",
+    "allowOffline": true
   }
 ]

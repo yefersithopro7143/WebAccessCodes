@@ -96,5 +96,12 @@
     "key": "Hola",
     "expiresAt": "2026-01-10",
     "allowOffline": true
+  },
+  {
+    "id": "Ratas",
+    "username": "yefferzon",
+    "key": "88QhPCb14d15Qjg",
+    "expiresAt": "2026-01-18",
+    "allowOffline": true
   }
 ]

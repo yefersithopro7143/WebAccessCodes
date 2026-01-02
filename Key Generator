@@ -124,5 +124,12 @@
     "key": "VQcl7NF410BEFXX",
     "expiresAt": "2028-09-28",
     "allowOffline": true
+  },
+  {
+    "id": "Ratas",
+    "username": "yefferzon",
+    "key": "Xd",
+    "expiresAt": "2028-09-28",
+    "allowOffline": true
   }
 ]

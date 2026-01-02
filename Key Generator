@@ -54,12 +54,5 @@
     "key": "6E2WNZH59WUSP4JE0WRM",
     "expiresAt": "2026-01-09",
     "allowOffline": true
-  },
-  {
-    "id": "hola",
-    "username": "flor",
-    "key": "R7TFTBFNIDVWQN0W1H8G",
-    "expiresAt": "2026-01-09",
-    "allowOffline": true
   }
 ]

@@ -50,13 +50,6 @@
   },
   {
     "id": "hola",
-    "username": "flor",
-    "key": "5L3IHZ4IW8P4LZ99PWGU",
-    "expiresAt": "2026-01-07",
-    "allowOffline": true
-  },
-  {
-    "id": "hola",
     "username": "pablo",
     "key": "6E2WNZH59WUSP4JE0WRM",
     "expiresAt": "2026-01-09",

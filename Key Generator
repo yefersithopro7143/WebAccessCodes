@@ -75,5 +75,12 @@
     "key": "Xd",
     "expiresAt": "2026-01-10",
     "allowOffline": true
+  },
+  {
+    "id": "Rassbj",
+    "username": "yefferzon",
+    "key": "Hhu",
+    "expiresAt": "2026-01-10",
+    "allowOffline": true
   }
 ]

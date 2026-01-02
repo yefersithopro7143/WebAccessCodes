@@ -51,13 +51,6 @@
   {
     "id": "4e81e67f955835c7",
     "username": "yefferzon",
-    "key": "Xd",
-    "expiresAt": "2026-02-02",
-    "allowOffline": true
-  },
-  {
-    "id": "4e81e67f955835c7",
-    "username": "yefferzon",
     "key": "asAEvla0E3ZLWxK",
     "expiresAt": "2026-01-10",
     "allowOffline": true
@@ -66,13 +59,6 @@
     "id": "4e81e67f95583",
     "username": "yefferzon",
     "key": "Ybb",
-    "expiresAt": "2026-01-10",
-    "allowOffline": true
-  },
-  {
-    "id": "Rass",
-    "username": "yefferzon",
-    "key": "Xd",
     "expiresAt": "2026-01-10",
     "allowOffline": true
   },
@@ -122,13 +108,6 @@
     "id": "Ratas",
     "username": "yefferzon",
     "key": "VQcl7NF410BEFXX",
-    "expiresAt": "2028-09-28",
-    "allowOffline": true
-  },
-  {
-    "id": "Ratas",
-    "username": "yefferzon",
-    "key": "Xd",
     "expiresAt": "2028-09-28",
     "allowOffline": true
   }

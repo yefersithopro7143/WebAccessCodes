@@ -131,12 +131,5 @@
     "key": "Hhjj",
     "expiresAt": "2053-02-09",
     "allowOffline": true
-  },
-  {
-    "id": "Hols",
-    "username": "yefferzon",
-    "key": "Vhh",
-    "expiresAt": "2026-02-02",
-    "allowOffline": true
   }
 ]

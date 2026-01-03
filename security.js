@@ -279,6 +279,7 @@
   // Bloquear doble tap para zoom
   let lastTap = 0;
   document.addEventListener("touchend", (e) => {
+    if (e.touches.length > 0) return;
     if (e.changedTouches.length !== 1) return;
     const currentTime = new Date().getTime();
     const tapLength = currentTime - lastTap;

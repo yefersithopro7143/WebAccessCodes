@@ -288,7 +288,6 @@
     lastTap = currentTime;
   });
 
-
   // Detección de DevTools (optimizada)
   let devToolsOpen = false;
   setInterval(() => {

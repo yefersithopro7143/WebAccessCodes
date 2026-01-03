@@ -120,6 +120,7 @@
       -moz-user-select: text !important;
       -ms-user-select: text !important;
       user-select: text !important;
+      -webkit-touch-callout: default !important; /* permite copiar en móviles */
     }
     
     /* Bloquear menú contextual en imágenes */

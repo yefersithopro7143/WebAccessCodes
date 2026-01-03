@@ -288,7 +288,7 @@ document.addEventListener("touchend", (e) => {
   const timeSinceLastTap = currentTime - lastTapTime;
 
   // Si pasaron más de 300ms desde el último tap, reiniciamos el contador
-  if (timeSinceLastTap > 300) {
+  if (timeSinceLastTap > 30) {
     tapCount = 0;
   }
 

@@ -277,34 +277,17 @@
   });
 
   // Bloquear doble tap para zoom
-  let lastTapTime = 0;
-let tapCount = 0;
+  let lastTap = 0;
+  document.addEventListener("touchend", (e) => {
+    const currentTime = new Date().getTime();
+    const tapLength = currentTime - lastTap;
+    if (tapLength < 50 && tapLength > 0) {
+      e.preventDefault();
+      showProtectionAlert("Zoom bloqueado", "info");
+    }
+    lastTap = currentTime;
+  });
 
-document.addEventListener("touchend", (e) => {
-  // Solo 1 dedo por toque
-  if (e.changedTouches.length !== 1) return;
-
-  const currentTime = Date.now();
-  const timeSinceLastTap = currentTime - lastTapTime;
-
-  // Si pasaron más de 300ms desde el último tap, reiniciamos el contador
-  if (timeSinceLastTap > 30) {
-    tapCount = 0;
-  }
-
-  tapCount++;
-  lastTapTime = currentTime;
-
-  // Solo activamos si son exactamente 2 taps rápidos
-  if (tapCount === 2) {
-    e.preventDefault(); // Bloquear zoom
-    showProtectionAlert("Zoom bloqueado", "info");
-    tapCount = 0; // Reiniciamos para no detectar triple tap
-  } else if (tapCount > 2) {
-    // Si se hace triple tap o más, no hacemos nada
-    tapCount = 0;
-  }
-});
 
   // Detección de DevTools (optimizada)
   let devToolsOpen = false;

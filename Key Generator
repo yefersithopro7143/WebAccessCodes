@@ -180,5 +180,12 @@
     "key": "test",
     "expiresAt": "2034-03-23",
     "allowOffline": true
+  },
+  {
+    "id": "fbf433993223d135",
+    "username": "andrea",
+    "key": "2tzAmJNDrkOTfbn",
+    "expiresAt": "4763-12-01",
+    "allowOffline": true
   }
 ]

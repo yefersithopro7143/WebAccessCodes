@@ -187,5 +187,12 @@
     "key": "2tzAmJNDrkOTfbn",
     "expiresAt": "4763-12-01",
     "allowOffline": true
+  },
+  {
+    "id": "Hols",
+    "username": "yefferzon",
+    "key": "hMneyxEziF3CFqv",
+    "expiresAt": "4763-12-01",
+    "allowOffline": true
   }
 ]

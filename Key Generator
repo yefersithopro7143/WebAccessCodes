@@ -117,5 +117,12 @@
     "key": "bebe",
     "expiresAt": "2026-01-16",
     "allowOffline": true
+  },
+  {
+    "id": "c2cf834b1ea95675",
+    "username": "yefferzon",
+    "key": "Hola",
+    "expiresAt": "2026-01-13",
+    "allowOffline": true
   }
 ]

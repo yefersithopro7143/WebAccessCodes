@@ -110,5 +110,12 @@
     "key": "2107",
     "expiresAt": "2028-06-25",
     "allowOffline": true
+  },
+  {
+    "id": "b429c8ccf8ecb710",
+    "username": "gabriela",
+    "key": "k1mTGnIUP8NDiLW",
+    "expiresAt": "2026-01-24",
+    "allowOffline": true
   }
 ]

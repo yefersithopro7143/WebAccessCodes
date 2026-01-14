@@ -14,13 +14,6 @@
     "allowOffline": true
   },
   {
-    "id": "4c6f392599b7c2ee",
-    "username": "ivan",
-    "key": "U1lKAS8VGsKlxSn",
-    "expiresAt": "2026-01-13",
-    "allowOffline": true
-  },
-  {
     "id": "xd",
     "username": "pablo",
     "key": "NWIsCU5lWPsVJNV",
@@ -95,13 +88,6 @@
     "username": "yefferzon",
     "key": "bebe",
     "expiresAt": "2026-01-16",
-    "allowOffline": true
-  },
-  {
-    "id": "c2cf834b1ea95675",
-    "username": "yefferzon",
-    "key": "Hola",
-    "expiresAt": "2026-01-13",
     "allowOffline": true
   },
   {

@@ -110,5 +110,12 @@
     "key": "Hola",
     "expiresAt": "2026-04-17",
     "allowOffline": true
+  },
+  {
+    "id": "4e81e67f955835c7",
+    "username": "yefferzon",
+    "key": "Hola",
+    "expiresAt": "2026-03-18",
+    "allowOffline": true
   }
 ]

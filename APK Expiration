@@ -1,11 +1,11 @@
 {
-  "ShowDate": "2026-02-30",
+  "ShowDate": "2026-01-24",
   "Title": "Actualización Disponible",
   "Subtitle": "v4.5 • Critical Patch",
   "WhatsNew": "• Actualización de servidor\n• Corrección de funcion Pro\n• Nueva interfaz de usuario añadida\n• Seguridad del sistema activa\n • Creado por Yefferzon",
   "Button1": "Actualizar",
   "Button1Url": "https://tienda-premium.blogspot.com/p/inicio-de-sesion-iniciar-sesion.html",
   "2Button": true,
-  "ShowTimer": false,
+  "ShowTimer": true,
   "TargetTime": "2026-02-15 00:00:00"
 }

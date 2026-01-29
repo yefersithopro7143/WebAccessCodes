@@ -96,5 +96,12 @@
     "key": "Hola",
     "expiresAt": "2026-03-30",
     "allowOffline": true
+  },
+  {
+    "id": "4c6f392599b7c2ee",
+    "username": "ivan",
+    "key": "bPCGOcmX6kVbfrq",
+    "expiresAt": "2026-02-14",
+    "allowOffline": true
   }
 ]

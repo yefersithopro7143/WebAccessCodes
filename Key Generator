@@ -89,5 +89,12 @@
     "key": "bPCGOcmX6kVbfrq",
     "expiresAt": "2026-02-14",
     "allowOffline": true
+  },
+  {
+    "id": "db2d728dc612a543",
+    "username": "anghelo",
+    "key": "FSvgwMSaAMr7ILl",
+    "expiresAt": "2026-02-21",
+    "allowOffline": true
   }
 ]

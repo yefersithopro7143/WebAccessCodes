@@ -1,4 +1,4 @@
-// security.js - Premium Store Security Core (VIP GOD-TIER)
+// security.js - Premium Store Security Core (VIP GOD-TIER V2)
 (function() {
   // ==========================================
   // PROTOCOLO 1: ESCUDO ANTI-IFRAME (FRAME KILLER)
@@ -8,7 +8,7 @@
   }
 
   // ==========================================
-  // ESTILOS BASE Y ALERTAS COMPACTAS (Uso Normal)
+  // ESTILOS BASE Y ALERTAS COMPACTAS
   // ==========================================
   const css = `
     .premium-sec-alert {
@@ -22,7 +22,7 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
     .premium-sec-alert.show { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
-    .premium-sec-alert.danger { border-color: #39ff14; box-shadow: 0 5px 15px rgba(57, 255, 20, 0.3); color: #39ff14; }
+    .premium-sec-alert.danger { border-color: #ff003c; box-shadow: 0 5px 15px rgba(255, 0, 60, 0.3); color: #ff003c; }
     .premium-sec-alert.warning { border-color: #d4af37; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2); color: #d4af37; }
     .premium-sec-alert.info { border-color: #00d2ff; box-shadow: 0 5px 15px rgba(0, 210, 255, 0.2); color: #00d2ff; }
     .premium-sec-alert svg { width: 14px; height: 14px; fill: currentColor; }
@@ -48,87 +48,61 @@
   }
 
   // ==========================================
-  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DOM BLACKOUT - VERDE RADIACTIVO)
+  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DISEÑO RADIACTIVO LEGENDARIO)
   // ==========================================
   let isDestroyed = false;
-  
-  // Fake IP generator for intimidation
-  function generateFakeIP() {
-      return `${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}`;
-  }
-
   function triggerAutoDestruct() {
       if (isDestroyed) return;
       isDestroyed = true;
       
-      const fakeIP = generateFakeIP();
+      // Borrar el head destruye CSS de Blogger pero no afectará a los estilos in-line que pondremos abajo
+      document.head.innerHTML = ''; 
       
-      // Borramos la página (Head y Body content)
-      document.head.innerHTML = '';
-      
-      // Inyectamos el estilo DIRECTAMENTE en el body para que no se borre
-      const blackoutStyles = `
-          body {
-              background: #050a05 !important; color: #39ff14 !important;
-              font-family: 'Courier New', Courier, monospace !important;
-              display: flex !important; justify-content: center !important; align-items: center !important;
-              height: 100vh !important; width: 100vw !important; overflow: hidden !important;
-              margin: 0 !important; padding: 0 !important;
-              background-image: 
-                  radial-gradient(circle at center, rgba(57, 255, 20, 0.05) 0%, transparent 60%),
-                  repeating-linear-gradient(0deg, rgba(57, 255, 20, 0.02) 0px, rgba(57, 255, 20, 0.02) 1px, transparent 1px, transparent 3px) !important;
-          }
-          .blackout-card {
-              background: rgba(0, 20, 0, 0.8) !important; border: 1px solid #39ff14 !important;
-              padding: 40px !important; border-radius: 8px !important; text-align: center !important;
-              box-shadow: 0 0 40px rgba(57, 255, 20, 0.2), inset 0 0 20px rgba(57, 255, 20, 0.1) !important;
-              max-width: 600px !important; width: 90% !important; position: relative !important;
-              animation: glitchIn 0.2s linear !important;
-          }
-          .radar {
-              width: 80px; height: 80px; border-radius: 50%; border: 2px solid #39ff14;
-              margin: 0 auto 20px; position: relative; overflow: hidden;
-              box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
-          }
-          .radar::before {
-              content: ''; position: absolute; top: 0; left: 50%; width: 50%; height: 50%;
-              background: linear-gradient(45deg, rgba(57, 255, 20, 0) 0%, rgba(57, 255, 20, 0.8) 100%);
-              transform-origin: bottom left; animation: scan 2s linear infinite;
-          }
-          .radar::after { content: '⚠️'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; z-index: 2; }
-          .blackout-card h1 { font-size: 28px !important; margin: 0 0 15px 0 !important; text-shadow: 0 0 10px #39ff14 !important; letter-spacing: 2px !important; }
-          .blackout-card p { font-size: 14px !important; margin-bottom: 10px !important; line-height: 1.5 !important; }
-          .alert-box {
-              background: rgba(255, 0, 0, 0.1) !important; border: 1px solid #ff003c !important;
-              color: #ff003c !important; padding: 15px !important; margin-top: 25px !important;
-              text-align: left !important; font-size: 12px !important;
-          }
-          .alert-box strong { font-size: 14px; }
-          
-          @keyframes scan { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-          @keyframes glitchIn { 0% { transform: scale(1.1); filter: contrast(2); } 50% { transform: scale(0.9); filter: invert(1); } 100% { transform: scale(1); filter: none; } }
-          @keyframes blinkWarning { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-      `;
+      // Obtener IP simulada o real si tienes servicio externo (aquí simulo para el impacto visual)
+      const fakeIP = Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255) + ".x.x";
 
+      // Reemplazamos el BODY entero con CSS y HTML en línea para asegurar que se vea incluso sin HEAD
+      document.body.style.cssText = "margin:0; padding:0; background-color:#050a05; background-image:repeating-linear-gradient(0deg, rgba(57,255,20,0.03) 0px, rgba(57,255,20,0.03) 1px, transparent 1px, transparent 2px); height:100vh; width:100vw; display:flex; justify-content:center; align-items:center; overflow:hidden; font-family:monospace;";
+      
       document.body.innerHTML = `
-          <style>${blackoutStyles}</style>
-          <div class="blackout-card">
-              <div class="radar"></div>
-              <h1>ACCESO DENEGADO</h1>
-              <p>El código fuente ha sido purgado tras detectar una intrusión no autorizada en el DOM.</p>
-              <p>Tu intento de inspección/clonación ha activado los protocolos de seguridad.</p>
-              
-              <div class="alert-box">
-                  <strong><span style="animation: blinkWarning 1s infinite;">[!]</span> ADVERTENCIA CRÍTICA</strong><br><br>
-                  IP Registrada: ${fakeIP}<br>
-                  Acción: Extracción de código bloqueada.<br><br>
-                  <em>Aviso 1 de 2: Cierra las herramientas de desarrollo inmediatamente. Un segundo intento resultará en un bloqueo permanente de hardware (MAC Address) y reporte a ISP.</em>
+          <style>
+              @keyframes glitch-green { 0% { transform: translate(0); text-shadow: 0 0 10px #39ff14; } 20% { transform: translate(-2px, 2px); text-shadow: -2px 0 red, 2px 0 blue; } 40% { transform: translate(-2px, -2px); } 60% { transform: translate(2px, 2px); text-shadow: 0 0 20px #39ff14; } 80% { transform: translate(2px, -2px); } 100% { transform: translate(0); text-shadow: 0 0 10px #39ff14; } }
+              @keyframes pulse-ring { 0% { transform: scale(0.8); opacity: 0.8; } 100% { transform: scale(1.5); opacity: 0; } }
+              .terminal-box { border: 1px solid #39ff14; background: rgba(0, 20, 0, 0.8); padding: 40px; border-radius: 12px; text-align: center; box-shadow: 0 0 40px rgba(57, 255, 20, 0.2), inset 0 0 20px rgba(57, 255, 20, 0.1); max-width: 450px; position: relative; }
+              .terminal-box::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: #39ff14; box-shadow: 0 2px 15px #39ff14; }
+              .icon-container { position: relative; width: 80px; height: 80px; margin: 0 auto 20px auto; }
+              .ring { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid #39ff14; border-radius: 50%; animation: pulse-ring 2s infinite ease-out; }
+              .nuke-icon { width: 50px; height: 50px; fill: #39ff14; filter: drop-shadow(0 0 10px #39ff14); position: relative; top: 15px; }
+              h1 { color: #39ff14; font-size: 28px; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 2px; animation: glitch-green 0.4s infinite; }
+              .warning-text { color: #fff; font-size: 14px; line-height: 1.6; margin-bottom: 25px; }
+              .ip-box { background: rgba(255, 0, 0, 0.1); border: 1px dashed red; padding: 10px; border-radius: 5px; color: red; font-weight: bold; font-size: 12px; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px;}
+              .strike-tag { display: inline-block; background: #39ff14; color: #000; font-weight: 900; padding: 5px 10px; font-size: 10px; border-radius: 4px; text-transform: uppercase; }
+              .footer-sys { color: #555; font-size: 10px; margin-top: 25px; }
+          </style>
+
+          <div class="terminal-box">
+              <div class="icon-container">
+                  <div class="ring"></div>
+                  <svg class="nuke-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M256 0a256 256 0 1 0 256 256A256.3 256.3 0 0 0 256 0zm0 39.7a216 216 0 0 1 108.9 29.8l-54 93.5a108 108 0 0 0-109.8 0l-54-93.5A216 216 0 0 1 256 39.7zM78.6 150.3l54 93.5a108 108 0 0 0 0 110l-54 93.5a216.3 216.3 0 0 1 0-297zm93.6 242.4a108 108 0 0 0 167.6 0l54 93.5a216.3 216.3 0 0 1-275.6 0zm207.2-28.9l-54-93.5a108 108 0 0 0 0-110l54-93.5a216.3 216.3 0 0 1 0 297z"/>
+                      <circle cx="256" cy="256" r="45"/>
+                  </svg>
               </div>
-              <p style="margin-top: 20px; font-size: 10px; opacity: 0.5;">PREMIUM STORE SECURITY ENFORCEMENT</p>
+              
+              <h1>ACCESS DENIED</h1>
+              
+              <p class="warning-text">El sistema de <b>Premium Store</b> ha detectado un intento de inspección de código. El DOM ha sido purgado por seguridad.</p>
+              
+              <div class="ip-box">
+                  [!] Rastreo de Conexión: IP ${fakeIP} <br>
+                  Aviso 1 de 2: Bloqueo Permanente Inminente
+              </div>
+              
+              <div class="strike-tag">SISTEMA CERRADO</div>
+              
+              <div class="footer-sys">Premium Store Security Core v3.0</div>
           </div>
       `;
-      // Prevenir el menú de nuevo por si acaso en la pantalla negra
-      document.body.oncontextmenu = (e) => e.preventDefault();
   }
 
   // ==========================================
@@ -138,7 +112,7 @@
       mutations.forEach((mutation) => {
           mutation.removedNodes.forEach((node) => {
               if (node.tagName === 'SCRIPT' || node.tagName === 'STYLE') {
-                  triggerAutoDestruct(); 
+                  triggerAutoDestruct();
               }
           });
       });
@@ -150,27 +124,25 @@
   // ==========================================
   setInterval(() => {
       console.clear();
-      console.log("%c¡SISTEMA BLOQUEADO!", "color: #39ff14; font-size: 40px; font-weight: bold; text-shadow: 0 0 10px #39ff14; background: #000; padding: 20px; border: 2px solid #39ff14;");
-      console.log("%cTus acciones están siendo monitoreadas. Cierra la consola inmediatamente.", "color: #fff; font-size: 16px; background: #ff003c; padding: 10px;");
-  }, 1000);
+      console.log("%c☢️ SYSTEM OVERRIDE ☢️", "color: #39ff14; font-size: 40px; font-weight: bold; text-shadow: 0 0 10px #39ff14; background: #000; padding: 20px; border: 2px solid #39ff14;");
+      console.log("%cIntento de robo detectado. Abandona la consola inmediatamente o tu IP será registrada en la lista negra.", "color: red; font-size: 16px; background: black; padding: 10px; border-radius: 5px;");
+  }, 1000); // Lo aceleré a 1 segundo para ser más molesto
 
   // ==========================================
   // PROTOCOLO 5: BLOQUEO DE DESCARGA Y TECLAS (ANTI-SAVE)
   // ==========================================
   document.addEventListener("keydown", (e) => {
-    // Bloquea Guardar e Imprimir
     if ((e.ctrlKey || e.metaKey) && ["s", "p", "u", "a", "c", "x", "v"].includes(e.key.toLowerCase())) {
         e.preventDefault(); e.stopPropagation();
-        showProtectionAlert("Acción Bloqueada", "danger");
+        showProtectionAlert("Descarga y Copia Restringida", "danger");
     }
-    // Bloquea F12 y Herramientas (Gatilla destrucción)
     if (e.key === "F12" || (e.ctrlKey && e.shiftKey && ["I", "J", "C", "K"].includes(e.key.toUpperCase()))) {
         e.preventDefault(); e.stopPropagation();
         triggerAutoDestruct(); 
     }
   }, true);
 
-  // Detección agresiva del Debugger
+  // Detección del Debugger
   let devToolsOpen = false;
   setInterval(() => {
     let start = performance.now();
@@ -180,11 +152,11 @@
       devToolsOpen = true;
       triggerAutoDestruct(); 
     }
-  }, 1500);
+  }, 2000);
 
-  // INTERACCIONES TÁCTILES / RATÓN (con soporte allow-copy)
+  // INTERACCIONES BÁSICAS DE RATÓN (Protegiendo allow-copy)
   document.addEventListener("contextmenu", (e) => {
-    if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.stopPropagation(); showProtectionAlert("Protegido", "warning"); }
+    if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.stopPropagation(); showProtectionAlert("Acción Bloqueada", "warning"); }
   }, true);
 
   document.addEventListener("selectstart", (e) => {
@@ -196,8 +168,8 @@
   }, true);
 
   document.addEventListener("copy", (e) => {
-    if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.clipboardData.setData("text/plain", ""); showProtectionAlert("Copia Bloqueada", "warning"); }
+    if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.clipboardData.setData("text/plain", ""); showProtectionAlert("Copia Restringida", "warning"); }
   });
 
-  console.log("🛡️ Premium Store Security Core: [MODO DIOS ACTIVADO]");
+  console.log("🛡️ Premium Store Security Core: [NIVEL DIOS ACTIVADO]");
 })();

@@ -51,11 +51,14 @@
       -webkit-tap-highlight-color: transparent !important;
     }
     
+    /* Permitir selección y menú de copiar solo en elementos específicos */
     .allow-copy, .allow-copy * {
       -webkit-user-select: text !important;
       -moz-user-select: text !important;
       -ms-user-select: text !important;
       user-select: text !important;
+      /* ESTA LÍNEA ES LA MAGIA: Despierta el menú de copiar del celular */
+      -webkit-touch-callout: default !important; 
     }
     
     img {

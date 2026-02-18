@@ -1,14 +1,15 @@
-// security.js - Premium Store Security Core (VIP GOD-TIER V2)
+// security.js - Premium Store Security Core (VIP GOD-TIER SUPREME)
 (function() {
   // ==========================================
   // PROTOCOLO 1: ESCUDO ANTI-IFRAME (FRAME KILLER)
+  // Evita que clonen la web metiéndola en un marco oculto
   // ==========================================
   if (window.top !== window.self) {
       window.top.location = window.self.location;
   }
 
   // ==========================================
-  // ESTILOS BASE Y ALERTAS COMPACTAS
+  // ESTILOS BASE Y ALERTAS COMPACTAS (Para el uso normal)
   // ==========================================
   const css = `
     .premium-sec-alert {
@@ -48,71 +49,67 @@
   }
 
   // ==========================================
-  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DISEÑO RADIACTIVO LEGENDARIO)
+  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DOM BLACKOUT RADIACTIVO)
+  // Borra todo e inyecta CSS en línea para sobrevivir al borrado del HTML
   // ==========================================
   let isDestroyed = false;
   function triggerAutoDestruct() {
       if (isDestroyed) return;
       isDestroyed = true;
       
-      // Borrar el head destruye CSS de Blogger pero no afectará a los estilos in-line que pondremos abajo
+      // 1. Purga masiva
       document.head.innerHTML = ''; 
       
-      // Obtener IP simulada o real si tienes servicio externo (aquí simulo para el impacto visual)
-      const fakeIP = Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255) + ".x.x";
+      // 2. Genera IP Falsa para intimidar
+      const fakeIP = Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 100) + ".x.x";
 
-      // Reemplazamos el BODY entero con CSS y HTML en línea para asegurar que se vea incluso sin HEAD
-      document.body.style.cssText = "margin:0; padding:0; background-color:#050a05; background-image:repeating-linear-gradient(0deg, rgba(57,255,20,0.03) 0px, rgba(57,255,20,0.03) 1px, transparent 1px, transparent 2px); height:100vh; width:100vw; display:flex; justify-content:center; align-items:center; overflow:hidden; font-family:monospace;";
+      // 3. Inyección INLINE en el body (Indestructible)
+      document.body.style.cssText = "margin:0!important; padding:0!important; background-color:#020502!important; background-image:repeating-linear-gradient(0deg, rgba(57,255,20,0.03) 0px, rgba(57,255,20,0.03) 1px, transparent 1px, transparent 2px)!important; height:100vh!important; width:100vw!important; display:flex!important; justify-content:center!important; align-items:center!important; overflow:hidden!important; font-family:monospace!important; z-index:999999999!important;";
       
+      // 4. Inyección del diseño HTML
       document.body.innerHTML = `
           <style>
-              @keyframes glitch-green { 0% { transform: translate(0); text-shadow: 0 0 10px #39ff14; } 20% { transform: translate(-2px, 2px); text-shadow: -2px 0 red, 2px 0 blue; } 40% { transform: translate(-2px, -2px); } 60% { transform: translate(2px, 2px); text-shadow: 0 0 20px #39ff14; } 80% { transform: translate(2px, -2px); } 100% { transform: translate(0); text-shadow: 0 0 10px #39ff14; } }
-              @keyframes pulse-ring { 0% { transform: scale(0.8); opacity: 0.8; } 100% { transform: scale(1.5); opacity: 0; } }
-              .terminal-box { border: 1px solid #39ff14; background: rgba(0, 20, 0, 0.8); padding: 40px; border-radius: 12px; text-align: center; box-shadow: 0 0 40px rgba(57, 255, 20, 0.2), inset 0 0 20px rgba(57, 255, 20, 0.1); max-width: 450px; position: relative; }
-              .terminal-box::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px; background: #39ff14; box-shadow: 0 2px 15px #39ff14; }
-              .icon-container { position: relative; width: 80px; height: 80px; margin: 0 auto 20px auto; }
-              .ring { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid #39ff14; border-radius: 50%; animation: pulse-ring 2s infinite ease-out; }
-              .nuke-icon { width: 50px; height: 50px; fill: #39ff14; filter: drop-shadow(0 0 10px #39ff14); position: relative; top: 15px; }
-              h1 { color: #39ff14; font-size: 28px; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 2px; animation: glitch-green 0.4s infinite; }
-              .warning-text { color: #fff; font-size: 14px; line-height: 1.6; margin-bottom: 25px; }
-              .ip-box { background: rgba(255, 0, 0, 0.1); border: 1px dashed red; padding: 10px; border-radius: 5px; color: red; font-weight: bold; font-size: 12px; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px;}
-              .strike-tag { display: inline-block; background: #39ff14; color: #000; font-weight: 900; padding: 5px 10px; font-size: 10px; border-radius: 4px; text-transform: uppercase; }
-              .footer-sys { color: #555; font-size: 10px; margin-top: 25px; }
+              @keyframes glitch-neon { 0% { transform: translate(0); text-shadow: 0 0 10px #39ff14; } 20% { transform: translate(-2px, 2px); text-shadow: -2px 0 red, 2px 0 blue; } 40% { transform: translate(-2px, -2px); } 60% { transform: translate(2px, 2px); text-shadow: 0 0 20px #39ff14; } 80% { transform: translate(2px, -2px); } 100% { transform: translate(0); text-shadow: 0 0 10px #39ff14; } }
+              @keyframes pulse-ring { 0% { transform: scale(0.8); opacity: 0.8; border-width: 3px; } 100% { transform: scale(1.5); opacity: 0; border-width: 1px;} }
+              @keyframes scanline { 0% { top: -10%; } 100% { top: 110%; } }
           </style>
 
-          <div class="terminal-box">
-              <div class="icon-container">
-                  <div class="ring"></div>
-                  <svg class="nuke-icon" viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+          <div style="border: 1px solid #39ff14; background: rgba(0, 15, 0, 0.9); padding: 40px 30px; border-radius: 8px; text-align: center; box-shadow: 0 0 50px rgba(57, 255, 20, 0.15), inset 0 0 20px rgba(57, 255, 20, 0.1); width: 90%; max-width: 400px; position: relative; overflow: hidden;">
+              
+              <div style="position: absolute; left: 0; width: 100%; height: 5px; background: rgba(57, 255, 20, 0.5); box-shadow: 0 0 15px #39ff14; animation: scanline 3s linear infinite; z-index: 10; pointer-events: none;"></div>
+
+              <div style="position: relative; width: 70px; height: 70px; margin: 0 auto 20px auto;">
+                  <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid #39ff14; border-radius: 50%; animation: pulse-ring 2s infinite ease-out;"></div>
+                  <svg viewBox="0 0 512 512" style="width: 40px; height: 40px; fill: #39ff14; filter: drop-shadow(0 0 10px #39ff14); position: relative; top: 15px;">
                       <path d="M256 0a256 256 0 1 0 256 256A256.3 256.3 0 0 0 256 0zm0 39.7a216 216 0 0 1 108.9 29.8l-54 93.5a108 108 0 0 0-109.8 0l-54-93.5A216 216 0 0 1 256 39.7zM78.6 150.3l54 93.5a108 108 0 0 0 0 110l-54 93.5a216.3 216.3 0 0 1 0-297zm93.6 242.4a108 108 0 0 0 167.6 0l54 93.5a216.3 216.3 0 0 1-275.6 0zm207.2-28.9l-54-93.5a108 108 0 0 0 0-110l54-93.5a216.3 216.3 0 0 1 0 297z"/>
                       <circle cx="256" cy="256" r="45"/>
                   </svg>
               </div>
               
-              <h1>ACCESS DENIED</h1>
+              <h1 style="color: #39ff14; font-size: 24px; margin: 0 0 15px 0; text-transform: uppercase; letter-spacing: 2px; animation: glitch-neon 0.5s infinite;">ACCESO DENEGADO</h1>
               
-              <p class="warning-text">El sistema de <b>Premium Store</b> ha detectado un intento de inspección de código. El DOM ha sido purgado por seguridad.</p>
+              <p style="color: #ccc; font-size: 13px; line-height: 1.6; margin-bottom: 25px;">Se detectó una violación en el protocolo de seguridad de <b>Premium Store</b>. El código fuente ha sido purgado.</p>
               
-              <div class="ip-box">
-                  [!] Rastreo de Conexión: IP ${fakeIP} <br>
-                  Aviso 1 de 2: Bloqueo Permanente Inminente
+              <div style="background: rgba(255, 0, 0, 0.1); border: 1px dashed #ff003c; padding: 12px; border-radius: 4px; color: #ff003c; font-weight: bold; font-size: 11px; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px; text-shadow: 0 0 5px rgba(255,0,0,0.5);">
+                  [!] ALERTA CRÍTICA [!]<br>
+                  IP REGISTRADA: ${fakeIP}<br>
+                  <span style="display:inline-block; margin-top:8px; color:#fff;">Aviso 1 de 2 para bloqueo permanente.</span>
               </div>
               
-              <div class="strike-tag">SISTEMA CERRADO</div>
-              
-              <div class="footer-sys">Premium Store Security Core v3.0</div>
+              <div style="display: inline-block; background: #39ff14; color: #000; font-weight: 900; padding: 6px 12px; font-size: 10px; border-radius: 4px; text-transform: uppercase;">CONEXIÓN TERMINADA</div>
           </div>
       `;
   }
 
   // ==========================================
   // PROTOCOLO 3: TRAMPA DE MUTACIÓN (ANTI-TAMPERING)
+  // Si borran scripts desde el panel, detona la web.
   // ==========================================
   const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
           mutation.removedNodes.forEach((node) => {
               if (node.tagName === 'SCRIPT' || node.tagName === 'STYLE') {
-                  triggerAutoDestruct();
+                  triggerAutoDestruct(); 
               }
           });
       });
@@ -125,24 +122,26 @@
   setInterval(() => {
       console.clear();
       console.log("%c☢️ SYSTEM OVERRIDE ☢️", "color: #39ff14; font-size: 40px; font-weight: bold; text-shadow: 0 0 10px #39ff14; background: #000; padding: 20px; border: 2px solid #39ff14;");
-      console.log("%cIntento de robo detectado. Abandona la consola inmediatamente o tu IP será registrada en la lista negra.", "color: red; font-size: 16px; background: black; padding: 10px; border-radius: 5px;");
-  }, 1000); // Lo aceleré a 1 segundo para ser más molesto
+      console.log("%cViolación de seguridad detectada. Rastreando dirección de red...", "color: #ff003c; font-size: 16px; background: black; padding: 10px; border-radius: 5px; font-family: monospace;");
+  }, 1000); 
 
   // ==========================================
-  // PROTOCOLO 5: BLOQUEO DE DESCARGA Y TECLAS (ANTI-SAVE)
+  // PROTOCOLO 5: BLOQUEO DE TECLAS Y DEPUESTOS (ANTI-SAVE)
   // ==========================================
   document.addEventListener("keydown", (e) => {
+    // Bloquea comandos de guardado e impresión
     if ((e.ctrlKey || e.metaKey) && ["s", "p", "u", "a", "c", "x", "v"].includes(e.key.toLowerCase())) {
         e.preventDefault(); e.stopPropagation();
-        showProtectionAlert("Descarga y Copia Restringida", "danger");
+        showProtectionAlert("Descarga Restringida", "danger");
     }
+    // Si tocan F12 o atajos de consola, se auto-destruye
     if (e.key === "F12" || (e.ctrlKey && e.shiftKey && ["I", "J", "C", "K"].includes(e.key.toUpperCase()))) {
         e.preventDefault(); e.stopPropagation();
         triggerAutoDestruct(); 
     }
   }, true);
 
-  // Detección del Debugger
+  // DETECCIÓN DEL DEBUGGER (El escudo invisible)
   let devToolsOpen = false;
   setInterval(() => {
     let start = performance.now();
@@ -154,7 +153,9 @@
     }
   }, 2000);
 
-  // INTERACCIONES BÁSICAS DE RATÓN (Protegiendo allow-copy)
+  // ==========================================
+  // PROTECCIÓN DE MOUSE Y PORTAPAPELES (Mantiene allow-copy funcionando)
+  // ==========================================
   document.addEventListener("contextmenu", (e) => {
     if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.stopPropagation(); showProtectionAlert("Acción Bloqueada", "warning"); }
   }, true);

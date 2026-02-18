@@ -8,7 +8,7 @@
   }
 
   // ==========================================
-  // ESTILOS BASE Y ALERTAS COMPACTAS
+  // ESTILOS BASE, ALERTAS COMPACTAS Y BLACKOUT VIP
   // ==========================================
   const css = `
     .premium-sec-alert {
@@ -30,6 +30,46 @@
     * { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important; -webkit-touch-callout: none !important; -webkit-tap-highlight-color: transparent !important; }
     .allow-copy, .allow-copy * { -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; -webkit-touch-callout: default !important; }
     img { -webkit-user-drag: none !important; pointer-events: none !important; }
+    
+    /* ==========================================
+       ESTILOS PARA EL BLACKOUT (NUEVO DISEÑO VIP)
+       ========================================== */
+    body.blackout-mode {
+        background: radial-gradient(circle at center, #1a0005 0%, #000 70%) !important;
+        display: flex !important; justify-content: center !important; align-items: center !important;
+        height: 100vh !important; width: 100vw !important; overflow: hidden !important;
+        margin: 0 !important; padding: 0 !important; font-family: 'Montserrat', sans-serif !important;
+    }
+    .blackout-box {
+        background: linear-gradient(145deg, #0a0002, #000);
+        border: 1px solid rgba(255, 0, 60, 0.4);
+        border-radius: 12px; padding: 30px 20px; text-align: center;
+        width: 85%; max-width: 300px; /* Ultra delgado y perfecto para celular */
+        box-shadow: 0 0 40px rgba(255, 0, 60, 0.15), inset 0 0 15px rgba(255, 0, 60, 0.1);
+        position: relative; overflow: hidden;
+        animation: systemLockdown 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+    }
+    .blackout-box::before {
+        content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
+        background: #ff003c; box-shadow: 0 2px 10px #ff003c;
+    }
+    .lock-icon-svg { 
+        width: 35px; height: 35px; fill: #ff003c; margin-bottom: 15px; 
+        filter: drop-shadow(0 0 8px rgba(255,0,60,0.6)); animation: pulseLock 2s infinite; 
+    }
+    .blackout-box h1 { 
+        color: #fff; font-size: 16px; text-transform: uppercase; letter-spacing: 2px; 
+        margin: 0 0 8px 0; font-weight: 900; text-shadow: 0 0 10px rgba(255,0,60,0.5); line-height: 1.2;
+    }
+    .blackout-box p { color: #888; font-size: 11px; line-height: 1.5; margin: 0 0 18px 0; }
+    .blackout-tag { 
+        display: inline-block; background: rgba(255,0,60,0.1); color: #ff003c; 
+        border: 1px solid rgba(255,0,60,0.3); padding: 5px 12px; font-size: 9px; 
+        font-weight: 900; border-radius: 6px; letter-spacing: 1px; text-transform: uppercase; 
+    }
+    
+    @keyframes systemLockdown { 0% { transform: scale(0.8) translateY(20px); opacity: 0; } 100% { transform: scale(1) translateY(0); opacity: 1; } }
+    @keyframes pulseLock { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.7; } }
   `;
   const style = document.createElement('style'); style.textContent = css; document.head.appendChild(style);
 
@@ -48,68 +88,24 @@
   }
 
   // ==========================================
-  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DOM BLACKOUT ÉPICO)
+  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DOM BLACKOUT MEJORADO)
   // ==========================================
   let isDestroyed = false;
   function triggerAutoDestruct() {
       if (isDestroyed) return;
       isDestroyed = true;
-      
-      // Borramos el head para destruir el CSS de la página original
-      document.head.innerHTML = ''; 
-
-      // Inyectamos nuestro propio entorno seguro directamente en el Body
       document.body.innerHTML = `
-        <style>
-          body { margin: 0; padding: 0; background: #050000; overflow: hidden; }
-          .lockdown-container {
-             height: 100vh; width: 100vw; display: flex; flex-direction: column; 
-             justify-content: center; align-items: center;
-             background: radial-gradient(circle at center, rgba(255,0,0,0.1) 0%, #000 70%);
-             font-family: 'Courier New', monospace; color: #ff003c; text-align: center;
-             z-index: 9999999999; position: fixed; top: 0; left: 0;
-          }
-          .glitch-text {
-             font-size: 32px; font-weight: 900; text-transform: uppercase; letter-spacing: 2px;
-             text-shadow: 0 0 20px rgba(255,0,60,0.8); margin: 0 0 10px 0;
-             animation: glitch-anim 0.3s infinite;
-          }
-          .sub-text { font-size: 12px; color: #aaa; max-width: 80%; line-height: 1.5; margin-bottom: 25px; }
-          .terminal-box {
-             background: rgba(20, 0, 0, 0.8); border: 1px solid #ff003c;
-             padding: 20px; border-radius: 8px; text-align: left; font-size: 11px;
-             box-shadow: inset 0 0 15px rgba(255,0,60,0.2); width: 85%; max-width: 350px;
-          }
-          .terminal-line { margin: 6px 0; color: #fff; display: flex; justify-content: space-between;}
-          .status-ok { color: #00e676; text-shadow: 0 0 5px #00e676;}
-          .status-err { color: #ff003c; animation: blink 1s infinite; text-shadow: 0 0 5px #ff003c;}
-          @keyframes glitch-anim {
-             0% { transform: translate(0) }
-             20% { transform: translate(-2px, 2px) }
-             40% { transform: translate(-2px, -2px) }
-             60% { transform: translate(2px, 2px) }
-             80% { transform: translate(2px, -2px) }
-             100% { transform: translate(0) }
-          }
-          @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
-          .shield-icon { width: 70px; height: 70px; fill: none; stroke: #ff003c; stroke-width: 2; margin-bottom: 15px; filter: drop-shadow(0 0 10px #ff003c); stroke-linecap: round; stroke-linejoin: round;}
-        </style>
-        <div class="lockdown-container">
-           <svg class="shield-icon" viewBox="0 0 24 24">
-              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-              <line x1="12" y1="8" x2="12" y2="12"/>
-              <line x1="12" y1="16" x2="12.01" y2="16"/>
-           </svg>
-           <div class="glitch-text">SYSTEM LOCKDOWN</div>
-           <div class="sub-text">Violación de seguridad crítica detectada. El DOM ha sido purgado irreversiblemente para proteger a <b>Premium Store</b>.</div>
-           <div class="terminal-box">
-              <div class="terminal-line"><span>> PROTOCOLO DE DEFENSA:</span> <span class="status-ok">ACTIVO</span></div>
-              <div class="terminal-line"><span>> PURGA DE CÓDIGO HTML:</span> <span class="status-ok">COMPLETADA</span></div>
-              <div class="terminal-line"><span>> INTENTO DE CLONACIÓN:</span> <span class="status-err">BLOQUEADO</span></div>
-              <div class="terminal-line" style="margin-top: 15px; border-top: 1px dashed #ff003c; padding-top: 10px; color: #777;">>_ CONEXIÓN TERMINADA.</div>
-           </div>
-        </div>
+          <div class="blackout-box">
+              <svg class="lock-icon-svg" viewBox="0 0 24 24">
+                  <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
+              </svg>
+              <h1>Acceso Denegado</h1>
+              <p>El código fuente ha sido purgado. Se ha detectado un intento de violación en la seguridad del sistema.</p>
+              <div class="blackout-tag">IP REGISTRADA</div>
+          </div>
       `;
+      document.body.className = 'blackout-mode';
+      document.head.innerHTML = ''; // Borra el CSS original para romper la página
   }
 
   // ==========================================
@@ -119,7 +115,7 @@
       mutations.forEach((mutation) => {
           mutation.removedNodes.forEach((node) => {
               if (node.tagName === 'SCRIPT' || node.tagName === 'STYLE') {
-                  triggerAutoDestruct(); // Si borran nuestro script, la página explota
+                  triggerAutoDestruct(); 
               }
           });
       });
@@ -131,27 +127,24 @@
   // ==========================================
   setInterval(() => {
       console.clear();
-      console.log("%c¡ACCESO RESTRINGIDO!", "color: #ff003c; font-size: 40px; font-weight: bold; text-shadow: 2px 2px 0 #000;");
-      console.log("%cEsta área es exclusiva para la administración de Premium Store. Cualquier intento de inyección o copia de código activará el bloqueo por IP.", "color: white; font-size: 14px; background: #111; padding: 10px; border: 1px solid #ff003c; border-radius: 5px;");
+      console.log("%c¡ALTO AHÍ!", "color: red; font-size: 50px; font-weight: bold; text-shadow: 2px 2px 0 #000;");
+      console.log("%cEsta área es solo para administradores de Premium Store. Si intentas robar código, el sistema registrará tu actividad.", "color: white; font-size: 16px; background: black; padding: 10px; border-radius: 5px;");
   }, 1500);
 
   // ==========================================
   // PROTOCOLO 5: BLOQUEO DE DESCARGA Y TECLAS (ANTI-SAVE)
   // ==========================================
   document.addEventListener("keydown", (e) => {
-    // Bloquea Ctrl+S / Cmd+S (Guardar), Ctrl+P (Imprimir)
     if ((e.ctrlKey || e.metaKey) && ["s", "p", "u", "a", "c", "x", "v"].includes(e.key.toLowerCase())) {
         e.preventDefault(); e.stopPropagation();
-        showProtectionAlert("Descarga Restringida", "danger");
+        showProtectionAlert("Descarga y Copia Restringida", "danger");
     }
-    // Bloquea F12 y herramientas de inspector
     if (e.key === "F12" || (e.ctrlKey && e.shiftKey && ["I", "J", "C", "K"].includes(e.key.toUpperCase()))) {
         e.preventDefault(); e.stopPropagation();
-        triggerAutoDestruct(); // Destrucción inmediata al presionar F12
+        triggerAutoDestruct(); 
     }
   }, true);
 
-  // Detección del Debugger
   let devToolsOpen = false;
   setInterval(() => {
     let start = performance.now();
@@ -159,7 +152,7 @@
     let timeTaken = performance.now() - start;
     if (timeTaken > 100 && !devToolsOpen) {
       devToolsOpen = true;
-      triggerAutoDestruct(); // Destruye la página si detecta el inspector
+      triggerAutoDestruct(); 
     }
   }, 2000);
 

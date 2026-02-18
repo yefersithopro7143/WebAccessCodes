@@ -1,4 +1,4 @@
-// security.js - Premium Store Security Core (VIP GOD-TIER)
+// security.js - Premium Store Security Core (VIP GOD-TIER V2)
 (function() {
   // ==========================================
   // PROTOCOLO 1: ESCUDO ANTI-IFRAME (FRAME KILLER)
@@ -8,7 +8,7 @@
   }
 
   // ==========================================
-  // ESTILOS BASE, ALERTAS COMPACTAS Y BLACKOUT VIP
+  // ESTILOS BASE Y ALERTAS COMPACTAS
   // ==========================================
   const css = `
     .premium-sec-alert {
@@ -30,46 +30,6 @@
     * { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important; -webkit-touch-callout: none !important; -webkit-tap-highlight-color: transparent !important; }
     .allow-copy, .allow-copy * { -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; -webkit-touch-callout: default !important; }
     img { -webkit-user-drag: none !important; pointer-events: none !important; }
-    
-    /* ==========================================
-       ESTILOS PARA EL BLACKOUT (NUEVO DISEÑO VIP)
-       ========================================== */
-    body.blackout-mode {
-        background: radial-gradient(circle at center, #1a0005 0%, #000 70%) !important;
-        display: flex !important; justify-content: center !important; align-items: center !important;
-        height: 100vh !important; width: 100vw !important; overflow: hidden !important;
-        margin: 0 !important; padding: 0 !important; font-family: 'Montserrat', sans-serif !important;
-    }
-    .blackout-box {
-        background: linear-gradient(145deg, #0a0002, #000);
-        border: 1px solid rgba(255, 0, 60, 0.4);
-        border-radius: 12px; padding: 30px 20px; text-align: center;
-        width: 85%; max-width: 300px; /* Ultra delgado y perfecto para celular */
-        box-shadow: 0 0 40px rgba(255, 0, 60, 0.15), inset 0 0 15px rgba(255, 0, 60, 0.1);
-        position: relative; overflow: hidden;
-        animation: systemLockdown 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
-    }
-    .blackout-box::before {
-        content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 3px;
-        background: #ff003c; box-shadow: 0 2px 10px #ff003c;
-    }
-    .lock-icon-svg { 
-        width: 35px; height: 35px; fill: #ff003c; margin-bottom: 15px; 
-        filter: drop-shadow(0 0 8px rgba(255,0,60,0.6)); animation: pulseLock 2s infinite; 
-    }
-    .blackout-box h1 { 
-        color: #fff; font-size: 16px; text-transform: uppercase; letter-spacing: 2px; 
-        margin: 0 0 8px 0; font-weight: 900; text-shadow: 0 0 10px rgba(255,0,60,0.5); line-height: 1.2;
-    }
-    .blackout-box p { color: #888; font-size: 11px; line-height: 1.5; margin: 0 0 18px 0; }
-    .blackout-tag { 
-        display: inline-block; background: rgba(255,0,60,0.1); color: #ff003c; 
-        border: 1px solid rgba(255,0,60,0.3); padding: 5px 12px; font-size: 9px; 
-        font-weight: 900; border-radius: 6px; letter-spacing: 1px; text-transform: uppercase; 
-    }
-    
-    @keyframes systemLockdown { 0% { transform: scale(0.8) translateY(20px); opacity: 0; } 100% { transform: scale(1) translateY(0); opacity: 1; } }
-    @keyframes pulseLock { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.7; } }
   `;
   const style = document.createElement('style'); style.textContent = css; document.head.appendChild(style);
 
@@ -88,24 +48,74 @@
   }
 
   // ==========================================
-  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DOM BLACKOUT MEJORADO)
+  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DISEÑO DELGADO Y ELEGANTE)
   // ==========================================
   let isDestroyed = false;
   function triggerAutoDestruct() {
       if (isDestroyed) return;
       isDestroyed = true;
-      document.body.innerHTML = `
-          <div class="blackout-box">
-              <svg class="lock-icon-svg" viewBox="0 0 24 24">
-                  <path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/>
-              </svg>
-              <h1>Acceso Denegado</h1>
-              <p>El código fuente ha sido purgado. Se ha detectado un intento de violación en la seguridad del sistema.</p>
-              <div class="blackout-tag">IP REGISTRADA</div>
-          </div>
+      
+      // En lugar de vaciar solo el body, reescribimos todo el documento con estilos propios aislados
+      document.documentElement.innerHTML = `
+        <head>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <style>
+                body {
+                    background-color: #030303;
+                    font-family: 'Courier New', Courier, monospace;
+                    display: flex; justify-content: center; align-items: center;
+                    height: 100vh; margin: 0; overflow: hidden;
+                    user-select: none; -webkit-user-select: none;
+                }
+                .lockdown-card {
+                    background: linear-gradient(145deg, #0a0a0a, #000);
+                    border: 1px solid rgba(255, 0, 60, 0.3);
+                    box-shadow: 0 15px 35px rgba(0,0,0,0.9), inset 0 0 15px rgba(255, 0, 60, 0.05);
+                    border-radius: 12px;
+                    padding: 25px 20px;
+                    text-align: center;
+                    width: 85%; max-width: 300px;
+                    animation: glitchDrop 0.4s cubic-bezier(0.25, 0.8, 0.25, 1) forwards;
+                    position: relative;
+                }
+                .lockdown-card::before {
+                    content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%);
+                    width: 50px; height: 3px; background: #ff003c; border-radius: 0 0 4px 4px;
+                    box-shadow: 0 2px 10px #ff003c;
+                }
+                .icon { margin-bottom: 12px; }
+                .icon svg { width: 30px; height: 30px; stroke: #ff003c; filter: drop-shadow(0 0 5px rgba(255,0,60,0.5)); }
+                h1 { 
+                    font-size: 15px; margin: 0 0 8px 0; color: #fff; 
+                    text-transform: uppercase; letter-spacing: 2px; font-weight: bold;
+                }
+                p { font-size: 11px; color: #888; margin: 0; line-height: 1.5; }
+                .sys-code { 
+                    margin-top: 15px; font-size: 9px; color: #ff003c; 
+                    background: rgba(255,0,60,0.1); display: inline-block; 
+                    padding: 4px 8px; border-radius: 4px; border: 1px solid rgba(255,0,60,0.2);
+                    letter-spacing: 1px; font-weight: bold;
+                }
+                @keyframes glitchDrop {
+                    0% { transform: translateY(-20px) scale(0.95); opacity: 0; }
+                    100% { transform: translateY(0) scale(1); opacity: 1; }
+                }
+            </style>
+        </head>
+        <body>
+            <div class="lockdown-card">
+                <div class="icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+                    </svg>
+                </div>
+                <h1>Acceso Restringido</h1>
+                <p>El código fuente ha sido purgado debido a una violación de seguridad. Conexión terminada.</p>
+                <div class="sys-code">ERR_SEC_PURGE :: LOGGED</div>
+            </div>
+        </body>
       `;
-      document.body.className = 'blackout-mode';
-      document.head.innerHTML = ''; // Borra el CSS original para romper la página
   }
 
   // ==========================================
@@ -115,7 +125,7 @@
       mutations.forEach((mutation) => {
           mutation.removedNodes.forEach((node) => {
               if (node.tagName === 'SCRIPT' || node.tagName === 'STYLE') {
-                  triggerAutoDestruct(); 
+                  triggerAutoDestruct(); // Si borran nuestro script, la página explota
               }
           });
       });
@@ -127,28 +137,31 @@
   // ==========================================
   setInterval(() => {
       console.clear();
-      console.log("%c¡ALTO AHÍ!", "color: red; font-size: 50px; font-weight: bold; text-shadow: 2px 2px 0 #000;");
-      console.log("%cEsta área es solo para administradores de Premium Store. Si intentas robar código, el sistema registrará tu actividad.", "color: white; font-size: 16px; background: black; padding: 10px; border-radius: 5px;");
+      console.log("%c¡SISTEMA BLINDADO!", "color: #ff003c; font-size: 40px; font-weight: bold; text-shadow: 2px 2px 0 #000;");
+      console.log("%cEsta área es exclusiva para la administración de Premium Store. Intentos de manipulación del DOM serán bloqueados.", "color: white; font-size: 14px; background: #111; padding: 10px; border-radius: 5px; border-left: 4px solid #ff003c;");
   }, 1500);
 
   // ==========================================
   // PROTOCOLO 5: BLOQUEO DE DESCARGA Y TECLAS (ANTI-SAVE)
   // ==========================================
   document.addEventListener("keydown", (e) => {
+    // Bloquea Ctrl+S / Cmd+S (Guardar), Ctrl+P (Imprimir)
     if ((e.ctrlKey || e.metaKey) && ["s", "p", "u", "a", "c", "x", "v"].includes(e.key.toLowerCase())) {
         e.preventDefault(); e.stopPropagation();
-        showProtectionAlert("Descarga y Copia Restringida", "danger");
+        showProtectionAlert("Descarga Restringida", "danger");
     }
+    // Bloquea F12 y herramientas de inspector
     if (e.key === "F12" || (e.ctrlKey && e.shiftKey && ["I", "J", "C", "K"].includes(e.key.toUpperCase()))) {
         e.preventDefault(); e.stopPropagation();
         triggerAutoDestruct(); 
     }
   }, true);
 
+  // Detección del Debugger (Gatillo principal de destrucción)
   let devToolsOpen = false;
   setInterval(() => {
     let start = performance.now();
-    debugger; 
+    debugger; // Si tienen la consola abierta, el navegador se pausa aquí
     let timeTaken = performance.now() - start;
     if (timeTaken > 100 && !devToolsOpen) {
       devToolsOpen = true;

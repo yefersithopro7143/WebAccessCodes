@@ -51,14 +51,13 @@
       -webkit-tap-highlight-color: transparent !important;
     }
     
-    /* Permitir selección y menú de copiar solo en elementos específicos */
+    /* Permitir selección y menú de copiar en celulares SOLO aquí */
     .allow-copy, .allow-copy * {
       -webkit-user-select: text !important;
       -moz-user-select: text !important;
       -ms-user-select: text !important;
       user-select: text !important;
-      /* ESTA LÍNEA ES LA MAGIA: Despierta el menú de copiar del celular */
-      -webkit-touch-callout: default !important; 
+      -webkit-touch-callout: default !important; /* ¡Esta es la magia para móviles! */
     }
     
     img {
@@ -115,8 +114,11 @@
 
   // 2. Bloquear Menú Contextual (Clic derecho / Mantener presionado en móvil)
   document.addEventListener("contextmenu", (e) => {
-    e.preventDefault(); e.stopPropagation();
-    showProtectionAlert("Acción Bloqueada", "warning");
+    // Si NO están tocando un elemento con "allow-copy", lo bloquea
+    if (!e.target.closest(".allow-copy")) {
+      e.preventDefault(); e.stopPropagation();
+      showProtectionAlert("Acción Bloqueada", "warning");
+    }
   }, true);
 
   // 3. Bloquear Selección de Texto

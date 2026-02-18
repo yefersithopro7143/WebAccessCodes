@@ -1,4 +1,4 @@
-// security.js - Premium Store Security Core (VIP GOD-TIER V4)
+// security.js - Premium Store Security Core (VIP GOD-TIER V4 - FLUIDO)
 (function() {
   // ==========================================
   // PROTOCOLO 1: ESCUDO ANTI-IFRAME (FRAME KILLER)
@@ -48,15 +48,14 @@
   }
 
   // ==========================================
-  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DOM BLACKOUT VISUAL PRIMERO)
+  // PROTOCOLO 2: AUTO-DESTRUCCIÓN 
   // ==========================================
   let isDestroyed = false;
-  
   function triggerAutoDestruct() {
       if (isDestroyed) return;
       isDestroyed = true;
       
-      document.head.innerHTML = ''; // Destruye CSS/Scripts originales
+      document.head.innerHTML = ''; 
       const fakeIP = "192." + Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255) + ".x";
 
       document.body.style.cssText = "margin:0; padding:0; background-color:#020502; background-image:repeating-linear-gradient(0deg, rgba(57,255,20,0.03) 0px, rgba(57,255,20,0.03) 1px, transparent 1px, transparent 2px); height:100vh; width:100vw; display:flex; justify-content:center; align-items:center; overflow:hidden; font-family:monospace;";
@@ -69,11 +68,14 @@
               
               .terminal-box { border: 1px solid #39ff14; background: rgba(0, 15, 0, 0.9); padding: 30px 20px; border-radius: 12px; text-align: center; box-shadow: 0 0 40px rgba(57, 255, 20, 0.2), inset 0 0 20px rgba(57, 255, 20, 0.1); width: 85%; max-width: 300px; position: relative; }
               .terminal-box::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: #39ff14; box-shadow: 0 2px 15px #39ff14; }
+              
               .icon-container { position: relative; width: 70px; height: 70px; margin: 0 auto 20px auto; }
               .ring { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid #39ff14; border-radius: 50%; animation: pulse-ring 1.5s infinite ease-out; }
               .nuke-icon { width: 40px; height: 40px; fill: #39ff14; filter: drop-shadow(0 0 10px #39ff14); position: relative; top: 15px; }
+              
               h1 { color: #39ff14; font-size: 22px; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 2px; animation: glitch-neon 0.3s infinite; }
               .warning-text { color: #ccc; font-size: 11px; line-height: 1.5; margin-bottom: 20px; }
+              
               .ip-box { animation: alert-flash 1s infinite; border: 1px dashed red; padding: 12px; border-radius: 5px; color: #ff3333; font-weight: bold; font-size: 11px; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px;}
               .strike-tag { display: inline-block; background: #39ff14; color: #000; font-weight: 900; padding: 6px 12px; font-size: 10px; border-radius: 4px; text-transform: uppercase; box-shadow: 0 0 10px #39ff14;}
               .footer-sys { color: #444; font-size: 9px; margin-top: 20px; letter-spacing: 1px;}
@@ -87,31 +89,28 @@
                       <circle cx="256" cy="256" r="45"/>
                   </svg>
               </div>
+              
               <h1>AMENAZA DETECTADA</h1>
               <p class="warning-text">Intento de inspección o robo de código fuente interceptado. El DOM ha sido purgado.</p>
-              <div class="ip-box">[!] RASTREO IP: ${fakeIP}<br><br>AVISO 1 DE 2:<br>BLOQUEO PERMANENTE INMINENTE</div>
+              
+              <div class="ip-box">
+                  [!] RASTREO IP: ${fakeIP}<br><br>
+                  AVISO 1 DE 2:<br>BLOQUEO PERMANENTE INMINENTE
+              </div>
+              
               <div class="strike-tag">SISTEMA CERRADO</div>
               <div class="footer-sys">Premium Store Security v4.0</div>
           </div>
       `;
-
-      // ACTIVA EL DEPURADOR INFINITO *DESPUÉS* DE QUE LA PANTALLA CARGUE
-      setTimeout(() => {
-          setInterval(() => {
-              Function("debugger")();
-          }, 50);
-      }, 500); // Espera 0.5 segundos y los atrapa
   }
 
   // ==========================================
   // PROTOCOLO 3: TRAMPA DE MUTACIÓN (ANTI-TAMPERING)
-  // Detecta si eliminan scripts, estilos, o intentan vaciar la página.
   // ==========================================
   const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
           mutation.removedNodes.forEach((node) => {
-              // Si borran nuestro script o cualquier div importante, explota.
-              if (node.tagName === 'SCRIPT' || node.tagName === 'STYLE' || node.tagName === 'DIV') {
+              if (node.tagName === 'SCRIPT' || node.tagName === 'STYLE') {
                   triggerAutoDestruct(); 
               }
           });
@@ -129,20 +128,39 @@
   }, 1000); 
 
   // ==========================================
-  // PROTOCOLO 5: BLOQUEO DE TECLAS (ANTI-SAVE)
+  // PROTOCOLO 5: BLOQUEO DE DESCARGA Y TECLAS (ANTI-SAVE)
   // ==========================================
   document.addEventListener("keydown", (e) => {
-    // Bloquea atajos de guardado e impresión
     if ((e.ctrlKey || e.metaKey) && ["s", "p", "u", "a", "c", "x", "v"].includes(e.key.toLowerCase())) {
         e.preventDefault(); e.stopPropagation();
         showProtectionAlert("Descarga y Copia Restringida", "danger");
     }
-    // Bloquea atajos de DevTools (F12, Ctrl+Shift+I, etc)
     if (e.key === "F12" || (e.ctrlKey && e.shiftKey && ["I", "J", "C", "K"].includes(e.key.toUpperCase()))) {
         e.preventDefault(); e.stopPropagation();
-        triggerAutoDestruct(); // Gatilla la destrucción
+        triggerAutoDestruct(); 
     }
   }, true);
+
+  // ==========================================
+  // DETECCIÓN DEL DEBUGGER (SIN PAUSAS MOLESTAS EN PANTALLA)
+  // ==========================================
+  let devToolsOpen = false;
+  const debugTrap = setInterval(() => {
+    // MAGIA AQUÍ: Si ya detonó, apagamos la trampa del debugger para que la animación corra fluida.
+    if (isDestroyed) {
+        clearInterval(debugTrap);
+        return;
+    }
+    
+    let start = performance.now();
+    debugger; 
+    let timeTaken = performance.now() - start;
+    
+    if (timeTaken > 100 && !devToolsOpen) {
+      devToolsOpen = true;
+      triggerAutoDestruct(); 
+    }
+  }, 2000);
 
   // ==========================================
   // INTERACCIONES BÁSICAS DE RATÓN (RESPETA ALLOW-COPY)

@@ -1,4 +1,4 @@
-// security.js - Premium Store Security Core (VIP GOD-TIER v2)
+// security.js - Premium Store Security Core (VIP GOD-TIER)
 (function() {
   // ==========================================
   // PROTOCOLO 1: ESCUDO ANTI-IFRAME (FRAME KILLER)
@@ -8,7 +8,7 @@
   }
 
   // ==========================================
-  // ESTILOS BASE, ALERTAS Y DISEÑO DE AUTO-DESTRUCCIÓN
+  // ESTILOS BASE Y ALERTAS COMPACTAS (Uso Normal)
   // ==========================================
   const css = `
     .premium-sec-alert {
@@ -22,7 +22,7 @@
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
     .premium-sec-alert.show { opacity: 1; transform: translateX(-50%) translateY(0) scale(1); }
-    .premium-sec-alert.danger { border-color: #ff003c; box-shadow: 0 5px 15px rgba(255, 0, 60, 0.3); color: #ff003c; }
+    .premium-sec-alert.danger { border-color: #39ff14; box-shadow: 0 5px 15px rgba(57, 255, 20, 0.3); color: #39ff14; }
     .premium-sec-alert.warning { border-color: #d4af37; box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2); color: #d4af37; }
     .premium-sec-alert.info { border-color: #00d2ff; box-shadow: 0 5px 15px rgba(0, 210, 255, 0.2); color: #00d2ff; }
     .premium-sec-alert svg { width: 14px; height: 14px; fill: currentColor; }
@@ -30,46 +30,6 @@
     * { -webkit-user-select: none !important; -moz-user-select: none !important; -ms-user-select: none !important; user-select: none !important; -webkit-touch-callout: none !important; -webkit-tap-highlight-color: transparent !important; }
     .allow-copy, .allow-copy * { -webkit-user-select: text !important; -moz-user-select: text !important; -ms-user-select: text !important; user-select: text !important; -webkit-touch-callout: default !important; }
     img { -webkit-user-drag: none !important; pointer-events: none !important; }
-    
-    /* ==========================================
-       DISEÑO ÉPICO PARA EL BLACKOUT
-       ========================================== */
-    body.blackout-mode {
-        background: #050000 !important; color: #ff003c !important;
-        font-family: 'Courier New', Courier, monospace !important;
-        display: flex !important; justify-content: center !important; align-items: center !important;
-        height: 100vh !important; width: 100vw !important; overflow: hidden !important;
-        margin: 0 !important; padding: 0 !important;
-        background-image: repeating-linear-gradient(0deg, rgba(255, 0, 60, 0.05) 0px, rgba(255, 0, 60, 0.05) 1px, transparent 1px, transparent 2px) !important;
-    }
-    
-    .blackout-container {
-        text-align: center; padding: 40px 30px; border: 1px solid rgba(255, 0, 60, 0.5);
-        box-shadow: 0 0 50px rgba(255, 0, 60, 0.2), inset 0 0 20px rgba(255, 0, 60, 0.1);
-        border-radius: 12px; background: rgba(0,0,0,0.9); position: relative;
-        max-width: 90%; width: 400px;
-    }
-    
-    .blackout-container svg {
-        width: 50px; height: 50px; fill: none; stroke: #ff003c; stroke-width: 2;
-        margin-bottom: 20px; filter: drop-shadow(0 0 8px #ff003c); animation: pulseLock 2s infinite;
-    }
-    
-    .glitch-title {
-        font-size: 28px; margin: 0 0 10px 0; font-weight: 900; text-shadow: 0 0 15px rgba(255, 0, 60, 0.8);
-        text-transform: uppercase; animation: glitchText 3s infinite; letter-spacing: 2px;
-    }
-    
-    .terminal-log {
-        text-align: left; font-size: 11px; color: #ff5555; margin-top: 25px; line-height: 1.8;
-        border-top: 1px dashed rgba(255, 0, 60, 0.4); padding-top: 20px;
-    }
-    
-    @keyframes pulseLock { 0%, 100% { transform: scale(1); opacity: 1; } 50% { transform: scale(1.1); opacity: 0.6; } }
-    @keyframes glitchText { 
-        0% { transform: translate(0) } 2% { transform: translate(-3px, 2px) } 
-        4% { transform: translate(3px, -2px) } 6% { transform: translate(0) } 100% { transform: translate(0) } 
-    }
   `;
   const style = document.createElement('style'); style.textContent = css; document.head.appendChild(style);
 
@@ -88,32 +48,87 @@
   }
 
   // ==========================================
-  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DOM BLACKOUT MEJORADO)
+  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DOM BLACKOUT - VERDE RADIACTIVO)
   // ==========================================
   let isDestroyed = false;
+  
+  // Fake IP generator for intimidation
+  function generateFakeIP() {
+      return `${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}.${Math.floor(Math.random()*255)}`;
+  }
+
   function triggerAutoDestruct() {
       if (isDestroyed) return;
       isDestroyed = true;
-      document.body.className = 'blackout-mode';
       
-      // Destruye el contenido original pero respeta la cabecera (CSS)
+      const fakeIP = generateFakeIP();
+      
+      // Borramos la página (Head y Body content)
+      document.head.innerHTML = '';
+      
+      // Inyectamos el estilo DIRECTAMENTE en el body para que no se borre
+      const blackoutStyles = `
+          body {
+              background: #050a05 !important; color: #39ff14 !important;
+              font-family: 'Courier New', Courier, monospace !important;
+              display: flex !important; justify-content: center !important; align-items: center !important;
+              height: 100vh !important; width: 100vw !important; overflow: hidden !important;
+              margin: 0 !important; padding: 0 !important;
+              background-image: 
+                  radial-gradient(circle at center, rgba(57, 255, 20, 0.05) 0%, transparent 60%),
+                  repeating-linear-gradient(0deg, rgba(57, 255, 20, 0.02) 0px, rgba(57, 255, 20, 0.02) 1px, transparent 1px, transparent 3px) !important;
+          }
+          .blackout-card {
+              background: rgba(0, 20, 0, 0.8) !important; border: 1px solid #39ff14 !important;
+              padding: 40px !important; border-radius: 8px !important; text-align: center !important;
+              box-shadow: 0 0 40px rgba(57, 255, 20, 0.2), inset 0 0 20px rgba(57, 255, 20, 0.1) !important;
+              max-width: 600px !important; width: 90% !important; position: relative !important;
+              animation: glitchIn 0.2s linear !important;
+          }
+          .radar {
+              width: 80px; height: 80px; border-radius: 50%; border: 2px solid #39ff14;
+              margin: 0 auto 20px; position: relative; overflow: hidden;
+              box-shadow: 0 0 20px rgba(57, 255, 20, 0.5);
+          }
+          .radar::before {
+              content: ''; position: absolute; top: 0; left: 50%; width: 50%; height: 50%;
+              background: linear-gradient(45deg, rgba(57, 255, 20, 0) 0%, rgba(57, 255, 20, 0.8) 100%);
+              transform-origin: bottom left; animation: scan 2s linear infinite;
+          }
+          .radar::after { content: '⚠️'; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); font-size: 24px; z-index: 2; }
+          .blackout-card h1 { font-size: 28px !important; margin: 0 0 15px 0 !important; text-shadow: 0 0 10px #39ff14 !important; letter-spacing: 2px !important; }
+          .blackout-card p { font-size: 14px !important; margin-bottom: 10px !important; line-height: 1.5 !important; }
+          .alert-box {
+              background: rgba(255, 0, 0, 0.1) !important; border: 1px solid #ff003c !important;
+              color: #ff003c !important; padding: 15px !important; margin-top: 25px !important;
+              text-align: left !important; font-size: 12px !important;
+          }
+          .alert-box strong { font-size: 14px; }
+          
+          @keyframes scan { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+          @keyframes glitchIn { 0% { transform: scale(1.1); filter: contrast(2); } 50% { transform: scale(0.9); filter: invert(1); } 100% { transform: scale(1); filter: none; } }
+          @keyframes blinkWarning { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+      `;
+
       document.body.innerHTML = `
-          <div class="blackout-container">
-              <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
-                  <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
-                  <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
-              </svg>
-              <h1 class="glitch-title">SYSTEM LOCKDOWN</h1>
-              <p style="font-size: 13px; color: #fff; margin: 0; font-family: sans-serif;">Violación de seguridad detectada en el código fuente.</p>
+          <style>${blackoutStyles}</style>
+          <div class="blackout-card">
+              <div class="radar"></div>
+              <h1>ACCESO DENEGADO</h1>
+              <p>El código fuente ha sido purgado tras detectar una intrusión no autorizada en el DOM.</p>
+              <p>Tu intento de inspección/clonación ha activado los protocolos de seguridad.</p>
               
-              <div class="terminal-log">
-                  > PURGANDO ESTRUCTURA DOM... [OK]<br>
-                  > BLOQUEANDO HERRAMIENTAS DEV... [OK]<br>
-                  > CANCELANDO CONEXIÓN LOCAL... [OK]<br>
-                  > REGISTRANDO INCIDENTE... [EN PROCESO]
+              <div class="alert-box">
+                  <strong><span style="animation: blinkWarning 1s infinite;">[!]</span> ADVERTENCIA CRÍTICA</strong><br><br>
+                  IP Registrada: ${fakeIP}<br>
+                  Acción: Extracción de código bloqueada.<br><br>
+                  <em>Aviso 1 de 2: Cierra las herramientas de desarrollo inmediatamente. Un segundo intento resultará en un bloqueo permanente de hardware (MAC Address) y reporte a ISP.</em>
               </div>
+              <p style="margin-top: 20px; font-size: 10px; opacity: 0.5;">PREMIUM STORE SECURITY ENFORCEMENT</p>
           </div>
       `;
+      // Prevenir el menú de nuevo por si acaso en la pantalla negra
+      document.body.oncontextmenu = (e) => e.preventDefault();
   }
 
   // ==========================================
@@ -135,24 +150,27 @@
   // ==========================================
   setInterval(() => {
       console.clear();
-      console.log("%c¡ALTO AHÍ!", "color: red; font-size: 50px; font-weight: bold; text-shadow: 2px 2px 0 #000;");
-      console.log("%cEsta área es solo para administradores de Premium Store. Si intentas robar código, el sistema registrará tu actividad.", "color: white; font-size: 16px; background: black; padding: 10px; border-radius: 5px;");
-  }, 1500);
+      console.log("%c¡SISTEMA BLOQUEADO!", "color: #39ff14; font-size: 40px; font-weight: bold; text-shadow: 0 0 10px #39ff14; background: #000; padding: 20px; border: 2px solid #39ff14;");
+      console.log("%cTus acciones están siendo monitoreadas. Cierra la consola inmediatamente.", "color: #fff; font-size: 16px; background: #ff003c; padding: 10px;");
+  }, 1000);
 
   // ==========================================
   // PROTOCOLO 5: BLOQUEO DE DESCARGA Y TECLAS (ANTI-SAVE)
   // ==========================================
   document.addEventListener("keydown", (e) => {
+    // Bloquea Guardar e Imprimir
     if ((e.ctrlKey || e.metaKey) && ["s", "p", "u", "a", "c", "x", "v"].includes(e.key.toLowerCase())) {
         e.preventDefault(); e.stopPropagation();
-        showProtectionAlert("Descarga y Copia Restringida", "danger");
+        showProtectionAlert("Acción Bloqueada", "danger");
     }
+    // Bloquea F12 y Herramientas (Gatilla destrucción)
     if (e.key === "F12" || (e.ctrlKey && e.shiftKey && ["I", "J", "C", "K"].includes(e.key.toUpperCase()))) {
         e.preventDefault(); e.stopPropagation();
-        triggerAutoDestruct();
+        triggerAutoDestruct(); 
     }
   }, true);
 
+  // Detección agresiva del Debugger
   let devToolsOpen = false;
   setInterval(() => {
     let start = performance.now();
@@ -162,11 +180,11 @@
       devToolsOpen = true;
       triggerAutoDestruct(); 
     }
-  }, 2000);
+  }, 1500);
 
-  // INTERACCIONES BÁSICAS DE RATÓN
+  // INTERACCIONES TÁCTILES / RATÓN (con soporte allow-copy)
   document.addEventListener("contextmenu", (e) => {
-    if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.stopPropagation(); showProtectionAlert("Acción Bloqueada", "warning"); }
+    if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.stopPropagation(); showProtectionAlert("Protegido", "warning"); }
   }, true);
 
   document.addEventListener("selectstart", (e) => {
@@ -178,8 +196,8 @@
   }, true);
 
   document.addEventListener("copy", (e) => {
-    if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.clipboardData.setData("text/plain", ""); showProtectionAlert("Copia Restringida", "warning"); }
+    if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.clipboardData.setData("text/plain", ""); showProtectionAlert("Copia Bloqueada", "warning"); }
   });
 
-  console.log("🛡️ Premium Store Security Core: [NIVEL DIOS ACTIVADO]");
+  console.log("🛡️ Premium Store Security Core: [MODO DIOS ACTIVADO]");
 })();

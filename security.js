@@ -1,15 +1,14 @@
-// security.js - Premium Store Security Core (VIP GOD-TIER V3)
+// security.js - Premium Store Security Core (VIP GOD-TIER V4 - FLUIDO)
 (function() {
   // ==========================================
   // PROTOCOLO 1: ESCUDO ANTI-IFRAME (FRAME KILLER)
-  // Evita que clonen tu web metiéndola en un marco de otra página.
   // ==========================================
   if (window.top !== window.self) {
       window.top.location = window.self.location;
   }
 
   // ==========================================
-  // ESTILOS BASE Y ALERTAS COMPACTAS (Para clientes reales)
+  // ESTILOS BASE Y ALERTAS COMPACTAS
   // ==========================================
   const css = `
     .premium-sec-alert {
@@ -49,30 +48,24 @@
   }
 
   // ==========================================
-  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DOM BLACKOUT - DISEÑO MÓVIL TERRORÍFICO)
-  // Borra el HTML y muestra una pantalla verde radiactiva angosta.
+  // PROTOCOLO 2: AUTO-DESTRUCCIÓN 
   // ==========================================
   let isDestroyed = false;
   function triggerAutoDestruct() {
       if (isDestroyed) return;
       isDestroyed = true;
       
-      document.head.innerHTML = ''; // Destruye todo el CSS y Scripts de la página original
-      
-      // IP simulada para asustar al ladrón
+      document.head.innerHTML = ''; 
       const fakeIP = "192." + Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255) + ".x";
 
-      // Reemplazamos el BODY con un estilo que sobrevive a todo
       document.body.style.cssText = "margin:0; padding:0; background-color:#020502; background-image:repeating-linear-gradient(0deg, rgba(57,255,20,0.03) 0px, rgba(57,255,20,0.03) 1px, transparent 1px, transparent 2px); height:100vh; width:100vw; display:flex; justify-content:center; align-items:center; overflow:hidden; font-family:monospace;";
       
-      // Inyectamos CSS en línea dentro del body + el HTML de terror
       document.body.innerHTML = `
           <style>
               @keyframes glitch-neon { 0% { transform: translate(0); text-shadow: 0 0 10px #39ff14; } 20% { transform: translate(-2px, 2px); text-shadow: -2px 0 red, 2px 0 blue; } 40% { transform: translate(-2px, -2px); } 60% { transform: translate(2px, 2px); text-shadow: 0 0 20px #39ff14; } 80% { transform: translate(2px, -2px); } 100% { transform: translate(0); text-shadow: 0 0 10px #39ff14; } }
               @keyframes pulse-ring { 0% { transform: scale(0.8); opacity: 0.8; border-color: #39ff14; } 100% { transform: scale(1.8); opacity: 0; border-color: red; } }
               @keyframes alert-flash { 0%, 100% { background: rgba(255, 0, 0, 0.1); } 50% { background: rgba(255, 0, 0, 0.3); } }
               
-              /* Caja súper angosta para celulares */
               .terminal-box { border: 1px solid #39ff14; background: rgba(0, 15, 0, 0.9); padding: 30px 20px; border-radius: 12px; text-align: center; box-shadow: 0 0 40px rgba(57, 255, 20, 0.2), inset 0 0 20px rgba(57, 255, 20, 0.1); width: 85%; max-width: 300px; position: relative; }
               .terminal-box::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: #39ff14; box-shadow: 0 2px 15px #39ff14; }
               
@@ -98,7 +91,6 @@
               </div>
               
               <h1>AMENAZA DETECTADA</h1>
-              
               <p class="warning-text">Intento de inspección o robo de código fuente interceptado. El DOM ha sido purgado.</p>
               
               <div class="ip-box">
@@ -107,7 +99,6 @@
               </div>
               
               <div class="strike-tag">SISTEMA CERRADO</div>
-              
               <div class="footer-sys">Premium Store Security v4.0</div>
           </div>
       `;
@@ -115,7 +106,6 @@
 
   // ==========================================
   // PROTOCOLO 3: TRAMPA DE MUTACIÓN (ANTI-TAMPERING)
-  // Si intentan borrar el script de seguridad desde el inspector, explota.
   // ==========================================
   const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
@@ -130,7 +120,6 @@
 
   // ==========================================
   // PROTOCOLO 4: INUNDACIÓN DE CONSOLA (CONSOLE JAMMER)
-  // Limpia la consola infinitamente y lanza alertas rojas.
   // ==========================================
   setInterval(() => {
       console.clear();
@@ -152,12 +141,21 @@
     }
   }, true);
 
-  // DETECCIÓN DEL DEBUGGER (El gatillo principal)
+  // ==========================================
+  // DETECCIÓN DEL DEBUGGER (SIN PAUSAS MOLESTAS EN PANTALLA)
+  // ==========================================
   let devToolsOpen = false;
-  setInterval(() => {
+  const debugTrap = setInterval(() => {
+    // MAGIA AQUÍ: Si ya detonó, apagamos la trampa del debugger para que la animación corra fluida.
+    if (isDestroyed) {
+        clearInterval(debugTrap);
+        return;
+    }
+    
     let start = performance.now();
-    debugger; // Pausa el navegador si abren la consola
+    debugger; 
     let timeTaken = performance.now() - start;
+    
     if (timeTaken > 100 && !devToolsOpen) {
       devToolsOpen = true;
       triggerAutoDestruct(); 

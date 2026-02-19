@@ -1,4 +1,4 @@
-// security.js - Premium Store Security Core (VIP GOD-TIER V4 - FLUIDO)
+// security.js - Premium Store Security Core (VIP GOD-TIER V4 - REPARADO)
 (function() {
   // ==========================================
   // PROTOCOLO 1: ESCUDO ANTI-IFRAME (FRAME KILLER)
@@ -39,7 +39,6 @@
     lastAlertTime = Date.now();
     let oldAlert = document.querySelector(".premium-sec-alert"); if (oldAlert) oldAlert.remove();
     const alert = document.createElement("div"); alert.className = `premium-sec-alert ${type}`;
-    
     let iconSVG = type === 'danger' ? `<svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15h2v-2h-2v2zm0-4h2V7h-2v6z"/></svg>` : `<svg viewBox="0 0 24 24"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z"/></svg>`;
     alert.innerHTML = `${iconSVG} <span>${message}</span>`;
     document.body.appendChild(alert);
@@ -48,13 +47,14 @@
   }
 
   // ==========================================
-  // PROTOCOLO 2: AUTO-DESTRUCCIÓN 
+  // PROTOCOLO 2: AUTO-DESTRUCCIÓN (DOM BLACKOUT)
   // ==========================================
   let isDestroyed = false;
   function triggerAutoDestruct() {
       if (isDestroyed) return;
       isDestroyed = true;
       
+      // 1. Destruimos la página original inmediatamente
       document.head.innerHTML = ''; 
       const fakeIP = "192." + Math.floor(Math.random() * 255) + "." + Math.floor(Math.random() * 255) + ".x";
 
@@ -68,14 +68,11 @@
               
               .terminal-box { border: 1px solid #39ff14; background: rgba(0, 15, 0, 0.9); padding: 30px 20px; border-radius: 12px; text-align: center; box-shadow: 0 0 40px rgba(57, 255, 20, 0.2), inset 0 0 20px rgba(57, 255, 20, 0.1); width: 85%; max-width: 300px; position: relative; }
               .terminal-box::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 4px; background: #39ff14; box-shadow: 0 2px 15px #39ff14; }
-              
               .icon-container { position: relative; width: 70px; height: 70px; margin: 0 auto 20px auto; }
               .ring { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 2px solid #39ff14; border-radius: 50%; animation: pulse-ring 1.5s infinite ease-out; }
               .nuke-icon { width: 40px; height: 40px; fill: #39ff14; filter: drop-shadow(0 0 10px #39ff14); position: relative; top: 15px; }
-              
               h1 { color: #39ff14; font-size: 22px; margin: 0 0 10px 0; text-transform: uppercase; letter-spacing: 2px; animation: glitch-neon 0.3s infinite; }
               .warning-text { color: #ccc; font-size: 11px; line-height: 1.5; margin-bottom: 20px; }
-              
               .ip-box { animation: alert-flash 1s infinite; border: 1px dashed red; padding: 12px; border-radius: 5px; color: #ff3333; font-weight: bold; font-size: 11px; text-transform: uppercase; margin-bottom: 15px; letter-spacing: 1px;}
               .strike-tag { display: inline-block; background: #39ff14; color: #000; font-weight: 900; padding: 6px 12px; font-size: 10px; border-radius: 4px; text-transform: uppercase; box-shadow: 0 0 10px #39ff14;}
               .footer-sys { color: #444; font-size: 9px; margin-top: 20px; letter-spacing: 1px;}
@@ -89,19 +86,36 @@
                       <circle cx="256" cy="256" r="45"/>
                   </svg>
               </div>
-              
               <h1>AMENAZA DETECTADA</h1>
               <p class="warning-text">Intento de inspección o robo de código fuente interceptado. El DOM ha sido purgado.</p>
-              
-              <div class="ip-box">
-                  [!] RASTREO IP: ${fakeIP}<br><br>
-                  AVISO 1 DE 2:<br>BLOQUEO PERMANENTE INMINENTE
-              </div>
-              
+              <div class="ip-box">[!] RASTREO IP: ${fakeIP}<br><br>AVISO 1 DE 2:<br>BLOQUEO PERMANENTE INMINENTE</div>
               <div class="strike-tag">SISTEMA CERRADO</div>
-              <div class="footer-sys">Premium Store Security v4.0</div>
+              <div class="footer-sys">Premium Store Security v5.0</div>
           </div>
       `;
+
+      // 2. MAGIA PURA: Le damos 800ms al navegador para que dibuje la pantalla radiactiva
+      // ANTES de que el debugger congele todo el sistema.
+      setTimeout(() => {
+          activarCastigoMortal();
+      }, 800);
+  }
+
+  // ==========================================
+  // PROTOCOLO DE CASTIGO (EL BUCLE INFERNAL)
+  // ==========================================
+  function activarCastigoMortal() {
+      // Inundación de Consola
+      setInterval(() => {
+          console.clear();
+          console.log("%c☢️ ZONA RESTRINGIDA ☢️", "color: #39ff14; font-size: 30px; font-weight: bold; text-shadow: 0 0 10px #39ff14; background: #000; padding: 15px; border: 2px solid #39ff14;");
+          console.log("%cSi no eres administrador de Premium Store, cierra esta ventana inmediatamente. RASTREO ACTIVO.", "color: #ff3333; font-size: 14px; background: black; padding: 10px; border-radius: 5px;");
+      }, 500); 
+
+      // Debugger Infinito (Congela la herramienta del hacker)
+      setInterval(() => {
+          Function("debugger")();
+      }, 50);
   }
 
   // ==========================================
@@ -119,16 +133,29 @@
   observer.observe(document.documentElement, { childList: true, subtree: true });
 
   // ==========================================
-  // PROTOCOLO 4: INUNDACIÓN DE CONSOLA (CONSOLE JAMMER)
+  // PROTOCOLO 4: DETECCIÓN DEL INTRUSO (SILENCIOSA)
   // ==========================================
-  setInterval(() => {
-      console.clear();
-      console.log("%c☢️ ZONA RESTRINGIDA ☢️", "color: #39ff14; font-size: 30px; font-weight: bold; text-shadow: 0 0 10px #39ff14; background: #000; padding: 15px; border: 2px solid #39ff14;");
-      console.log("%cSi no eres administrador de Premium Store, cierra esta ventana. Todo intento de inyección de código está siendo monitoreado.", "color: #ff3333; font-size: 14px; background: black; padding: 10px; border-radius: 5px;");
-  }, 1000); 
+  
+  // A) Detección por tamaño de ventana (Detecta herramientas ancladas sin congelar la pantalla)
+  window.addEventListener('resize', function() {
+      if (window.outerWidth - window.innerWidth > 160 || window.outerHeight - window.innerHeight > 160) {
+          triggerAutoDestruct();
+      }
+  });
+
+  // B) Detección clásica como respaldo
+  let detectorLento = setInterval(() => {
+    let start = performance.now();
+    debugger; // Este solo salta cada 2 segundos. Al darle a continuar, se activa la trampa.
+    let timeTaken = performance.now() - start;
+    if (timeTaken > 100 && !isDestroyed) {
+      clearInterval(detectorLento); // Apagamos este detector para que no interrumpa el renderizado
+      triggerAutoDestruct(); 
+    }
+  }, 2000);
 
   // ==========================================
-  // PROTOCOLO 5: BLOQUEO DE DESCARGA Y TECLAS (ANTI-SAVE)
+  // PROTOCOLO 5: BLOQUEO DE TECLAS Y RATÓN (ANTI-SAVE)
   // ==========================================
   document.addEventListener("keydown", (e) => {
     if ((e.ctrlKey || e.metaKey) && ["s", "p", "u", "a", "c", "x", "v"].includes(e.key.toLowerCase())) {
@@ -141,30 +168,7 @@
     }
   }, true);
 
-  // ==========================================
-  // DETECCIÓN DEL DEBUGGER (SIN PAUSAS MOLESTAS EN PANTALLA)
-  // ==========================================
-  let devToolsOpen = false;
-  const debugTrap = setInterval(() => {
-    // MAGIA AQUÍ: Si ya detonó, apagamos la trampa del debugger para que la animación corra fluida.
-    if (isDestroyed) {
-        clearInterval(debugTrap);
-        return;
-    }
-    
-    let start = performance.now();
-    debugger; 
-    let timeTaken = performance.now() - start;
-    
-    if (timeTaken > 100 && !devToolsOpen) {
-      devToolsOpen = true;
-      triggerAutoDestruct(); 
-    }
-  }, 2000);
-
-  // ==========================================
   // INTERACCIONES BÁSICAS DE RATÓN (RESPETA ALLOW-COPY)
-  // ==========================================
   document.addEventListener("contextmenu", (e) => {
     if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.stopPropagation(); showProtectionAlert("Acción Bloqueada", "warning"); }
   }, true);

@@ -89,5 +89,12 @@
     "key": "Andrea",
     "expiresAt": "2028-11-01",
     "allowOffline": true
+  },
+  {
+    "id": "1c14c4cb64009694",
+    "username": "vanessa",
+    "key": "Vanessa11",
+    "expiresAt": "2026-03-24",
+    "allowOffline": true
   }
 ]

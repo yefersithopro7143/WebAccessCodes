@@ -89,5 +89,12 @@
     "key": "Vanessa11",
     "expiresAt": "2026-03-24",
     "allowOffline": true
+  },
+  {
+    "id": "db2d728dc612a543",
+    "username": "anghelo",
+    "key": "tirIECH85rBrFxG",
+    "expiresAt": "2026-03-18",
+    "allowOffline": true
   }
 ]

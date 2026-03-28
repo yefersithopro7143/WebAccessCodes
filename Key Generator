@@ -89,12 +89,5 @@
     "key": "xd",
     "expiresAt": "2026-04-05",
     "allowOffline": true
-  },
-  {
-    "id": "asd",
-    "username": "pablo",
-    "key": "raaa",
-    "expiresAt": "2026-04-05",
-    "allowOffline": true
   }
 ]

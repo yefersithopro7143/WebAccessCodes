@@ -82,5 +82,12 @@
     "key": "Jl6xw70bbOXxz7f",
     "expiresAt": "2026-04-05",
     "allowOffline": true
+  },
+  {
+    "id": "asd",
+    "username": "pablo",
+    "key": "BYT4Up4R3kRseBL",
+    "expiresAt": "2026-04-05",
+    "allowOffline": true
   }
 ]

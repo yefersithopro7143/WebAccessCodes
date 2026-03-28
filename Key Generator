@@ -72,13 +72,6 @@
   {
     "id": "hola",
     "username": "pablo",
-    "key": "hola",
-    "expiresAt": "2026-03-27",
-    "allowOffline": true
-  },
-  {
-    "id": "hola",
-    "username": "pablo",
     "key": "obmR0hJOIUfct2Z",
     "expiresAt": "2026-03-28",
     "allowOffline": true

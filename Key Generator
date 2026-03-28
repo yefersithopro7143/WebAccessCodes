@@ -89,5 +89,12 @@
     "key": "sad",
     "expiresAt": "2026-04-05",
     "allowOffline": true
+  },
+  {
+    "id": "hola",
+    "username": "pablo",
+    "key": "bot",
+    "expiresAt": "2026-04-05",
+    "allowOffline": true
   }
 ]

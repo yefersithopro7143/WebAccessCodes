@@ -68,12 +68,5 @@
     "key": "Pompompurin",
     "expiresAt": "2026-04-21",
     "allowOffline": true
-  },
-  {
-    "id": "hola",
-    "username": "pablo",
-    "key": "obmR0hJOIUfct2Z",
-    "expiresAt": "2026-03-28",
-    "allowOffline": true
   }
 ]

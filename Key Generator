@@ -82,5 +82,12 @@
     "key": "nhfC2Csux90dAyZ",
     "expiresAt": "2026-04-05",
     "allowOffline": true
+  },
+  {
+    "id": "hola",
+    "username": "pablo",
+    "key": "EzXtRZp2IGVTlC6",
+    "expiresAt": "2026-04-05",
+    "allowOffline": true
   }
 ]

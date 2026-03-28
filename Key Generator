@@ -82,5 +82,12 @@
     "key": "rata",
     "expiresAt": "2026-04-05",
     "allowOffline": true
+  },
+  {
+    "id": "hola",
+    "username": "pablo",
+    "key": "fr",
+    "expiresAt": "2026-04-05",
+    "allowOffline": true
   }
 ]

@@ -110,5 +110,12 @@
     "key": "Xd",
     "expiresAt": "2026-04-14",
     "allowOffline": true
+  },
+  {
+    "id": "Hola",
+    "username": "yefferzon2",
+    "key": "Bot",
+    "expiresAt": "2026-04-06",
+    "allowOffline": true
   }
 ]

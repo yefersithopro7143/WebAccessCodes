@@ -86,8 +86,51 @@ const SECURITY_ENABLED = true; // 🛡️ EL INTERRUPTOR MAESTRO (Controlado por
   // ==========================================
   setInterval(() => {
       console.clear();
-      console.log("%c🛡️ PRECAUCIÓN DE SEGURIDAD", "color: #07ff00; font-size: 22px; font-weight: bold; text-shadow: 0 0 10px rgba(7, 255, 0, 0.4); font-family: sans-serif; padding: 10px 0;");
-      console.log("%cLa seguridad máxima de Premium Store ha sido activada por el desarrollador. Esta es una función del navegador dirigida únicamente a programadores. Si alguien te pidió que copies y pegues código aquí para habilitar alguna función, se trata de una estafa (Self-XSS) que les dará acceso a tu cuenta y comprometerá tu dispositivo. Por favor, cierra esta ventana para continuar navegando de forma segura.", "color: #ffffff; font-size: 13px; background: #111; padding: 15px; border-radius: 8px; border-left: 4px solid #fff700; line-height: 1.6; font-family: sans-serif;");
+
+      // --- Estilo del Título (Brillo Neón Dorado) ---
+      const estiloTitulo = [
+          'color: #FFD700', // Dorado Principal
+          'font-size: 35px', // Súper grande
+          'font-weight: bold',
+          'background: #000', // Fondo Negro Absoluto
+          // Múltiples sombras para efecto de brillo intenso (Glow)
+          'text-shadow: 0 0 10px #FFD700, 0 0 20px #FFD700, 0 0 30px #FFD700, 0 0 40px #FFA500', 
+          'font-family: "Segoe UI", Roboto, Helvetica, Arial, sans-serif',
+          'padding: 20px 0',
+          'border-top: 5px solid #FFD700', // Borde superior grueso
+          'border-bottom: 5px solid #FFD700', // Borde inferior grueso
+          'display: block',
+          'text-align: center',
+          'width: 100%'
+      ].join(';');
+
+      // --- Estilo del Cuerpo (Caja de Alerta Premium) ---
+      const estiloCuerpo = [
+          'color: #FFFFFF', // Texto Blanco Puro
+          'font-size: 14px',
+          'background: #111', // Fondo Oscuro
+          'padding: 20px',
+          'border-radius: 0 0 12px 12px', // Bordes redondeados abajo
+          'border: 2px solid #FFD700', // Borde dorado alrededor
+          'border-top: none', // Sin borde arriba para conectar con el título
+          'line-height: 1.8', // Espaciado elegante entre líneas
+          'font-family: "Segoe UI", Roboto, sans-serif',
+          'box-shadow: 0 10px 20px rgba(0,0,0,0.5)' // Sombra de caja para profundidad
+      ].join(';');
+
+      // Imprimir Título Epico
+      console.log("%c⚠️ PROTOCOLO DE PROTECCIÓN DIVINA ACTIVADO 🛡️", estiloTitulo);
+
+      // Imprimir Cuerpo Legendario (con saltos de línea manuales para mejor formato)
+      console.log(
+          "%cEsta plataforma está blindada por el núcleo de seguridad avanzado de Premium Store.\n\n" +
+          "🚨 ATENCIÓN, ESTO NO ES UN JUEGO:\n" +
+          "Si un tercero te ha instruido para copiar y pegar cualquier tipo de código en esta consola, estás siendo víctima de un ataque de ingeniería social conocido como Self-XSS. Al hacerlo, le otorgas acceso total a tu sesión, permitiéndole robar tu cuenta, datos personales y comprometer la seguridad de tu dispositivo de forma irreversible.\n\n" +
+          "✅ RECOMENDACIÓN:\n" +
+          "Por tu propia seguridad, cierra esta ventana inmediatamente y no confíes en fuentes externas. Tu navegación está monitoreada.",
+          estiloCuerpo
+      );
+
   }, 1000);
 
   // ==========================================

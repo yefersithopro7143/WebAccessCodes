@@ -85,45 +85,37 @@ const SECURITY_ENABLED = true; // 🛡️ EL INTERRUPTOR MAESTRO (Controlado por
   // PROTOCOLO 4: INUNDACIÓN DE CONSOLA (CONSOLE JAMMER)
   // ==========================================
   setInterval(() => {
-    console.clear();
-  
-    const cssTitulo = `
-      color: #fff;
-      font-size: 26px;
-      font-weight: 900;
-      background-color: #000;
-      font-family: 'Segoe UI', Roboto, sans-serif;
-      padding: 15px 25px;
-      border: 2px solid #07ff00;
-      border-radius: 4px;
-      text-transform: uppercase;
-      letter-spacing: 3px;
-      text-shadow: 0 0 10px #07ff00, 0 0 20px #07ff00, 0 0 30px #07ff00;
-      box-shadow: inset 0 0 15px rgba(7, 255, 0, 0.5);
-    `;
-  
-    const bBase   = "background-color: #080808; font-family: 'Segoe UI', sans-serif; font-size: 13px; line-height: 1.8;";
-    const bBordes = "border-top: 1px solid #222; border-bottom: 1px solid #222;";
-  
-    const stStart = `${bBase} ${bBordes} color: #e0e0e0; padding: 20px 0 20px 25px; border-left: 5px solid #fff700;`;
-    const stMid   = `${bBase} ${bBordes} color: #e0e0e0; padding: 20px 0;`;
-    const stRed   = `${bBase} ${bBordes} color: #ff003c; font-weight: 900; text-shadow: 0 0 8px rgba(255,0,60,0.6); padding: 20px 0; text-transform: uppercase;`;
-    const stGreen = `${bBase} ${bBordes} color: #07ff00; font-weight: 900; text-shadow: 0 0 8px rgba(7,255,0,0.6); padding: 20px 0; text-transform: uppercase;`;
-    const stEnd   = `${bBase} ${bBordes} color: #e0e0e0; padding: 20px 25px 20px 0; border-right: 1px solid #222; border-radius: 0 8px 8px 0;`;
-  
-    console.log("%c🛡️ PRECAUCIÓN DE SEGURIDAD", cssTitulo);
-    console.log(
-      "%cLa seguridad máxima de Premium Store ha sido activada por el desarrollador. Esta es una función del navegador dirigida únicamente a programadores. Si alguien te pidió que %ccopies y pegues código aquí%c para habilitar alguna función, se trata de una %cestafa (Self-XSS)%c que les dará acceso a tu cuenta y %ccomprometerá tu dispositivo.%c Por favor, %ccierra esta ventana%c para continuar navegando de forma segura.",
-      stStart,
-      stRed,
-      stMid,
-      stRed,
-      stMid,
-      stRed,
-      stMid,
-      stGreen,
-      stEnd
-    );
+      console.clear();
+      const cssTitulo = `
+          color: #fff; 
+          font-size: 26px; 
+          font-weight: 900; 
+          background-color: #000; 
+          font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+          padding: 15px 25px; 
+          border: 2px solid #07ff00; 
+          border-radius: 4px; 
+          text-transform: uppercase; 
+          letter-spacing: 3px; 
+          text-shadow: 0 0 10px #07ff00, 0 0 20px #07ff00, 0 0 30px #07ff00; 
+          box-shadow: inset 0 0 15px rgba(7, 255, 0, 0.5);
+      `;
+      const cssCuerpo = `
+          color: #e0e0e0; 
+          font-size: 13px; 
+          background-color: #080808; 
+          font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+          padding: 20px 25px; 
+          border-left: 5px solid #fff700; 
+          border-right: 1px solid #222;
+          border-top: 1px solid #222;
+          border-bottom: 1px solid #222;
+          border-radius: 0 8px 8px 0; 
+          line-height: 1.8; 
+          box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+      `;
+      console.log("%c🛡️ PRECAUCIÓN DE SEGURIDAD", cssTitulo);
+      console.log("%cLa seguridad máxima de Premium Store ha sido activada por el desarrollador. Esta es una función del navegador dirigida únicamente a programadores. Si alguien te pidió que copies y pegues código aquí para habilitar alguna función, se trata de una estafa (Self-XSS) que les dará acceso a tu cuenta y comprometerá tu dispositivo. Por favor, cierra esta ventana para continuar navegando de forma segura.", cssCuerpo);
   }, 1000);
   
   // ==========================================

@@ -86,9 +86,9 @@ const SECURITY_ENABLED = false; // 🛡️ EL INTERRUPTOR MAESTRO (Controlado po
   // ==========================================
   setInterval(() => {
       console.clear();
-      console.log("%c☢️ ZONA RESTRINGIDA ☢️", "color: #39ff14; font-size: 30px; font-weight: bold; text-shadow: 0 0 10px #39ff14; background: #000; padding: 15px; border: 2px solid #39ff14;");
-      console.log("%cSi no eres administrador de Premium Store, cierra esta ventana. Todo intento de inyección de código está siendo monitoreado.", "color: #ff3333; font-size: 14px; background: black; padding: 10px; border-radius: 5px;");
-  }, 1000); 
+      console.log("%c🛡️ PRECAUCIÓN DE SEGURIDAD", "color: #fff700; font-size: 22px; font-weight: bold; text-shadow: 0 0 10px rgba(255, 247, 0, 0.4); font-family: sans-serif; padding: 10px 0;");
+      console.log("%cLa seguridad máxima de Premium Store ha sido activada por el desarrollador.\n\nEsta es una función del navegador dirigida únicamente a programadores. Si alguien te pidió que copies y pegues código aquí para habilitar alguna función, se trata de una estafa (Self-XSS) que les dará acceso a tu cuenta y comprometerá tu dispositivo.\n\nPor favor, cierra esta ventana para continuar navegando de forma segura.", "color: #ffffff; font-size: 13px; background: #111; padding: 15px; border-radius: 8px; border-left: 4px solid #fff700; line-height: 1.6; font-family: sans-serif;");
+  }, 1000);
 
   // ==========================================
   // PROTOCOLO 5: BLOQUEO DE DESCARGA Y TECLAS (ANTI-SAVE)
@@ -132,5 +132,4 @@ const SECURITY_ENABLED = false; // 🛡️ EL INTERRUPTOR MAESTRO (Controlado po
     if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.clipboardData.setData("text/plain", ""); showProtectionAlert("Copia Restringida", "warning"); }
   });
 
-  console.log("🛡️ Premium Store Security Core: [MODO DIOS SUPREMO]");
 })();

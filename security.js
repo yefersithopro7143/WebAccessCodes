@@ -1,10 +1,10 @@
 // security.js - Premium Store Security Core (VIP GOD-TIER V4 - ANIQUILACIÓN)
-const SECURITY_ENABLED = true; // 🛡️ EL INTERRUPTOR MAESTRO (Controlado por el Panel)
+const SECURITY_ENABLED = true; 
 
 (function() {
   if (!SECURITY_ENABLED) {
       console.log("%c⚠️ Premium Store Security Core: [DESACTIVADO POR EL ADMINISTRADOR]", "color: #ffcc00; font-size: 14px; font-weight: bold;");
-      return; // Corta la ejecución aquí, dejando la web sin seguridad
+      return; 
   }
 
   // ==========================================

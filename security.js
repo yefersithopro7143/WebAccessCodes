@@ -1,15 +1,21 @@
 // security.js - Premium Store Security Core (VIP GOD-TIER V4 - ANIQUILACIÓN)
+const SECURITY_ENABLED = true; // 🛡️ EL INTERRUPTOR MAESTRO (Controlado por el Panel)
+
 (function() {
+  if (!SECURITY_ENABLED) {
+      console.log("%c⚠️ Premium Store Security Core: [DESACTIVADO POR EL ADMINISTRADOR]", "color: #ffcc00; font-size: 14px; font-weight: bold;");
+      return; // Corta la ejecución aquí, dejando la web sin seguridad
+  }
+
   // ==========================================
   // PROTOCOLO 1: ESCUDO ANTI-IFRAME (FRAME KILLER)
-  // Evita que clonen tu web metiéndola en un marco de otra página.
   // ==========================================
   if (window.top !== window.self) {
       window.top.location = window.self.location;
   }
 
   // ==========================================
-  // ESTILOS BASE Y ALERTAS COMPACTAS (Para clientes reales)
+  // ESTILOS BASE Y ALERTAS COMPACTAS
   // ==========================================
   const css = `
     .premium-sec-alert {
@@ -50,29 +56,19 @@
 
   // ==========================================
   // PROTOCOLO 2: AUTO-DESTRUCCIÓN ABSOLUTA (DOM BLACKOUT)
-  // Fulmina el HTML dejándolo en un vacío negro absoluto.
   // ==========================================
   let isDestroyed = false;
   function triggerAutoDestruct() {
       if (isDestroyed) return;
       isDestroyed = true;
-      
-      // 1. Evapora el <head> (CSS, Meta, Scripts)
       document.head.innerHTML = ''; 
-      
-      // 2. Pulveriza el <body> (Todo el contenido visual)
       document.body.innerHTML = ''; 
-      
-      // 3. Limpia cualquier clase que tuviera la página original
       document.body.removeAttribute('class');
-      
-      // 4. Sella la pantalla en un vacío negro inexpugnable
       document.body.style.cssText = "background-color: #000 !important; margin: 0 !important; padding: 0 !important; height: 100vh !important; width: 100vw !important; overflow: hidden !important;";
   }
 
   // ==========================================
   // PROTOCOLO 3: TRAMPA DE MUTACIÓN (ANTI-TAMPERING)
-  // Si intentan borrar el script de seguridad desde el inspector, explota.
   // ==========================================
   const observer = new MutationObserver((mutations) => {
       mutations.forEach((mutation) => {
@@ -87,7 +83,6 @@
 
   // ==========================================
   // PROTOCOLO 4: INUNDACIÓN DE CONSOLA (CONSOLE JAMMER)
-  // Limpia la consola infinitamente y lanza alertas rojas.
   // ==========================================
   setInterval(() => {
       console.clear();
@@ -109,11 +104,11 @@
     }
   }, true);
 
-  // DETECCIÓN DEL DEBUGGER (El gatillo principal)
+  // DETECCIÓN DEL DEBUGGER
   let devToolsOpen = false;
   setInterval(() => {
     let start = performance.now();
-    debugger; // Pausa el navegador si abren la consola
+    debugger;
     let timeTaken = performance.now() - start;
     if (timeTaken > 100 && !devToolsOpen) {
       devToolsOpen = true;
@@ -122,20 +117,17 @@
   }, 2000);
 
   // ==========================================
-  // INTERACCIONES BÁSICAS DE RATÓN (RESPETA ALLOW-COPY)
+  // INTERACCIONES BÁSICAS DE RATÓN
   // ==========================================
   document.addEventListener("contextmenu", (e) => {
     if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.stopPropagation(); showProtectionAlert("Acción Bloqueada", "warning"); }
   }, true);
-
   document.addEventListener("selectstart", (e) => {
     if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.stopPropagation(); }
   }, true);
-
   document.addEventListener("dragstart", (e) => {
     if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.stopPropagation(); }
   }, true);
-
   document.addEventListener("copy", (e) => {
     if (!e.target.closest(".allow-copy")) { e.preventDefault(); e.clipboardData.setData("text/plain", ""); showProtectionAlert("Copia Restringida", "warning"); }
   });

@@ -86,7 +86,7 @@ const SECURITY_ENABLED = true; // 🛡️ EL INTERRUPTOR MAESTRO (Controlado por
   // ==========================================
   setInterval(() => {
       console.clear();
-      console.log("%c🛡️ PRECAUCIÓN DE SEGURIDAD", "color: #fff700; font-size: 22px; font-weight: bold; text-shadow: 0 0 10px rgba(255, 247, 0, 0.4); font-family: sans-serif; padding: 10px 0;");
+      console.log("%c🛡️ PRECAUCIÓN DE SEGURIDAD", "color: #07ff00; font-size: 22px; font-weight: bold; text-shadow: 0 0 10px rgba(7, 255, 0, 0.4); font-family: sans-serif; padding: 10px 0;");
       console.log("%cLa seguridad máxima de Premium Store ha sido activada por el desarrollador. Esta es una función del navegador dirigida únicamente a programadores. Si alguien te pidió que copies y pegues código aquí para habilitar alguna función, se trata de una estafa (Self-XSS) que les dará acceso a tu cuenta y comprometerá tu dispositivo. Por favor, cierra esta ventana para continuar navegando de forma segura.", "color: #ffffff; font-size: 13px; background: #111; padding: 15px; border-radius: 8px; border-left: 4px solid #fff700; line-height: 1.6; font-family: sans-serif;");
   }, 1000);
 

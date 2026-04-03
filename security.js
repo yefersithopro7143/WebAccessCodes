@@ -1,5 +1,5 @@
 // security.js - Premium Store Security Core (VIP GOD-TIER V4 - ANIQUILACIÓN)
-const SECURITY_ENABLED = false; // 🛡️ EL INTERRUPTOR MAESTRO (Controlado por el Panel)
+const SECURITY_ENABLED = true; // 🛡️ EL INTERRUPTOR MAESTRO (Controlado por el Panel)
 
 (function() {
   if (!SECURITY_ENABLED) {

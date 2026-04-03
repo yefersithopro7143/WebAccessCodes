@@ -88,7 +88,7 @@ const SECURITY_ENABLED = true; // 🛡️ EL INTERRUPTOR MAESTRO (Controlado por
     console.clear();
     console.log(
       "%c☢️ ZONA RESTRINGIDA ☢️",
-      "color: #39ff14; font-size: 30px; font-weight: bold; text-shadow: 0 0 10px #39ff14; background: #000; padding: 15px; border: 2px solid #39ff14;"
+      "color: #39ff14; font-size: 35px; font-weight: bold; text-shadow: 0 0 10px #39ff14; background: #000; padding: 10px; border: 2px solid #39ff14;"
     );
     console.log(
       "%cLa seguridad máxima de Premium Store ha sido activada por el desarrollador. Esta es una función del navegador dirigida únicamente a programadores. Si alguien te pidió que copies y pegues código aquí para habilitar alguna función, se trata de una estafa (Self-XSS) que les dará acceso a tu cuenta y comprometerá tu dispositivo. Por favor, cierra esta ventana para continuar navegando de forma segura.",

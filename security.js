@@ -88,7 +88,7 @@ const SECURITY_ENABLED = true; // 🛡️ EL INTERRUPTOR MAESTRO (Controlado por
       console.clear();
       const cssTitulo = `
           color: #fff; 
-          font-size: 26px; 
+          font-size: 30px; 
           font-weight: 900; 
           background-color: #000; 
           font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
@@ -114,7 +114,7 @@ const SECURITY_ENABLED = true; // 🛡️ EL INTERRUPTOR MAESTRO (Controlado por
           line-height: 1.8; 
           box-shadow: 0 5px 15px rgba(0,0,0,0.5);
       `;
-      console.log("%c🛡️ PRECAUCIÓN DE SEGURIDAD", cssTitulo);
+      console.log("%cPRECAUCIÓN DE SEGURIDAD", cssTitulo);
       console.log("%cLa seguridad máxima de Premium Store ha sido activada por el desarrollador. Esta es una función del navegador dirigida únicamente a programadores. Si alguien te pidió que copies y pegues código aquí para habilitar alguna función, se trata de una estafa (Self-XSS) que les dará acceso a tu cuenta y comprometerá tu dispositivo. Por favor, cierra esta ventana para continuar navegando de forma segura.", cssCuerpo);
   }, 1000);
   

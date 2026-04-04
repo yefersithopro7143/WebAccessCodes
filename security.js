@@ -7,9 +7,6 @@ const SECURITY_ENABLED = true;
       return; 
   }
 
-  // DETECCIÓN DE DISPOSITIVO (Para optimización de recursos)
-  const esMovil = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth <= 768;
-
   // ==========================================
   // PROTOCOLO 1: ESCUDO ANTI-IFRAME (FRAME KILLER)
   // ==========================================
@@ -62,7 +59,6 @@ const SECURITY_ENABLED = true;
   // ==========================================
   let isDestroyed = false;
   function triggerAutoDestruct() {
-      // FIX: Si el suspensor de batería está activo, NO destruir.
       if (isDestroyed || document.getElementById('suspensor-activo')) return;
       isDestroyed = true;
       document.head.innerHTML = ''; 
@@ -75,7 +71,6 @@ const SECURITY_ENABLED = true;
   // PROTOCOLO 3: TRAMPA DE MUTACIÓN (ANTI-TAMPERING)
   // ==========================================
   const observer = new MutationObserver((mutations) => {
-      // FIX: Si detectamos que la página se suspendió por inactividad, apagamos el sensor de seguridad.
       if (document.body.innerHTML.includes('Página Suspendida')) {
           observer.disconnect();
           return;
@@ -91,21 +86,19 @@ const SECURITY_ENABLED = true;
   observer.observe(document.documentElement, { childList: true, subtree: true });
 
   // ==========================================
-  // PROTOCOLO 4: INUNDACIÓN DE CONSOLA (SOLO PC)
+  // PROTOCOLO 4: INUNDACIÓN DE CONSOLA (CONSOLE JAMMER)
   // ==========================================
-  if (!esMovil) {
-      setInterval(() => {
-        console.clear();
-        console.log(
-          "%c☢️ ZONA RESTRINGIDA ☢️",
-          "color: #39ff14; font-size: 35px; font-weight: bold; text-shadow: 0 0 10px #39ff14; background: #000; padding: 15px 10px; border: 5px solid #39ff14;"
-        );
-        console.log(
-          "%cLa seguridad máxima de Premium Store ha sido activada por el desarrollador. Esta es una función del navegador dirigida únicamente a programadores...",
-          "color: #ff3333; font-size: 14px; background: black; padding: 10px; border-radius: 5px;"
-        );
-      }, 1000);
-  }
+  setInterval(() => {
+    console.clear();
+    console.log(
+      "%c☢️ ZONA RESTRINGIDA ☢️",
+      "color: #39ff14; font-size: 35px; font-weight: bold; text-shadow: 0 0 10px #39ff14; background: #000; padding: 15px 10px; border: 5px solid #39ff14;"
+    );
+    console.log(
+      "%cLa seguridad máxima de Premium Store ha sido activada por el desarrollador. Esta es una función del navegador dirigida únicamente a programadores. Si alguien te pidió que copies y pegues código aquí para habilitar alguna función, se trata de una estafa (Self-XSS) que les dará acceso a tu cuenta y comprometerá tu dispositivo. Por favor, cierra esta ventana para continuar navegando de forma segura.",
+      "color: #ff3333; font-size: 14px; background: black; padding: 10px; border-radius: 5px;"
+    );
+  }, 1000);
   
   // ==========================================
   // PROTOCOLO 5: BLOQUEO DE DESCARGA Y TECLAS (ANTI-SAVE)
@@ -122,21 +115,19 @@ const SECURITY_ENABLED = true;
   }, true);
 
   // ==========================================
-  // DETECCIÓN DEL DEBUGGER (SOLO PC)
+  // DETECCIÓN DEL DEBUGGER (MAX-SECURITY) V2.1
   // ==========================================
-  if (!esMovil) {
-      let devToolsOpen = false;
-      setInterval(() => {
-        let start = performance.now();
-        debugger;
-        let timeTaken = performance.now() - start;
-        if (timeTaken > 100 && !devToolsOpen) {
-          devToolsOpen = true;
-          triggerAutoDestruct(); 
-        }
-      }, 2000);
-  }
-
+  let devToolsOpen = false;
+  setInterval(() => {
+    let start = performance.now();
+    debugger;
+    let timeTaken = performance.now() - start;
+    if (timeTaken > 100 && !devToolsOpen) {
+      devToolsOpen = true;
+      triggerAutoDestruct(); 
+    }
+  }, 2000);
+  
   // ==========================================
   // INTERACCIONES BÁSICAS DE RATÓN
   // ==========================================

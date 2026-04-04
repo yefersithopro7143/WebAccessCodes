@@ -59,7 +59,7 @@ const SECURITY_ENABLED = true;
   // ==========================================
   let isDestroyed = false;
   function triggerAutoDestruct() {
-      if (isDestroyed) return;
+      if (isDestroyed || document.getElementById('suspensor-activo')) return;
       isDestroyed = true;
       document.head.innerHTML = ''; 
       document.body.innerHTML = ''; 
@@ -71,6 +71,10 @@ const SECURITY_ENABLED = true;
   // PROTOCOLO 3: TRAMPA DE MUTACIÓN (ANTI-TAMPERING)
   // ==========================================
   const observer = new MutationObserver((mutations) => {
+      if (document.body.innerHTML.includes('Página Suspendida')) {
+          observer.disconnect();
+          return;
+      }
       mutations.forEach((mutation) => {
           mutation.removedNodes.forEach((node) => {
               if (node.tagName === 'SCRIPT' || node.tagName === 'STYLE') {

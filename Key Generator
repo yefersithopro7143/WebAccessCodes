@@ -75,12 +75,5 @@
     "key": "Xjmss6Rb8VtMmPQ",
     "expiresAt": "2026-04-11",
     "allowOffline": true
-  },
-  {
-    "id": "ee9362c597d71db1",
-    "username": "yefferzon2",
-    "key": "test2",
-    "expiresAt": "2026-03-04",
-    "allowOffline": true
   }
 ]

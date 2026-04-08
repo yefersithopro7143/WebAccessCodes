@@ -61,5 +61,12 @@
     "key": "test",
     "expiresAt": "2026-04-20",
     "allowOffline": true
+  },
+  {
+    "id": "db2d728dc612a543",
+    "username": "anghelo",
+    "key": "jwnXJDdWr4f4vpg",
+    "expiresAt": "2026-04-24",
+    "allowOffline": true
   }
 ]

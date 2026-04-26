@@ -35,31 +35,10 @@
     "allowOffline": true
   },
   {
-    "id": "1c14c4cb64009694",
-    "username": "vanessa",
-    "key": "Pompompurin",
-    "expiresAt": "2026-04-21",
-    "allowOffline": true
-  },
-  {
     "id": "4e81e67f955835c7",
     "username": "yefferzon",
     "key": "Hola",
     "expiresAt": "2026-06-19",
-    "allowOffline": true
-  },
-  {
-    "id": "ee9362c597d71db1",
-    "username": "yefferzon2",
-    "key": "test",
-    "expiresAt": "2026-04-20",
-    "allowOffline": true
-  },
-  {
-    "id": "db2d728dc612a543",
-    "username": "anghelo",
-    "key": "jwnXJDdWr4f4vpg",
-    "expiresAt": "2026-04-24",
     "allowOffline": true
   }
 ]

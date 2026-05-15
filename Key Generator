@@ -54,5 +54,12 @@
     "key": "Bebe",
     "expiresAt": "2026-06-29",
     "allowOffline": true
+  },
+  {
+    "id": "db2d728dc612a543",
+    "username": "anghelo",
+    "key": "E8r8Jo6bBTJdvQD",
+    "expiresAt": "2026-05-31",
+    "allowOffline": true
   }
 ]

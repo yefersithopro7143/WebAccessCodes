@@ -9,27 +9,34 @@
     },
     {
       "id": 2,
+      "nombre": "Copilot",
+      "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/Copilot.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Copilot.apk"
+    },
+    {
+      "id": 3,
       "nombre": "LingoClip",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/LingoClip.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/LingoClip.apk"
     },
     {
-      "id": 3,
+      "id": 4,
       "nombre": "Melolo",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/Melolo.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Melolo.apk"
     },
     {
-      "id": 4,
+      "id": 5,
       "nombre": "YouTube",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/YouTube.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YouTube.zip"
     },
     {
-      "id": 5,
+      "id": 6,
       "nombre": "YT Music",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/YT.Music.png",
       "estado": "Disponible",

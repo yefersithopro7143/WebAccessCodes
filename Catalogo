@@ -16,48 +16,41 @@
     },
     {
       "id": 3,
-      "nombre": "Loora",
-      "imagen": "https://e.top4top.io/p_3538mu4ql3.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Loora.apk"
-    },
-    {
-      "id": 4,
       "nombre": "M. Copilot",
       "imagen": "https://b.top4top.io/p_3538smqry0.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Copilot.apk"
     },
     {
-      "id": 5,
+      "id": 4,
       "nombre": "Melolo",
       "imagen": "https://c.top4top.io/p_3674k2z3i1.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Melolo.apk"
     },
     {
-      "id": 6,
+      "id": 5,
       "nombre": "Temp Mail",
       "imagen": "https://l.top4top.io/p_3531mto0g0.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Temp.Mail.apk"
     },
     {
-      "id": 7,
+      "id": 6,
       "nombre": "Xuper TV",
       "imagen": "https://k.top4top.io/p_36568yf3v0.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Xuper.apk"
     },
     {
-      "id": 8,
+      "id": 7,
       "nombre": "YouTube ",
       "imagen": "https://c.top4top.io/p_3531zqxqk3.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YouTube.zip"
     },
     {
-      "id": 9,
+      "id": 8,
       "nombre": "YT Music",
       "imagen": "https://d.top4top.io/p_3531v3gqg4.png",
       "estado": "Disponible",

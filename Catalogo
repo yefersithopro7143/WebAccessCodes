@@ -100,27 +100,20 @@
     },
     {
       "id": 15,
-      "nombre": "TeraBox ",
-      "imagen": "https://a.top4top.io/p_3531d5uem1.png",
-      "estado": "Disponible",
-      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/TeraBox.apk"
-    },
-    {
-      "id": 16,
       "nombre": "Xuper TV",
       "imagen": "https://k.top4top.io/p_36568yf3v0.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Xuper.apk"
     },
     {
-      "id": 17,
+      "id": 16,
       "nombre": "YouTube ",
       "imagen": "https://c.top4top.io/p_3531zqxqk3.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YouTube.zip"
     },
     {
-      "id": 18,
+      "id": 17,
       "nombre": "YT Music",
       "imagen": "https://d.top4top.io/p_3531v3gqg4.png",
       "estado": "Disponible",

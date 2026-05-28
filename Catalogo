@@ -2,27 +2,34 @@
   "aplicaciones": [
     {
       "id": 1,
+      "nombre": "AI Chat",
+      "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/AI.Chat.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/AI.Chat.apk"
+    },
+    {
+      "id": 2,
       "nombre": "LingoClip",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/LingoClip.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/LingoClip.apk"
     },
     {
-      "id": 2,
+      "id": 3,
       "nombre": "Melolo",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/Melolo.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Melolo.apk"
     },
     {
-      "id": 3,
+      "id": 4,
       "nombre": "YouTube",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/YouTube.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YouTube.zip"
     },
     {
-      "id": 4,
+      "id": 5,
       "nombre": "YT Music",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/YT.Music.png",
       "estado": "Disponible",

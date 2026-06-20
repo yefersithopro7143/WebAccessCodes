@@ -79,20 +79,27 @@
     },
     {
       "id": 12,
+      "nombre": "Photomath",
+      "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/Photomath.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Photomath.apk"
+    },
+    {
+      "id": 13,
       "nombre": "Xuper TV",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/Xuper.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Xuper.apk"
     },
     {
-      "id": 13,
+      "id": 14,
       "nombre": "YouTube",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/YouTube.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YouTube.zip"
     },
     {
-      "id": 14,
+      "id": 15,
       "nombre": "YT Music",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/YT.Music.png",
       "estado": "Disponible",

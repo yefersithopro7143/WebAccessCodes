@@ -107,13 +107,20 @@
     },
     {
       "id": 16,
+      "nombre": "Yazio",
+      "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/Yazio.png",
+      "estado": "Disponible",
+      "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/Yazio.apk"
+    },
+    {
+      "id": 17,
       "nombre": "YouTube",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/YouTube.png",
       "estado": "Disponible",
       "enlace": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0/YouTube.zip"
     },
     {
-      "id": 17,
+      "id": 18,
       "nombre": "YT Music",
       "imagen": "https://github.com/yefersithopro7143/APKs/releases/download/V1.0-beta/YT.Music.png",
       "estado": "Disponible",

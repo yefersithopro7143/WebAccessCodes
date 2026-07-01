@@ -1,5 +1,5 @@
 // security.js - Premium Store Security Core (VIP GOD-TIER V4 - ANIQUILACIÓN)
-const SECURITY_ENABLED = false; 
+const SECURITY_ENABLED = true; 
 
 (function() {
   if (!SECURITY_ENABLED) {

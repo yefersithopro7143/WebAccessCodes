@@ -61,5 +61,12 @@
     "key": "Hola",
     "expiresAt": "2026-09-18",
     "allowOffline": true
+  },
+  {
+    "id": "db2d728dc612a543",
+    "username": "anghelo",
+    "key": "tGFwgOpo7PyF7JW",
+    "expiresAt": "2026-08-03",
+    "allowOffline": true
   }
 ]

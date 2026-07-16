@@ -68,5 +68,12 @@
     "key": "tGFwgOpo7PyF7JW",
     "expiresAt": "2026-08-03",
     "allowOffline": true
+  },
+  {
+    "id": "38156e074e83c3fa",
+    "username": "dorita",
+    "key": "Hola",
+    "expiresAt": "2053-11-30",
+    "allowOffline": true
   }
 ]
